@@ -1,0 +1,40 @@
+this is intended to (hopefully) get you a bit more familiar with the layout and everything that is already going on.
+A break down of everything so far is below. It contains the file name, file location and a small description.
+
+**also note that the logo at the moment has a few appearance defects courtesy of the awful software
+  that is gimp image editor. don't worry about this for now. It's only there as an example of what it will be like.
+  the final will pretty much be the same but with the defects fixed and removed.**
+
+Hope it helps:
+
+Break down of pages on 27/01/11:
+
+index.php	- a little script that changes the content of each page visited. It include the folowing 2 scripts:
+			 
+			  header.php ----> located in following directory:  res/config/header.php - this contains code for the logo 
+			  and navbar.
+			  
+			  footer.php ----> located in following directory:  res/config/footer.php - this contains code for the link
+			  to the staff login page and the copyright.
+			  
+main.css	- the style sheet.   Located at ----> res/css/main.css
+
+about.php	- page for conataining details about the company. Located at ----> res/pages/about.php
+
+contact.php - page for containing contact details. Located at ----> res/pages/about.php
+
+admin.php	- page where staff log in.  Located at ----> res/pages/admin.php
+
+login.php (still coding as of 27/01/11)	- php script for logging in to staff zone. Located at ----> res/pages/login.php
+
+admin-access.php	- page the user should be redirected to after successful login. Located at ----> res/pages/admin-access.php
+
+error.php	-	page a user is redirected to for some error. Located at ----> res/pages/error.php	
+
+news.php	-	any news or events for the company. Located at ----> res/pages/news.php
+
+start.php	-	welcome page automatically directed to from index.php.  Located at ----> res/pages/start.php
+
+sql.sql	-	 The database file. This is already loaded up onto the anubis server. 
+			 You can connect to this using js230 as both username and password.
+			 The database name is also js230.

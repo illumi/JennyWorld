@@ -14,11 +14,11 @@ Computer Science and Information Systems Year 3
 
 	<div id="valid" > <!--footer float area right--> 
 
-<a href="index.php?page=admin">Staff Login</a>
+<a href="index.php?page=admin">Admin Login</a>
 
-<br>
+<p>
 
-&copy; JWorld Cinema Complex 2011
+&copy; Jenny World 2011
 
 	
 

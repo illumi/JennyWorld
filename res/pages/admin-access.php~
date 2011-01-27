@@ -1,0 +1,38 @@
+<?php 
+
+/**********************************************
+
+Software Engineering Group Project
+
+Computer Science and Information Systems Year 3
+
+**********************************************/ 
+
+?>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Administration</title>
+
+	<link href="res/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+			<center><h1>Administration</h1></center>
+		
+		</hgroup>
+
+	<div id="vision2">
+	<nav>
+		<ul>
+			<li><a href="index.php?page=stat-acs">Statistical actions</a></li>
+			<li><a href="index.php?page=tt-acs">Timetable actions</a></li>
+			<li><a href="index.php?page=film-acs">Film actions</a></li>
+			<li><a href="index.php?page=staff-acs">Staff actions</a></li>
+			<li><a href="index.php?page=promo-acs">Promotion actions</a></li>
+		</ul>
+	</nav>
+</body>

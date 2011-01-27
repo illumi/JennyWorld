@@ -10,4 +10,4 @@ Computer Science and Information Systems Year 3
 
 ?>
 
-<div id="vision">Jennyworld has lots of exciting and interesting films including brand new releases and specialist interest films.</div>
+<div id="body"><h1> Welcome to Jenny world </h1></div>

@@ -17,10 +17,6 @@ $link = mysql_connect($host,$username,$password) or die('Could not connect: ' . 
 $query = "SELECT FROM staff WHERE staff_ID='username' AND password ='password'";
 $result = mysql_query($query);
 
-echo mysql_result($result, 0);
-
-mysql_close();
-
 echo "Hello ". $user . " " . $pass . ".<br />";
 echo "Thank you for logging in!";
 

@@ -45,21 +45,10 @@ h2{
 	font-family:Vera, Helvetica, Georgia;
 }
 
-h3{
-
-	letter-spacing:-1px;
-	font-size:18px;
-	padding-bottom:6px;
-	font-weight:400;
-	margin:10px 10px 3px 0;
-	font-family:Vera, Helvetica, Georgia;
-}
-
-
 img.align-left { float:left; margin: 0 15px 15px 0; } 
 
 #logo {
-	background-image: url(../img/log.png);
+	background-image: url(../img/logo.png);
 	background-repeat: no-repeat;
 	height: 138px;
 	width: 100%;
@@ -118,8 +107,21 @@ nav ul a:hover, nav ul a:focus {
 	padding-bottom: 10px;
 	padding-left: 0px;
 }
+#vision1 {
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:28px;
+	font-weight:bold;
+	background-image: url(../img/hero.jpg);
+	background-repeat:no-repeat;
+	width: 339px;
+	height:277px;
+	padding:20px 450px 0 30px;
+	margin-bottom:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
 
-#body{
+#vision2 {
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:28px;
 	font-weight:bold;
