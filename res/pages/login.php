@@ -1,5 +1,3 @@
-
-
 <?php
 
 $username="js230";
