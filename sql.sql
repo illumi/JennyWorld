@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS staff;
 
 CREATE TABLE staff (
 	staff_ID INTEGER NOT NULL AUTO_INCREMENT,
+	user_name VARCHAR(15) NOT NULL,
 	password VARCHAR(32) NOT NULL,
 	role_type ENUM('manager','staff') NOT NULL,
 	PRIMARY KEY (staff_ID)
@@ -67,7 +68,7 @@ CREATE TABLE promotions (
 	FOREIGN KEY (film_ID) REFERENCES films(film_ID) ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE = InnoDB;
 
-INSERT INTO staff (password, role_type)  VALUES ('test', 'manager');
+INSERT INTO staff (user_name, password, role_type)  VALUES ('jenny', 'test', 'manager');
 
 INSERT INTO screens (screen_ID, capacity)  VALUES (1, 1000);
 
