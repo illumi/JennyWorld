@@ -1,5 +1,5 @@
 <div id="body">
-<h1> Staff Overview</h1>
+<h1> Remove Staff Members</h1>
 <center>
 <p>
 <div id="header">
