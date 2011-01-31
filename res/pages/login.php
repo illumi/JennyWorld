@@ -24,7 +24,7 @@ if($count == 1){
 	// Register $myusername, $mypassword and redirect to file "admin-access.php"
 	session_register("user");
 	session_register("pass");
-	header("location:admin-access.php");
+	header("location:../../admin.php");
 }
 //displays error message otherwise
 else {
