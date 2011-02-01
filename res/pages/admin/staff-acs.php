@@ -3,7 +3,8 @@
 <center>
 <p>
 <div id="header">
-	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff Overview'>
+	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff 
+Overview'>
 	<input type=button onClick="location.href='admin.php?page=add-staff'" value='Add Staff 
 Members'>
 	<input type=button onClick="location.href='admin.php?page=edit-staff'" value='Edit Current 
@@ -15,13 +16,7 @@ Member'>
 
 include 'sql-connection.php';
 
-//$username="js230";
-//$password="js230";
-//$database="js230";
-//$host="anubis.macs.hw.ac.uk";
-
 $con = mysql_connect($host,$username,$password) or die(mysql_error());
-//$con = mysql_connect('anubis.macs.hw.ac.uk','js230','js230') or die(mysql_error());
 
 mysql_select_db($database) or die(mysql_error());
 
@@ -45,7 +40,7 @@ while($row = mysql_fetch_array($query))
 	echo"</tr>";
 }
 echo "</table>";
-mysql_close($link);
+mysql_close($con);
 
 ?>
 </center>

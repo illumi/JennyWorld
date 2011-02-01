@@ -3,7 +3,9 @@
 <center>
 <p>
 <div id="header">
-	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff Overview'>
+	<input type=button 
+onClick="location.href='admin.php?page=staff-acs'" value='Staff
+Overview'>
 	<input type=button onClick="location.href='admin.php?page=add-staff'" value='Add Staff 
 Members'>
 	<input type=button onClick="location.href='admin.php?page=edit-staff'" value='Edit Current 
@@ -13,10 +15,11 @@ Member'>
 
 </div>
 <section id="new staff info">
-	<form method="POST action="add.php" type="application/x-www-urlencoded">
-	Name: <input type="text" value="" id="newStafName" required> <br />
-	Password: <input type="text" value="" id="newStaffPassword" required> <br />
-	Role: <input type="text" value="" id="newStaffRole" required> <br />
+	<form method="POST" action="res/pages/admin/add.php">
+	Name: <input type="text" value="" name="newname" required> <br />
+	Password: <input type="text" value="" name="newpassword" required> <br />
+	Role:	 <input type="radio" name="newrole" value="manager"/> manager <br />
+	&nbsp&nbsp      <input type="radio" name="newrole" value="staff"/> staff <br />
 		<input type="submit" name="submit" id="submit" value="Submit">
 		<input type="reset" name="reset" id="reset" value="Reset"> <br />
 	</form>

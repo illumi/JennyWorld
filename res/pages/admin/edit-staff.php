@@ -3,7 +3,8 @@
 <center>
 <p>
 <div id="header">
-	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff Overview'>
+	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff 
+Overview'>
 	<input type=button onClick="location.href='admin.php?page=add-staff'" value='Add Staff 
 Members'>
 	<input type=button onClick="location.href='admin.php?page=edit-staff'" value='Edit Current 
