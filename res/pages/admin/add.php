@@ -16,5 +16,5 @@ $sql="INSERT INTO staff (user_name,password,role_type)
 VALUES
 ('$name','$password','$role')";
 mysql_query($sql) or die(mysql_error());
-Echo "success"
+header("location:../../../admin.php?page=staff-acs");
 ?>
