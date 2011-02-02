@@ -19,5 +19,5 @@ $sql="INSERT INTO promotions (film_ID, promo_name, start_date, end_date, descrip
 VALUES
 ('$filmid','$promoname','$start','$end','$description')";
 mysql_query($sql) or die(mysql_error());
-header("location:../../admin.php?page=promo-acs");
+header("location:../../../admin.php?page=promo-acs");
 ?>

@@ -18,6 +18,7 @@
 </div>
 <section id="new film info">
 	<form method="POST" action="res/pages/admin/add-flm.php">
+	Film ID: <input type="text" value="" name="filmid" required> <br />
 	Film Title: <input type="text" value="" name="filmtitle" required> <br />
 	Film Length (minutes): <input type="text" value="" name="filmlength" required> <br />
 	Film Genre: <select name="genre" value="" id="genre" required>

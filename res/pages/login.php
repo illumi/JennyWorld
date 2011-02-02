@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 $username="js230";
 $password="js230";
 $database="js230";
