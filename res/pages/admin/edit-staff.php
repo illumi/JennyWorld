@@ -1,8 +1,6 @@
-<div id="body">
+<div id ="body">
 <h1> Edit Current Staff Members</h1>
-<center>
 <p>
-<div id="header">
 	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff 
 Overview'>
 	<input type=button onClick="location.href='admin.php?page=add-staff'" value='Add Staff 
@@ -12,7 +10,6 @@ Staff Members'>
 	<input type=button onClick="location.href='admin.php?page=remove-staff'" value='Remove Staff 
 Member'>
 
-</div>
 <small>
 <form method="POST" action="res/pages/admin/edit.php" align="left">
 please enter the ID of the staff member you would like to edit:
@@ -22,8 +19,10 @@ Name: <input type="text" value="" name="editname" required> <br />
 Password: <input type="password" value="" name="editpassword" required> <br />
 Role(either staff : <input type="radio" name="editrole" value="manager"> manager <br />
 or manager)<input type="radio" name="editrole" value="staff"> staff <br />
+<center>
 <input type="submit" name="submit" id="submit" value="Submit">
 <input type="reset" name="reset" id="reset" value="Reset"> <br />
+</center>
 </form>
 </small>
 
@@ -57,5 +56,4 @@ echo "</table>";
 mysql_close($con);
 
 ?>
-</center>
 </div>
