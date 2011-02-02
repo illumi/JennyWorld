@@ -24,6 +24,7 @@ Computer Science and Information Systems Year 3
 	<header id="logo">
     <div id="valid" > <!--headder float area right--> 
     </div>
+
 		<hgroup>
 			<h1>Jworld</h1>
 		</hgroup>
