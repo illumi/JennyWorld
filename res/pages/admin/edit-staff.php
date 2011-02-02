@@ -18,19 +18,27 @@ Members'>
 Staff Members'>
 	<input type=button onClick="location.href='admin.php?page=remove-staff'" value='Remove Staff 
 Member'>
+
 </div>
+<small>
+<form method="POST" action="res/pages/admin/edit.php" align="left">
+please enter the ID of the staff member you would like to edit:
+<input type="text" value="" name="editid" required> <br />
+Please fill in the new details (if any fields are unchanged, please repeat the old value) <br />
+Name: <input type="text" value="" name="editname" required> <br />
+Password: <input type="password" value="" name="editpassword" required> <br />
+Role(either staff : <input type="radio" name="editrole" value="manager"> manager <br />
+or manager)<input type="radio" name="editrole" value="staff"> staff <br />
+<input type="submit" name="submit" id="submit" value="Submit">
+<input type="reset" name="reset" id="reset" value="Reset"> <br />
+</form>
+</small>
+
 <?php
 
 include 'sql-connection.php';
 
-//$username="js230";
-//$password="js230";
-//$database="js230";
-//$host="anubis.macs.hw.ac.uk";
-
 $con = mysql_connect($host,$username,$password) or die(mysql_error());
-//$con = mysql_connect('anubis.macs.hw.ac.uk','js230','js230') or die(mysql_error());
-
 mysql_select_db($database) or die(mysql_error());
 
 $query = mysql_query("SELECT * FROM staff");
@@ -53,7 +61,7 @@ while($row = mysql_fetch_array($query))
 	echo"</tr>";
 }
 echo "</table>";
-mysql_close($link);
+mysql_close($con);
 
 ?>
 </center>
