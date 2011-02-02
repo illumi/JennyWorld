@@ -44,7 +44,7 @@ while($row = mysql_fetch_array($query))
 	echo "<td>" . $row['user_name'] . "</td>";
 	echo "<td>" . $row['password'] . "</td>";
 	echo "<td>" . $row['role_type'] . "</td>";
-	echo"</tr>";
+	echo "</tr>";
 }
 echo "</table>";
 
