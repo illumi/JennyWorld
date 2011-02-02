@@ -1,5 +1,10 @@
 <?php
 
+	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ../../../index.php?page=adminLogin');
+}
+
 $filmid = $_POST['filmid'];
 $promoname = $_POST['promoname'];
 $start = $_POST['start'];

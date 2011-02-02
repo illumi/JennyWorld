@@ -1,6 +1,11 @@
 <?php
-$name = $_POST['newname'];
-$password = $_POST['newpassword'];
+if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ../../../index.php?page=adminLogin');
+}
+
+$name = addslashes($_POST['newname']);
+$password = md5($_POST['newpassword']);
 $role = $_POST['newrole'];
 
 $con = mysql_connect('anubis.macs.hw.ac.uk','js230','js230') or die(mysql_error());
@@ -16,5 +21,5 @@ $sql="INSERT INTO staff (user_name,password,role_type)
 VALUES
 ('$name','$password','$role')";
 mysql_query($sql) or die(mysql_error());
-header("location:../../../admin.php?page=staff-acs");
+header("location:../../../admin.php?page=add-staff");
 ?>

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<?php
+	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ../../../index.php?page=adminLogin');
+}
+?>
+
+>>>>>>> 3c6a49ffb508fc52b395258bf060a3c998f7052d
 <div id="body">
 <h1>Remove Promo</h1>
 <center>

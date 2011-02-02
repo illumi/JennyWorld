@@ -1,7 +1,12 @@
+<?php
+	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ../../../index.php?page=adminLogin');
+}
+?>
 <div id="body">
 <h1> Staff Overview</h1>
 <center>
-<p>
 <div id="header">
 	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff 
 Overview'>
@@ -12,6 +17,7 @@ Staff Members'>
 	<input type=button onClick="location.href='admin.php?page=remove-staff'" value='Remove Staff 
 Member'>
 </div>
+<h2>
 <?php
 
 include 'sql-connection.php';
@@ -26,7 +32,6 @@ echo "<table border='1'>
 <tr>
 <th>Staff ID</th>
 <th>Name</th>
-<th>Password</th>
 <th>Role</th>
 </tr>";
 
@@ -35,7 +40,6 @@ while($row = mysql_fetch_array($query))
 	echo "<tr>";
 	echo "<td>" . $row['staff_ID'] . "</td>";
 	echo "<td>" . $row['user_name'] . "</td>";
-	echo "<td>" . $row['password'] . "</td>";
 	echo "<td>" . $row['role_type'] . "</td>";
 	echo"</tr>";
 }
@@ -43,5 +47,7 @@ echo "</table>";
 mysql_close($con);
 
 ?>
+</h2>
+<h3></h3>
 </center>
 </div>
