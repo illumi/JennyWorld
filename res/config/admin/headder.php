@@ -23,18 +23,19 @@ Computer Science and Information Systems Year 3
 <div id="container">
 	<header id="logo">
     <div id="valid" > <!--headder float area right--> 
-    	<u><a href="index.php">Log Out</a></u>
     </div>
+
 		<hgroup>
 			<h1>Jworld</h1>
 		</hgroup>
 	<nav>
-		<center><ul>
-			<li><a href="index.php?page=start">Home</a></li>
-			<li><a href="index.php?page=films">Films</a></li>
-			<li><a href="index.php?page=about">About</a></li>
-			<li><a href="index.php?page=contact">Contact</a></li>
-			<li><a href="index.php?page=news">News & Events</a></li>
+		<ul>
+			<ul><li><a href="admin.php">Home</a></li>
+			<li><a href="admin.php?page=staff-acs">Staff</a></li>
+			<li><a href="admin.php?page=promo-acs">Promotions</a></li>
+			<li><a href="admin.php?page=tt-acs">Timetable</a></li>
+			<li><a href="admin.php?page=stat-acs">Statistics</a></li>
+			</ul>
 		</ul></center>
 	</nav>
 </header>

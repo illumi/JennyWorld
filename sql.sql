@@ -78,4 +78,5 @@ INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, scree
 
 INSERT INTO booking (film_ID, customer_name, booking_date, numof_tickets)  VALUES (1, 'DaveMurray', '2010-12-12', 4);
 
-INSERT INTO promotions (film_ID, promo_name, start_date, end_date, description)  VALUES (1, 'BOGOF', '2010-12-12', '2011-01-12', 'Buy one get one free on selected films.');
+INSERT INTO promotions (film_ID, promo_name, start_date, end_date, description)  VALUES (1, 'BOGOF', '2010-12-12', '2011-01-12', 'Buy one get one free.');
+
