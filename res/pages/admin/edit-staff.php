@@ -7,9 +7,8 @@
 ?>
 
 <div id="body">
-<center>
 <h1> Edit Current Staff Members</h1>
-<p>
+<center>
 	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff 
 Overview'>
 	<input type=button onClick="location.href='admin.php?page=add-staff'" value='Add Staff 
@@ -18,11 +17,10 @@ Members'>
 Staff Members'>
 	<input type=button onClick="location.href='admin.php?page=remove-staff'" value='Remove Staff 
 Member'>
-
 <h3>
-<form method="POST" action="res/pages/admin/edit.php" align="left">
+<form method="POST" action="res/pages/admin/edit.php">
 please enter the ID of the staff member you would like to edit:
-<input type="text" value="" name="editid" required> <br /><br />
+<input type="text" value="" name="editid" required> <br />
 Please enter new details (enter old values for unchanged fields) <br />
 Name: <input type="text" value="" name="editname" required> <br />
 Role(either staff or manager): <br /> 

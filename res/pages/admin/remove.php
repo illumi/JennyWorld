@@ -12,7 +12,7 @@ mysql_select_db('js230') or die(mysql_error());
 
 mysql_query("DELETE FROM staff WHERE staff_ID='$removed'");
 
-header("location:../../../admin.php?page=staff-acs");
+header("location:../../../admin.php?page=remove-staff");
 Mysql_close($con);
 
 
