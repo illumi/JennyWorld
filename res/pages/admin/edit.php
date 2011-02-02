@@ -1,6 +1,6 @@
 <?php
 $editid=$_POST['editid'];
-$editname=$_POST['editname'];
+$editname=addslashes($_POST['editname']);
 $editpassword=md5($_POST['editpassword']);
 $editrole=$_POST['editrole'];
 
@@ -15,6 +15,6 @@ header("location:../../../admin.php?page=staff-acs");
 mysql_query("UPDATE staff SET user_name = '$editname', password='$editpassword', 
 role_type = '$editrole' WHERE staff_ID = '$editid'");
 echo "success";
-header("location:../../../admin.php?page=staff-acs");
+header("location:../../../admin.php?page=edit-staff");
 mysql_close($con);
 ?>

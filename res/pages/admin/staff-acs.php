@@ -4,11 +4,9 @@
 	header('Location: ../../../index.php?page=adminLogin');
 }
 ?>
-
 <div id="body">
 <h1> Staff Overview</h1>
 <center>
-<p>
 <div id="header">
 	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff 
 Overview'>
@@ -19,6 +17,7 @@ Staff Members'>
 	<input type=button onClick="location.href='admin.php?page=remove-staff'" value='Remove Staff 
 Member'>
 </div>
+<h2>
 <?php
 
 include 'sql-connection.php';
@@ -48,5 +47,7 @@ echo "</table>";
 mysql_close($con);
 
 ?>
+</h2>
+<h3></h3>
 </center>
 </div>

@@ -7,8 +7,7 @@
 <div id="body">
 <h1> Remove Staff Members</h1>
 <center>
-<small>
-<p>
+<h2>
 	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff 
 Overview'>
 	<input type=button onClick="location.href='admin.php?page=add-staff'" value='Add Staff 
@@ -53,6 +52,6 @@ echo "</table>";
 mysql_close($con);
 
 ?>
-</small>
+</h2>
 </center>
 </div>

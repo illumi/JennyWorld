@@ -7,9 +7,8 @@
 ?>
 
 <div id="body">
-<center>
 <h1> Edit Current Staff Members</h1>
-<p>
+<center>
 	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff 
 Overview'>
 	<input type=button onClick="location.href='admin.php?page=add-staff'" value='Add Staff 
@@ -18,11 +17,10 @@ Members'>
 Staff Members'>
 	<input type=button onClick="location.href='admin.php?page=remove-staff'" value='Remove Staff 
 Member'>
-
 <h3>
-<form method="POST" action="res/pages/admin/edit.php" align="left">
+<form method="POST" action="res/pages/admin/edit.php">
 please enter the ID of the staff member you would like to edit:
-<input type="text" value="" name="editid" required> <br /><br />
+<input type="text" value="" name="editid" required> <br />
 Please enter new details (enter old values for unchanged fields) <br />
 Name: <input type="text" value="" name="editname" required> <br />
 Role(either staff or manager): <br /> 
@@ -64,10 +62,10 @@ mysql_close($con);
 </h2>
 <h3>
 <form method="POST" action="res/pages/admin/editpw.php">
-IF you wish to edit a user's password, please enter the staff ID here:
+IF you wish to edit a user password, please enter the staff ID here:
 <input type="text" value="" name="editid" required> <br />
 Please enter the new password:<br />
-<input type="text" value="" name="editpw" required> <br />
+<input type="password" value="" name="editpw" required> <br />
 <input type="submit" name="submit" id="submit" value="Submit">
 <input type="reset" name="reset" id="reset" value="Reset"> <br />
 
