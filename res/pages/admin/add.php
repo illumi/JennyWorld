@@ -5,7 +5,7 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 }
 
 $name = $_POST['newname'];
-$password = $_POST['newpassword'];
+$password = md5($_POST['newpassword']);
 $role = $_POST['newrole'];
 
 $con = mysql_connect('anubis.macs.hw.ac.uk','js230','js230') or die(mysql_error());

@@ -4,13 +4,11 @@
 	header('Location: ../../../index.php?page=adminLogin');
 }
 ?>
-
 <div id="body">
 <h1> Remove Staff Members</h1>
 <center>
 <small>
 <p>
-<div id="header">
 	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff 
 Overview'>
 	<input type=button onClick="location.href='admin.php?page=add-staff'" value='Add Staff 
@@ -25,7 +23,6 @@ Member'>
 	<input type="text" value="" name="removeid" required>
 	<input type="submit" name="submit" id="submit" value="Submit"> <br />
 </form>
-</div>
 <?php
 
 include 'sql-connection.php';
@@ -40,7 +37,6 @@ echo "<table border='1'>
 <tr>
 <th>Staff ID</th>
 <th>Name</th>
-<th>Password</th>
 <th>Role</th>
 </tr>";
 
@@ -49,7 +45,6 @@ while($row = mysql_fetch_array($query))
 	echo "<tr>";
 	echo "<td>" . $row['staff_ID'] . "</td>";
 	echo "<td>" . $row['user_name'] . "</td>";
-	echo "<td>" . $row['password'] . "</td>";
 	echo "<td>" . $row['role_type'] . "</td>";
 	echo "</tr>";
 }

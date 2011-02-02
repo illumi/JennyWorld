@@ -33,7 +33,6 @@ echo "<table border='1'>
 <tr>
 <th>Staff ID</th>
 <th>Name</th>
-<th>Password</th>
 <th>Role</th>
 </tr>";
 
@@ -42,7 +41,6 @@ while($row = mysql_fetch_array($query))
 	echo "<tr>";
 	echo "<td>" . $row['staff_ID'] . "</td>";
 	echo "<td>" . $row['user_name'] . "</td>";
-	echo "<td>" . $row['password'] . "</td>";
 	echo "<td>" . $row['role_type'] . "</td>";
 	echo"</tr>";
 }

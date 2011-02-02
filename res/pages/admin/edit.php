@@ -1,7 +1,7 @@
 <?php
 $editid=$_POST['editid'];
 $editname=$_POST['editname'];
-$editpassword=$_POST['editpassword'];
+$editpassword=md5($_POST['editpassword']);
 $editrole=$_POST['editrole'];
 
 $con=mysql_connect('anubis.macs.hw.ac.uk','js230','js230') or die(mysql_error());
