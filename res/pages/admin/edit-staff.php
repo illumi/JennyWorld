@@ -64,10 +64,10 @@ mysql_close($con);
 </h2>
 <h3>
 <form method="POST" action="res/pages/admin/editpw.php">
-IF you wish to edit a user's password, please enter the staff ID here:
+IF you wish to edit a user password, please enter the staff ID here:
 <input type="text" value="" name="editid" required> <br />
 Please enter the new password:<br />
-<input type="text" value="" name="editpw" required> <br />
+<input type="password" value="" name="editpw" required> <br />
 <input type="submit" name="submit" id="submit" value="Submit">
 <input type="reset" name="reset" id="reset" value="Reset"> <br />
 

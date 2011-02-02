@@ -23,8 +23,7 @@ session_start();
 	include 'res/config/admin/headder.php'; //loads the admin logo and the nav bar
 ?>
 
-	<div id="maincontent"> <!-- define whatever gets loaded here as "mainconnent"-->
-	
+	<div id="maincontent"> <!--define whatever gets loaded here as "mainconnent"-->
 	<?php
 	
 	echo 'Welcome : '.$_SESSION['login'];
@@ -42,7 +41,6 @@ session_start();
 	?>
 
 </div>
-    
 <?php 	
 	include 'res/config/footer.php'; //loads the admin footer file
 ?>
