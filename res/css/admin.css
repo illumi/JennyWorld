@@ -156,29 +156,24 @@ nav ul a:hover {
 }
 /* level 2 list */
 nav ul {
-	background: #ddd; /* for non-css3 browsers */
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#cfcfcf'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#cfcfcf)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #fff,  #cfcfcf); /* for firefox 3.6+ */
-
 	display: none;
-	margin: 0;
-	padding: 0;
-	width: 185px;
+	margin: 5px 0px;
+	padding: 10px;
+	width: 140px;
 	position: absolute;
-	top: 35px;
-	left: 0;
-	border: solid 1px #b4b4b4;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
-	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
-	box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	top: 200px;
+	text-align:center;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	box-shadow: 1px 1px 3px #000;
+    text-shadow: 1px 1px 1px #000;
+	background: rgba(255,255,255,0.2);
 }
 /* dropdown */
 nav li:hover > ul {
 	display: block;
+	background: rgba(255,255,255,0.4);
 }
 nav ul li {
 	float: none;
@@ -197,15 +192,6 @@ nav:after {
 	visibility: hidden;
 	line-height: 0;
 	height: 0;
-}
-nav {
-	display: inline-block;
-}
-html[xmlns] #nav {
-	display: block;
-}
-* html #nav {
-	height: 1%;
 }
 
 #maincontent {
