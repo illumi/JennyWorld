@@ -1,3 +1,10 @@
+<?php
+	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ../../../index.php?page=adminLogin');
+}
+?>
+
 <div id="body">
 <h1> Promotions Overview</h1>
 <center>
@@ -42,7 +49,11 @@ while($row = mysql_fetch_array($query))
 	echo"</tr>";
 }
 echo "</table>";
+<<<<<<< HEAD
 mysql_close($link);
+=======
+mysql_close($con);
+>>>>>>> 3c6a49ffb508fc52b395258bf060a3c998f7052d
 
 ?>
 </center>

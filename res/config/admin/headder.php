@@ -29,13 +29,12 @@ Computer Science and Information Systems Year 3
 			<h1>Jworld</h1>
 		</hgroup>
 	<nav>
-		<ul>
-			<ul><li><a href="admin.php">Home</a></li>
+		<center><ul>
+			<li><a href="admin.php">Home</a></li>
 			<li><a href="admin.php?page=staff-acs">Staff</a></li>
 			<li><a href="admin.php?page=promo-acs">Promotions</a></li>
 			<li><a href="admin.php?page=tt-acs">Timetable</a></li>
 			<li><a href="admin.php?page=stat-acs">Statistics</a></li>
-			</ul>
 		</ul></center>
 	</nav>
 </header>

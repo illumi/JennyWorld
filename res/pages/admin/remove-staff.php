@@ -1,3 +1,10 @@
+<?php
+	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ../../../index.php?page=adminLogin');
+}
+?>
+
 <div id="body">
 <h1> Remove Staff Members</h1>
 <center>
@@ -44,7 +51,7 @@ while($row = mysql_fetch_array($query))
 	echo "<td>" . $row['user_name'] . "</td>";
 	echo "<td>" . $row['password'] . "</td>";
 	echo "<td>" . $row['role_type'] . "</td>";
-	echo"</tr>";
+	echo "</tr>";
 }
 echo "</table>";
 
