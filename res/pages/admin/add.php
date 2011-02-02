@@ -1,4 +1,9 @@
 <?php
+if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ../../../index.php?page=adminLogin');
+}
+
 $name = $_POST['newname'];
 $password = $_POST['newpassword'];
 $role = $_POST['newrole'];

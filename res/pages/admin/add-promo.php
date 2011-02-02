@@ -1,3 +1,10 @@
+<?php
+	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ../../../index.php?page=adminLogin');
+}
+?>
+
 <div id="body">
 <h1> Add Promotions</h1>
 <center>

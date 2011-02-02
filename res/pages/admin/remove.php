@@ -1,4 +1,10 @@
 <?php
+
+if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ../../../index.php?page=adminLogin');
+}
+
 $removed=$_POST['removeid'];
 
 $con = mysql_connect('anubis.macs.hw.ac.uk','js230','js230') or die(mysql_error());
