@@ -14,7 +14,7 @@ body {
 	/*background-image: url(../img/jen.jpg);*/
 	background-repeat: no-repeat;
 	background-position: right top;
-	width: 840px;
+	width: 980px;	
 	margin-top: 0px;
 	margin-right: auto;
 	margin-bottom: 0px;
@@ -112,8 +112,9 @@ nav ul a:hover, nav ul a:focus {
 
 nav {
 	padding-top: 150px;
-	width:810px;
-	margin-left:auto;
+	width: 980px;	
+	margin-left:auto;	
+//margin-left:-70px;
 	margin-right:auto;
 }
 nav li {
@@ -207,7 +208,7 @@ nav:after {
 	font-size:28px;
 	font-weight:bold;
 	background-image: url(../img/bcg.png);
-	background-repeat:repeat-y;
+	background-repeat:repeat-y;	
 	width: 519px;
 	height:100%;
 	padding:20px 260px 20px 30px;

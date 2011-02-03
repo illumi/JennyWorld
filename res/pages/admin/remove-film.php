@@ -4,24 +4,33 @@
 	header('Location: ../../../index.php?page=adminLogin');
 }
 ?>
+
 <div id="body">
 <h1> Remove Film</h1>
 <center>
-<small>
-<p>
-	<input type=button onClick="location.href='admin.php?page=films-acs'" value='Film Records'>
-	<input type=button onClick="location.href='admin.php?page=add-film'" value='Add Film'>
-	<input type=button onClick="location.href='admin.php?page=edit-staff'" value='Edit Current 
-Staff Members'>
-	
-
-<form method="POST" action="res/pages/admin/rm-flm.php">
-	Please enter the ID of the film you wish to remove:
-	<input type="text" value="" name="removefilm" required>
-	<input type="submit" name="submit" id="submit" value="Submit"> <br />
-</form>
-
-<small>
+	<div id="header">
+		<input type=button onClick="location.href='admin.php?page=films-acs'" value='Film Records'>
+		<input type=button onClick="location.href='admin.php?page=add-film'" value='Add Film'>
+		<input type=button onClick="location.href='admin.php?page=edit-film'" value='Edit Film'>
+	</div>	
+<section id="remove info">
+    <h3>
+	<form method="POST" action="res/pages/admin/rm-flm.php">
+	   <table border="0">
+		<tr>
+		<td>Enter the ID of the film you wish to remove:</td>
+		<td><input type="text" value="" name="removefilm" required></td>
+		<tr height="10px"></tr>
+	   </table>
+	   <table border="0">
+		<td><input type="submit" name="submit" id="submit" value="Submit"></td>
+		<td><input type="reset" name="reset" id="reset" value="Reset"></td>
+		</tr>
+	   </table>
+        </form>
+    </h3>
+</section>
+<h3>
 <?php
 
 include 'sql-connection.php';
@@ -57,6 +66,6 @@ while($row = mysql_fetch_array($query))
 echo "</table>";
 mysql_close($link);
 ?>
-</small>
+</h3>
 </center>
 </div>

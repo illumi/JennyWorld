@@ -20,5 +20,5 @@ mysql_select_db('js230') or die(mysql_error());
 $sql="INSERT INTO films (film_title, film_length, film_genre, film_rating, film_year) 
      VALUES('$filmtitle','$filmlength','$genre','$rating','$year')";
 mysql_query($sql) or die(mysql_error());
-header("location:../../../admin.php?page=films-acs");
+header("location: ../../../admin.php?page=add-film");
 ?>

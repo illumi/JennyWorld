@@ -40,5 +40,13 @@ Computer Science and Information Systems Year 3
 		<li><a href="admin.php?page=promo-acs">Promotions</a></li>
 		<li><a href="admin.php?page=tt-acs">Timetable</a></li>
 		<li><a href="admin.php?page=stat-acs">Statistics</a></li>
+		<li><a href="admin.php?page=films-acs">Film Records</a>
+			<ul>
+				<li><a href="admin.php?page=add-film">Add Film</a></li>
+				<li><a href="admin.php?page=edit-film">Edit Film</a></li>
+				<li><a href="admin.php?page=remove-film">Remove Film</a></li>
+			</ul>
+	`	</li>
+		
 	</nav>
-</header>
+	</header>

@@ -1,12 +1,18 @@
+<?php
+	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ../../../index.php?page=adminLogin');
+}
+?>
+
 <div id="body">
 <h1>Film Records</h1>
 <center>
-<p>
-<div id="header">
-	<input type=button onClick="location.href='admin.php?page=add-film'" value='Add Film'>
-	<input type=button onClick="location.href='admin.php?page=edit-promo'" value='Edit Film'>
-	<input type=button onClick="location.href='admin.php?page=remove-film'" value='Remove Film'>
-</div>
+	<div id="header">
+		<input type=button onClick="location.href='admin.php?page=add-film'" value='Add Film'>
+		<input type=button onClick="location.href='admin.php?page=edit-film'" value='Edit Film'>
+		<input type=button onClick="location.href='admin.php?page=remove-film'" value='Remove Film'>
+	</div>
 <h3>
 <?php
 

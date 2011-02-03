@@ -12,7 +12,7 @@ mysql_select_db('js230') or die(mysql_error());
 
 mysql_query("DELETE FROM films WHERE film_ID='$removed'");
 
-header("location:../../../admin.php?page=remove-film");
+header("location: ../../../admin.php?page=remove-film");
 Mysql_close($con);
 
 
