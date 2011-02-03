@@ -33,10 +33,11 @@ $screenResult= mysql_query ($screenQuery);
  
 
 
+
 ?>
 
 <div id="body">
-<h1> Timetable Overview</h1>
+<h1> Add Film to Timetable</h1>
 <center>
 <p>
 
@@ -51,7 +52,7 @@ $screenResult= mysql_query ($screenQuery);
 	</tr>
 </table>
 </div>
-
+<h2>
 <section id="add film timetable">
 	<form method="POST" action="res/pages/admin/add-f-tt.php">
   
@@ -75,13 +76,18 @@ $screenResult= mysql_query ($screenQuery);
 		</td>
 	</tr>
 <!--Need to enforce the formatting of the date and time -->
-<tr>	<td>Start Date: </td>
-	<td> <input type="text" value="" name="newStartDate" required>	</td>
-	<td>End Date: </td>
+<tr>	<td NOWRAP>Start Date	(yyyy-mm-dd):</td> 
+	<td><input type="text" value="" name="newStartDate" required>	</td>
+	
+</tr>
+
+<tr>	<td NOWRAP>End Date (yyyy-mm-dd): </td>
 	<td> <input type="text" value="" name="newEndDate" required>	</td>
 </tr>
 
-<tr>	<td>Time: </td>
+
+
+<tr>	<td NOWRAP>Time (00:00:00): </td>
 	<td> <input type="text" value="" name="newTime" required>	</td>
 	
 </tr>	

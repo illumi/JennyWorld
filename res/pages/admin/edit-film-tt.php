@@ -1,5 +1,5 @@
 <div id="body">
-<h1> Timetable Overview</h1>
+<h1> Edit Film in Timetable</h1>
 <center>
 <p>
 
@@ -22,10 +22,13 @@ $con = mysql_connect($host,$username,$password) or die(mysql_error());
 
 mysql_select_db($database) or die(mysql_error());
 
+$my_t=getdate(date("U"));
+print("$my_t[year]-$my_t[mon]-$my_t[mday]");
+
 echo date("Y-m-d");
 
 
-$query = "SELECT showings.screen_ID, showings.film_ID,  films.film_title, showings.start_time, films.film_rating FROM showings, films WHERE showings.film_ID = films.film_ID"; //ORDER BY films.film_title";
+$query = "SELECT showings.screen_ID, showings.film_ID,  films.film_title, showings.start_time, films.film_rating FROM showings, films WHERE showings.film_ID = films.film_ID";
      
 $result = mysql_query($query) or die(mysql_error());
 
@@ -51,6 +54,6 @@ echo "</table>";
 
 mysql_close($con);
 
-?> </h2>
+?></h2>
 </center>
 </div>
