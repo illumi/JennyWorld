@@ -15,10 +15,11 @@ session_start();
 <!DOCTYPE html>
 
 <?php 
-	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+	if( (!isset($_SESSION['login']) && !isset($_SESSION['admin'])) || !$_SESSION['admin'])
 	{
-		header('location: index.php');
+		header('location: ./index.php');
 	}
+
 	
 	include 'res/config/admin/headder.php'; //loads the admin logo and the nav bar
 ?>
