@@ -48,12 +48,12 @@ Promotion'>
 		<option VALUE="0">Film Title
 		<? echo $filmOptions?>
 		</select> <br />
-	Promotion Name: <input type="text" value="" id="promoname" required> <br />
-	Start Date: (Format: YYYY-MM-DD) <input type="text" value="" id="start" required> <br />
-	End Date: (Format: YYYY-MM-DD) <input type="text" value="" id="end" required> <br />
-	Description: <input type="text" value="" id="desc" required> <br />
-		<input type="submit" name="submit" id="submit" value="Submit">
-		<input type="reset" name="reset" id="reset" value="Reset"> <br />
+	Promotion Name: <input type="text" value="" name="promoname" required> <br />
+	Start Date: (Format: YYYY-MM-DD) <input type="text" value="" name="start" required> <br />
+	End Date: (Format: YYYY-MM-DD) <input type="text" value="" name="end" required> <br />
+	Description: <input type="text" value="" name="desc" required> <br />
+		<input type="submit" name="submit" name="submit" value="Submit">
+		<input type="reset" name="reset" name="reset" value="Reset"> <br />
 	</form>
 	</section>
 </h2>

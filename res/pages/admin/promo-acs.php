@@ -28,7 +28,7 @@ $query = mysql_query("SELECT * FROM promotions");
 echo "<table border='1'>
 <tr>
 <th>Promo ID</th>
-<th>Film ID</th>
+<th>Film</th>
 <th>Promo Name</th>
 <th>Start</th>
 <th>End</th>
@@ -37,9 +37,12 @@ echo "<table border='1'>
 
 while($row = mysql_fetch_array($query))
 {
+	$film = $row['film_ID'];
+	echo $film;
+	$filmtitle = mysql_query("SELECT film_title FROM films WHERE film_ID=$film") or die(mysql_error());
 	echo "<tr>";
 	echo "<td>" . $row['promo_id'] . "</td>";
-	echo "<td>" . $row['film_ID'] . "</td>";
+	echo "<td>" . $filmtitle . "</td>";
 	echo "<td>" . $row['promo_name'] . "</td>";
 	echo "<td>" . $row['start_date'] . "</td>";
 	echo "<td>" . $row['end_date'] . "</td>";
