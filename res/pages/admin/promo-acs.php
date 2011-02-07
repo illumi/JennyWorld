@@ -3,9 +3,14 @@
 <center>
 <p>
 <div id="header">
-	<input type=button onClick="location.href='admin.php?page=add-promo'" value='Add Promotion'>
-	<input type=button onClick="location.href='admin.php?page=edit-promo'" value='Edit Promotion'>
-	<input type=button onClick="location.href='admin.php?page=remove-promo'" value='Remove Promotion'>
+	<input type=button onClick="location.href'admin.php?page=promo-acs'" value='Promotions
+Overview'>
+	<input type=button onClick="location.href='admin.php?page=add-promo'" value='Add
+Promotion'>
+	<input type=button onClick="location.href='admin.php?page=edit-promo'" value='Edit
+Promotion'>
+	<input type=button onClick="location.href='admin.php?page=remove-promo'" value='Remove
+Promotion'>
 </div>
 <?php
 
