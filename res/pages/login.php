@@ -2,10 +2,10 @@
 
 session_start();
 
-$username="js230";
-$password="js230";
-$database="js230";
-$host = "anubis.macs.hw.ac.uk";
+$username="js230"; /*username*/
+$password="js230"; /*password*/
+$database="js230"; /*database name*/
+$host = "anubis.macs.hw.ac.uk";  /*host name*/
 
 $user = $_POST['username'];
 $pass = $_POST['password'];
@@ -33,11 +33,15 @@ if($count == 1){
             $_SESSION['login'] = $row[1];
 
             if($row[3] == 'manager')
-                $_SESSION['admin'] = true;
+            {
+                $_SESSION['admin'] = 1;
+            }
             else
-                $_SESSION['admin'] = false;
+            {
+                $_SESSION['admin'] = 0;
+            }
         }
-	header("location: ../../admin.php");
+        header("location: ../../admin.php");
 }
 //displays error message otherwise
 else {

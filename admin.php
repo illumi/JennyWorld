@@ -14,8 +14,8 @@ session_start();
 
 <!DOCTYPE html>
 
-<?php 
-	if( (!isset($_SESSION['login']) && !isset($_SESSION['admin'])) || !$_SESSION['admin'])
+<?php
+	if( !isset($_SESSION['login']) && !isset($_SESSION['admin']))
 	{
 		header('location: ./index.php');
 	}

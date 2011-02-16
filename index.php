@@ -1,13 +1,17 @@
-<?php 
-
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 /**********************************************
 
 Software Engineering Group Project
 
 Computer Science and Information Systems Year 3
 
-**********************************************/ 
-
+**********************************************/
+if( isset($_SESSION['login']) && isset($_SESSION['admin']))
+{
+    header('Location: ./admin.php');
+}
 ?>
 
 
