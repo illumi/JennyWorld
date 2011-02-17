@@ -1,0 +1,8 @@
+# ignore the NetBeans file
+nbproject/
+
+#ignore itself
+ignore.gitignore
+
+#ignore my login.php.me for localhost
+login.php.me

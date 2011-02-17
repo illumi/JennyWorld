@@ -15,13 +15,13 @@ session_start();
 <!DOCTYPE html>
 
 <?php
-	if( !isset($_SESSION['login']) && !isset($_SESSION['admin']))
+	if( !isset($_SESSION['login']) && !isset($_SESSION['admin']))   
 	{
 		header('location: ./index.php');
 	}
 
 	
-	include 'res/config/admin/headder.php'; //loads the admin logo and the nav bar
+	include('res/config/admin/headder.php'); //loads the admin logo and the nav bar
 ?>
 
 	<div id="maincontent"> <!--define whatever gets loaded here as "mainconnent"-->
@@ -34,7 +34,7 @@ session_start();
 		if(file_exists('res/pages/admin/'.$_GET['page'].'.php')) {
 			include('res/pages/admin/'.$_GET['page'].'.php');
 		} else {
-			include 'res/pages/error.php';
+			include('res/pages/error.php');
 		} 
 	} else {
 			include('res/pages/admin/start.php');
@@ -43,7 +43,7 @@ session_start();
 
 </div>
 <?php 	
-	include 'res/config/footer.php'; //loads the admin footer file
+	include('res/config/footer.php'); //loads the admin footer file
 ?>
 
 </html>

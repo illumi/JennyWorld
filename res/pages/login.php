@@ -5,7 +5,7 @@ session_start();
 $username="js230"; /*username*/
 $password="js230"; /*password*/
 $database="js230"; /*database name*/
-$host = "anubis.macs.hw.ac.uk";  /*host name*/
+$host = "www.macs.hw.ac.uk";  /*host name*/
 
 $user = $_POST['username'];
 $pass = $_POST['password'];
