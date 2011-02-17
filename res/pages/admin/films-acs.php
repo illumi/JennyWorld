@@ -8,11 +8,7 @@
 <div id="body">
 <h1>Film Records</h1>
 <center>
-	<div id="header">
-		<input type=button onClick="location.href='admin.php?page=add-film'" value='Add Film'>
-		<input type=button onClick="location.href='admin.php?page=edit-film'" value='Edit Film'>
-		<input type=button onClick="location.href='admin.php?page=remove-film'" value='Remove Film'>
-	</div>
+
 <h3>
 <?php
 

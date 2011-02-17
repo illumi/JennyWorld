@@ -41,17 +41,6 @@ $screenResult= mysql_query ($screenQuery);
 <center>
 <p>
 
-
-<div id="header">
-	<table border="0">
-	<tr>
-		<td>	<input type=button onClick="location.href='admin.php?page=tt-acs'" value='Timetable Overview'>	</td>
-		<td>	<input type=button onClick="location.href='admin.php?page=add-film-tt'" value='Add Film'>		</td>
-		<td>	<input type=button onClick="location.href='admin.php?page=edit-film-tt'" value='Edit Current Timetable'></td>
-		<td>	<input type=button onClick="location.href='admin.php?page=remove-film-tt'" value='Remove Film'>	</td>
-	</tr>
-</table>
-</div>
 <h2>
 <section id="add film timetable">
 	<form method="POST" action="res/pages/admin/add-f-tt.php">

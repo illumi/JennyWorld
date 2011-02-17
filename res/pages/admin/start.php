@@ -13,7 +13,6 @@ if( (!isset($_SESSION['login']) && !isset($_SESSION['admin'])))
 	header('Location: ./index.php?page=adminLogin');
 }
 ?>
-	
 
 <div id="body">
 	<center><h1>Administration</h1></center>

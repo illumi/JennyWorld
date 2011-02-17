@@ -8,11 +8,7 @@
 <div id="body">
 <h1> Remove Film</h1>
 <center>
-	<div id="header">
-		<input type=button onClick="location.href='admin.php?page=films-acs'" value='Film Records'>
-		<input type=button onClick="location.href='admin.php?page=add-film'" value='Add Film'>
-		<input type=button onClick="location.href='admin.php?page=edit-film'" value='Edit Film'>
-	</div>	
+
 <section id="remove info">
     <h3>
 	<form method="POST" action="res/pages/admin/rm-flm.php">

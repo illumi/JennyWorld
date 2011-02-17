@@ -2,15 +2,7 @@
 <h1> Promotions Overview</h1>
 <center>
 <p>
-<div id="header">
-	<table border="0">
-	<tr>
-		<td>	<input type=button onClick="location.href='admin.php?page=add-promo'" value='Add Promotion'> </td>
-		<td>	<input type=button onClick="location.href='admin.php?page=edit-promo'" value='Edit Promotion'> </td>
-		<td>	<input type=button onClick="location.href='admin.php?page=remove-promo'" value='Remove Promotion'> </td>
-	</tr>
-	</table>
-</div>
+
 <h3>
 <?php
 

@@ -27,11 +27,6 @@ $options="";
 <div id="body">
 <h1>Remove Promotion</h1>
 <center>
-	<div id="header">
-	<input type=button onClick="location.href='admin.php?page=promo-acs'" value='Promotions Overview'>
-	<input type=button onClick="location.href='admin.php?page=edit-promo'" value='Edit Promotion'>
-	<input type=button onClick="location.href='admin.php?page=add-promo'" value='Add Promotion'>
-	</div>
 
     <h3>
 	<form method="POST" action="res/pages/admin/remove-pro.php">

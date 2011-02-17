@@ -9,14 +9,6 @@
 <h1> Add Staff Members</h1>
 <center>
 <h2>
-	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff
-Overview'>
-	<input type=button onClick="location.href='admin.php?page=add-staff'" value='Add Staff
-Members'>
-	<input type=button onClick="location.href='admin.php?page=edit-staff'" value='Edit Current
-staff Members'>
-	<input type=button onClick="location.href='admin.php?page=remove-staff'" value='Remove Staff
-Member'>
 
 <?php
 
