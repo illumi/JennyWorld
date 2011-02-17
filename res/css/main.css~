@@ -189,8 +189,8 @@ footer p {
 
 #gay { 
 	margin:3px; 
-	width:400px; 
-	height:300px;
+	width:600px; 
+	height:600px;
 	display:none; 
 	float:center;
 	background:#ffffff;

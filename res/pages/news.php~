@@ -39,7 +39,7 @@ while($row = mysql_fetch_array($result)){
   
 
 	echo "<tr>";
-	echo "<td><a href='index.php?page=details1'>" . $row['film_title'] . "</td>";
+	echo "<td>" . $row['film_title'] . "</td>";
 	echo "<td>" . $row['promo_name'] . "</td>";
 	echo "<td>" . $row['end_date'] . "</td>";
 	echo "<td>" . $row['description'] . "</td>";
