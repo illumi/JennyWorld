@@ -16,6 +16,9 @@ Computer Science and Information Systems Year 3
 	<title>Jennyworld</title>
 
 	<link href="res/css/main.css" rel="stylesheet" type="text/css" />
+	<link href="calendar_eu.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" src="calendar_eu.js"></script>
+	
 </head>
 
 <body>

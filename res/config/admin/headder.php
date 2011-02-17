@@ -16,6 +16,7 @@ Computer Science and Information Systems Year 3
 	<title>Administration</title>
 
 	<link href="res/css/admin.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" src="calendar_us.js"></script>
 </head>
 
 <body>

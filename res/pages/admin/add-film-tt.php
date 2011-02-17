@@ -76,13 +76,21 @@ $screenResult= mysql_query ($screenQuery);
 		</td>
 	</tr>
 <!--Need to enforce the formatting of the date and time -->
-<tr>	<td NOWRAP>Start Date	(yyyy-mm-dd):</td> 
-	<td><input type="text" value="" name="newStartDate" required>	</td>
+<tr>	<td NOWRAP>Start Date:</td> 
+	<td>
+			<?php
+			include('calendar/calendar.html');
+			?>
+	</td>
 	
 </tr>
 
-<tr>	<td NOWRAP>End Date (yyyy-mm-dd): </td>
-	<td> <input type="text" value="" name="newEndDate" required>	</td>
+<tr>	<td NOWRAP>End Date: </td>
+	<td>
+			<?php
+			include('calendar/calendar.html');
+			?>
+	</td>
 </tr>
 
 
@@ -92,7 +100,8 @@ $screenResult= mysql_query ($screenQuery);
 	
 </tr>	
 <tr>
-	<td> <input type="submit" name="submit" id="submit" value="Submit">	</td>	<td> <input type="reset" name="reset" id="reset" value="Reset">		</td>
+	<td> <input type="submit" name="submit" id="submit" value="Submit">	</td>
+	<td> <input type="reset" name="reset" id="reset" value="Reset">		</td>
 </tr>
 </table>
 	</form>
