@@ -12,14 +12,7 @@
 <h3>
 <?php
 
-$username="js230"; /*username*/
-$password="js230"; /*password*/
-$database="js230"; /*database name*/
-$host = "anubis.macs.hw.ac.uk";  /*host name*/
-
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-
-mysql_select_db($database) or die(mysql_error());
+include 'sql-connection.php';
 
 $query = mysql_query("SELECT * FROM films");
 

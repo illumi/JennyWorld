@@ -7,22 +7,13 @@
 }
 
 include 'sql-connection.php';
-
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-mysql_select_db($database) or die(mysql_error());
-
-$titleQuery = "SELECT film_ID FROM films";
-
-$titleResult = mysql_query ($titleQuery);
-
-$options="";
-  
+  /*
   while ($row=mysql_fetch_array($titleResult)) {
-  
+    
   	$filmid=$row["film_ID"];
-  	$options.="<OPTION VALUE=\"$filmid\">".$filmid.'</option>';
+  	$options.="<option value=\"$i\">".$filmid.'</option>';
 }
-
+*/
 
 ?>
 
@@ -39,9 +30,16 @@ $options="";
 			<tr>		
 				<td> Film ID: </td>	
 				<td> 
-					<select NAME="filmid"  required>
-					<option VALUE="0">Film ID
-					<? echo $options?>
+					<select NAME="filmid">
+					<option VALUE="0">Film ID</option>
+					<?
+					$query = mysql_query("SELECT film_ID FROM films;");
+					$i=1;
+					while ($row = mysql_fetch_assoc($query)) {
+						echo '<option value="' . $i . '">' . $row['film_ID']. '</option>';
+						$i++;
+					}
+					?>
 					</select> 
 				</td>
 			</tr>
@@ -86,5 +84,5 @@ $options="";
 
 <h3>
 <?php
-mysql_close($con);
+mysql_close($link);
 ?>
