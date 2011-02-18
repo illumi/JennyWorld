@@ -33,7 +33,7 @@ Computer Science and Information Systems Year 3
 		<center><ul>
 			<li><a href="index.php?page=start">Home</a></li>
 			<li><a href="index.php?page=films">Films</a></li>
-			<li><a href="index.php?page=about">About</a></li>
+			<li><a href="index.php?page=about">Information</a></li>
 			<li><a href="index.php?page=contact">Contact</a></li>
 			<li><a href="index.php?page=news">Events</a></li>
 		</ul></center>
