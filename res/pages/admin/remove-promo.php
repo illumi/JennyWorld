@@ -1,13 +1,10 @@
 <?php
 	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ../../../index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin');
 }
 
 include 'sql-connection.php';
-
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-mysql_select_db($database) or die(mysql_error());
 
 $titleQuery = "SELECT promo_id FROM promotions";
 
@@ -54,6 +51,6 @@ $options="";
 
 <h3>
 <?php
-mysql_close($con);
+mysql_close($link);
 ?>
 

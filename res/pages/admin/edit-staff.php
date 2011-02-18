@@ -2,7 +2,7 @@
 <?php
 	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ../../../index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin');
 }
 ?>
 
@@ -29,9 +29,6 @@ Role(either staff or manager): <br />
 
 include 'sql-connection.php';
 
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-mysql_select_db($database) or die(mysql_error());
-
 $query = mysql_query("SELECT * FROM staff");
 
 echo "<table border='1'>
@@ -50,7 +47,7 @@ while($row = mysql_fetch_array($query))
 	echo"</tr>";
 }
 echo "</table>";
-mysql_close($con);
+mysql_close($link);
 ?>
 </h2>
 <h3>

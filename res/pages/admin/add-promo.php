@@ -1,19 +1,10 @@
-
-
 <?php
 	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ../../../index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin');
 }
 
 include 'sql-connection.php';
-  /*
-  while ($row=mysql_fetch_array($titleResult)) {
-    
-  	$filmid=$row["film_ID"];
-  	$options.="<option value=\"$i\">".$filmid.'</option>';
-}
-*/
 
 ?>
 
