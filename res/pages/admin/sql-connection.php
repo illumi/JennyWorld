@@ -12,7 +12,5 @@ mysql_select_db($database, $link) or die(mysql_error()); /*connects specified da
 
 //mysql_close($link);   /* closes connection to the sql database */
 
-
-
 ?>
 

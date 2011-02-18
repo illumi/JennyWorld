@@ -2,20 +2,13 @@
 
 session_start();
 
-$username="js230"; /*username*/
-$password="js230"; /*password*/
-$database="js230"; /*database name*/
-$host = "anubis.macs.hw.ac.uk";  /*host name*/
+include 'sql-connection.php';
 
 $user = $_POST['username'];
 $pass = $_POST['password'];
 
 // encrypt the password into MD5
 $pass = md5($pass);
-
-$link = mysql_connect($host,$username,$password) or die('Could not connect: ' . mysql_error());
-
-mysql_select_db($database) or die( "Unable to select the database: " . $database . " ");
 
 $sql = "SELECT * FROM staff WHERE user_name = '$user' AND password = '$pass'";
 
@@ -47,4 +40,6 @@ if($count == 1){
 else {
 	echo "Wrong Username or Password";
 }
+
+mysql_close($link);
 ?>

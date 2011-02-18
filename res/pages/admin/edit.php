@@ -1,11 +1,15 @@
 <?php
+if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ./index.php?page=adminLogin');
+}
+
 $editid=$_POST['editid'];
 $editname=addslashes($_POST['editname']);
 $editpassword=md5($_POST['editpassword']);
 $editrole=$_POST['editrole'];
 
-$con=mysql_connect('anubis.macs.hw.ac.uk','js230','js230') or die(mysql_error());
-mysql_select_db('js230') or die(mysql_error());
+include 'sql-connection.php';
 
 if($editrole!="manager" && $editrole!="staff"){
 die("role must be either manager or staff");
@@ -16,5 +20,5 @@ mysql_query("UPDATE staff SET user_name = '$editname', password='$editpassword',
 role_type = '$editrole' WHERE staff_ID = '$editid'");
 echo "success";
 header("location:../../../admin.php?page=edit-staff");
-mysql_close($con);
+mysql_close($link);
 ?>

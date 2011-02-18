@@ -18,10 +18,6 @@ Computer Science and Information Systems Year 3
 
 include 'sql-connection.php';
 
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-
-mysql_select_db($database) or die(mysql_error());
-
 
 $query = "select films.film_title, promotions.promo_name, promotions.end_date, promotions.description from films, promotions";
      
@@ -47,7 +43,7 @@ while($row = mysql_fetch_array($result)){
 }
 echo "</table></h3>";
 
-mysql_close($con);
+mysql_close($link);
 
 ?> 
 </div>

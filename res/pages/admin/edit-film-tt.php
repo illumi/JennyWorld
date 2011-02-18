@@ -1,13 +1,10 @@
 <?php
 	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ../../../index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin');
 }
 
 include 'sql-connection.php';
-
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-mysql_select_db($database) or die(mysql_error());
 
 $titleQuery = "SELECT film_ID, film_title FROM films";
 $screenQuery = "SELECT screen_ID FROM screens";
@@ -99,10 +96,6 @@ and then applied
 
 include 'sql-connection.php';
 
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-
-mysql_select_db($database) or die(mysql_error());
-
 $my_t=getdate(date("U"));
 print("$my_t[year]-$my_t[mon]-$my_t[mday]");
 
@@ -141,7 +134,7 @@ while($row = mysql_fetch_array($result)){
 }
 echo "</table>";
 
-mysql_close($con);
+mysql_close($link);
 
 ?></h2>
 </center>

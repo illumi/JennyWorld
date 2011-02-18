@@ -21,9 +21,6 @@
 
 include 'sql-connection.php';
 
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-mysql_select_db($database) or die(mysql_error());
-
 $sql= "select start_time, end_time from showings where film_ID = 1";
 
 $result = mysql_query($sql) or die(mysql_error());
@@ -45,7 +42,7 @@ while($row = mysql_fetch_array($result)){
 }
 echo "</table></h3>";
 
-mysql_close($con);
+mysql_close($link);
 
 ?>
 </center>

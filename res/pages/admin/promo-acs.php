@@ -1,3 +1,10 @@
+<?php
+if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ./index.php?page=adminLogin');
+}
+?>
+
 <div id="body">
 <h1> Promotions Overview</h1>
 <center>
@@ -8,12 +15,7 @@
 
 include 'sql-connection.php';
 
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-
-mysql_select_db($database) or die(mysql_error());
-
 echo date("Y-m-d");
-
 
 $query = "SELECT promotions.promo_id, films.film_title,  promotions.promo_name, promotions.start_date, promotions.end_date, promotions.description FROM promotions, films WHERE promotions.film_ID = films.film_ID";
      
@@ -43,7 +45,7 @@ while($row = mysql_fetch_array($result)){
 }
 echo "</table>";
 
-mysql_close($con);
+mysql_close($link);
 
 ?> 
 </h3>
