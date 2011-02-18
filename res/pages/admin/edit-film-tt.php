@@ -75,7 +75,7 @@ and then applied
 	<tr>	<td>Showing: </td>
 		<td> <SELECT Name="newShowingID">
 			<option value="0">Showings
-			<? echo $optionsShowings?>
+			<?php echo $optionsShowings?>
 			</select>
 		</td>
 	</tr>
@@ -84,7 +84,7 @@ and then applied
 	<tr>	<td>Screen: </td>
 		<td> <SELECT Name="newScreen">
 			<option value="0">Screen
-			<? echo $optionsScreen?>
+			<?php echo $optionsScreen?>
 			</select>
 		</td>
 	</tr>

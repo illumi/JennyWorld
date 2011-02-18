@@ -71,10 +71,26 @@ CREATE TABLE promotions (
 INSERT INTO staff (user_name, password, role_type)  VALUES ('jenny', 'test', 'manager');
 
 INSERT INTO screens (screen_ID, capacity)  VALUES (1, 1000);
+INSERT INTO screens (screen_ID, capacity)  VALUES (2, 1000);
+INSERT INTO screens (screen_ID, capacity)  VALUES (3, 500);
+INSERT INTO screens (screen_ID, capacity)  VALUES (4, 500);
+INSERT INTO screens (screen_ID, capacity)  VALUES (5, 100);
 
 INSERT INTO films (film_title, film_length, film_genre , film_rating, film_year)  VALUES ('Harry Potter and the Deathly Hallows pt1', 146, 'Fanstasy', '12A', 2010);
+INSERT INTO films (film_title, film_length, film_genre , film_rating, film_year)  VALUES ('127 Hours', 96, 'Drama', '15', 2010);
+INSERT INTO films (film_title, film_length, film_genre , film_rating, film_year)  VALUES ('Black Swan', 108, 'Thriller', '15', 2010);
 
 INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID, available_tickets)  VALUES ('2010-12-12', '2011-01-12', '15:30:00', '17:30:00', 1, 1, 1000);
+INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID, available_tickets)  VALUES ('2010-12-12', '2011-01-12', '18:00:00', '20:00:00', 1, 1, 1000);
+INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID, available_tickets)  VALUES ('2010-12-12', '2011-01-12', '20:30:00', '22:30:00', 1, 1, 1000);
+
+INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID, available_tickets)  VALUES ('2011-01-12', '2011-02-12', '15:30:00', '17:30:00', 2, 2, 1000);
+INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID, available_tickets)  VALUES ('2011-01-12', '2011-02-12', '18:00:00', '20:00:00', 2, 2, 1000);
+INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID, available_tickets)  VALUES ('2011-01-12', '2011-02-12', '20:30:00', '22:30:00', 2, 2, 1000);
+
+INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID, available_tickets)  VALUES ('2011-02-12', '2011-03-12', '15:30:00', '22:30:00', 3, 3, 500);
+INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID, available_tickets)  VALUES ('2011-02-12', '2011-03-12', '18:00:00', '22:00:00', 3, 3, 500);
+INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID, available_tickets)  VALUES ('2011-02-12', '2011-03-12', '20:30:00', '22:30:00', 3, 3, 500);
 
 INSERT INTO booking (film_ID, customer_name, booking_date, numof_tickets)  VALUES (1, 'DaveMurray', '2010-12-12', 4);
 

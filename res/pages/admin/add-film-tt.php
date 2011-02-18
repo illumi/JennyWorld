@@ -74,7 +74,7 @@ $screenResult= mysql_query ($screenQuery);
 <tr>	<td NOWRAP>End Date: </td>
 	<td>
 			<?php
-			include('calendar/calendar2.html');
+			include('calendar/calendar.html');
 			?>
 	</td>
 </tr>
@@ -111,7 +111,7 @@ while($row = mysql_fetch_array($films))
 {
 	echo "<tr>";
 	echo "<td>" . $row['film_ID'] . "</td>";
-	echo "<td>" . $row['film_title'] . "</td>";
+	echo "<td NOWRAP>" . $row['film_title'] . "</td>";
 	echo "<td>" . $row['film_length'] . "</td>";
 	echo "<td>" . $row['film_genre'] . "</td>";
 	echo "<td>" . $row['film_rating'] . "</td>";

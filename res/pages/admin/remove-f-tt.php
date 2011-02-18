@@ -22,8 +22,6 @@ while($row = mysql_fetch_array($result)){
 	echo "<br />";
 }
 
-//needs to return the proper title..it can find the showing ID when a number is entered into the film title field. ..but it gets lost n finding the title so maybe a view or an IF...need to figure it out..if we change th3 database then it will be btter
-
 $deleteQuery = mysql_query("SELECT showing_ID FROM showings WHERE start_date='$start_date' AND end_date = '$end_date' AND start_time = '$start_time' ") or die(mysql_error()); //  AND film_ID = '$film_title'
 
 
