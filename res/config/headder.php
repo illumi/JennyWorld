@@ -16,6 +16,10 @@ Computer Science and Information Systems Year 3
 	<title>Jennyworld</title>
 
 	<link href="res/css/main.css" rel="stylesheet" type="text/css" />
+	<link href="calendar_eu.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" src="calendar_eu.js"></script>
+	<script language="JavaScript" src="res/pages/in.js"></script>
+	
 </head>
 
 <body>
@@ -29,7 +33,7 @@ Computer Science and Information Systems Year 3
 		<center><ul>
 			<li><a href="index.php?page=start">Home</a></li>
 			<li><a href="index.php?page=films">Films</a></li>
-			<li><a href="index.php?page=about">About</a></li>
+			<li><a href="index.php?page=about">Information</a></li>
 			<li><a href="index.php?page=contact">Contact</a></li>
 			<li><a href="index.php?page=news">Events</a></li>
 		</ul></center>

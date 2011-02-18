@@ -18,15 +18,15 @@ Computer Science and Information Systems Year 3
 
 <h1>Contact us</h1>
 
-<h5>You can contact us by telephone:	
-
+<h3>You can contact us by telephone:	
+<p>
 Telephone: 0131 451 4178
-
+<p>
 <br> Or if you'd rather email us then the following email address is available:
-
+<p>
 enquiries@jworld.com
 
-</h5>
+</h3>
 
 </div>
 

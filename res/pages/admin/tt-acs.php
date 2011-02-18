@@ -1,26 +1,19 @@
+<?php
+if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ./index.php?page=adminLogin');
+}
+?>
+
 <div id="body">
 <h1> Timetable Overview</h1>
 <center>
 <p>
 
-<div id="header">
-	<table border="0">
-	<tr>
-		<td>	<input type=button onClick="location.href='admin.php?page=tt-acs'" value='Timetable Overview'>	</td>
-		<td>	<input type=button onClick="location.href='admin.php?page=add-film-tt'" value='Add Film'>		</td>
-		<td>	<input type=button onClick="location.href='admin.php?page=edit-film-tt'" value='Edit Current Timetable'></td>
-		<td>	<input type=button onClick="location.href='admin.php?page=remove-film-tt'" value='Remove Film'>	</td>
-	</tr>
-</table>
-</div>
 <h2>
 <?php
 
 include 'sql-connection.php';
-
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-
-mysql_select_db($database) or die(mysql_error());
 
 echo date("Y-m-d");
 
@@ -49,7 +42,7 @@ while($row = mysql_fetch_array($result)){
 }
 echo "</table>";
 
-mysql_close($con);
+mysql_close($link);
 
 ?> </h2>
 </center>

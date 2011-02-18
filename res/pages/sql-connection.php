@@ -1,5 +1,3 @@
-
-
 <?php
 
 $username="js230"; /*username*/
@@ -14,6 +12,4 @@ connection error */
 //mysql_close($link);   /* closes connection to the sql database */
 
 
-
 ?>
-

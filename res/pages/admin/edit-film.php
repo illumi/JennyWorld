@@ -1,20 +1,14 @@
-
 <?php
 	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ../../../index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin');
 }
 ?>
 
 <div id="body">
 <h1>Edit Film</h1>
 <center>
-<div id="header">
-	<input type=button onClick="location.href='admin.php?page=films-acs'" value='Film Records'>
-	<input type=button onClick="location.href='admin.php?page=add-film'" value='Add Film'>
-	<input type=button onClick="location.href='admin.php?page=remove-film'" value='Remove Film'>
 
-</div>
 <section id="edit info">
 	<h3>
             <P>Please enter new details (enter old values for unchanged fields)</p>
@@ -69,9 +63,6 @@
 
 include 'sql-connection.php';
 
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-mysql_select_db($database) or die(mysql_error());
-
 $query = mysql_query("SELECT * FROM films");
 
 
@@ -97,7 +88,7 @@ while($row = mysql_fetch_array($query))
 	echo"</tr>";
 }
 echo "</table>";
-mysql_close($con);
+mysql_close($link);
 ?>
 </h3>
 </center>

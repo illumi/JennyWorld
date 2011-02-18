@@ -1,29 +1,18 @@
 <?php
 	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ../../../index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin');
 }
 ?>
 
 <div id="body">
 <h1>Film Records</h1>
 <center>
-	<div id="header">
-		<input type=button onClick="location.href='admin.php?page=add-film'" value='Add Film'>
-		<input type=button onClick="location.href='admin.php?page=edit-film'" value='Edit Film'>
-		<input type=button onClick="location.href='admin.php?page=remove-film'" value='Remove Film'>
-	</div>
+
 <h3>
 <?php
 
-$username="js230"; /*username*/
-$password="js230"; /*password*/
-$database="js230"; /*database name*/
-$host = "anubis.macs.hw.ac.uk";  /*host name*/
-
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-
-mysql_select_db($database) or die(mysql_error());
+include 'sql-connection.php';
 
 $query = mysql_query("SELECT * FROM films");
 

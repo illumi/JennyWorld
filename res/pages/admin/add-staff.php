@@ -1,7 +1,7 @@
 <?php
 	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ../../../index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin');
 }
 ?>
 
@@ -9,22 +9,10 @@
 <h1> Add Staff Members</h1>
 <center>
 <h2>
-	<input type=button onClick="location.href='admin.php?page=staff-acs'" value='Staff
-Overview'>
-	<input type=button onClick="location.href='admin.php?page=add-staff'" value='Add Staff
-Members'>
-	<input type=button onClick="location.href='admin.php?page=edit-staff'" value='Edit Current
-staff Members'>
-	<input type=button onClick="location.href='admin.php?page=remove-staff'" value='Remove Staff
-Member'>
 
 <?php
 
 include 'sql-connection.php';
-
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-
-mysql_select_db($database) or die(mysql_error());
 
 $query = mysql_query("SELECT * FROM staff");
 
@@ -44,7 +32,7 @@ while($row = mysql_fetch_array($query))
 	echo"</tr>";
 }
 echo "</table>";
-mysql_close($con);
+mysql_close($link);
 
 ?>
 <section id="new staff info">

@@ -1,18 +1,14 @@
 <?php
 	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ../../../index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin');
 }
 ?>
 
 <div id="body">
 <h1> Remove Film</h1>
 <center>
-	<div id="header">
-		<input type=button onClick="location.href='admin.php?page=films-acs'" value='Film Records'>
-		<input type=button onClick="location.href='admin.php?page=add-film'" value='Add Film'>
-		<input type=button onClick="location.href='admin.php?page=edit-film'" value='Edit Film'>
-	</div>	
+
 <section id="remove info">
     <h3>
 	<form method="POST" action="res/pages/admin/rm-flm.php">
@@ -34,10 +30,6 @@
 <?php
 
 include 'sql-connection.php';
-
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-
-mysql_select_db($database) or die(mysql_error());
 
 $query = mysql_query("SELECT * FROM films");
 

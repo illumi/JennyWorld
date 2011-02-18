@@ -2,18 +2,17 @@
 
 if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ../../../index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin');
 }
 
 $removed=$_POST['removeid'];
 
-$con = mysql_connect('anubis.macs.hw.ac.uk','js230','js230') or die(mysql_error());
-mysql_select_db('js230') or die(mysql_error());
+include 'sql-connection.php';
 
 mysql_query("DELETE FROM staff WHERE staff_ID='$removed'");
 
 header("location:../../../admin.php?page=remove-staff");
-Mysql_close($con);
 
+mysql_close($link);
 
 ?>

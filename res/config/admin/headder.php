@@ -16,6 +16,7 @@ Computer Science and Information Systems Year 3
 	<title>Administration</title>
 
 	<link href="res/css/admin.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" src="calendar_us.js"></script>
 </head>
 
 <body>
@@ -36,9 +37,20 @@ Computer Science and Information Systems Year 3
 				<li><a href="admin.php?page=remove-staff">Remove Staff</a></li>
 			</ul>
 		</li>
-
-		<li><a href="admin.php?page=promo-acs">Promotions</a></li>
-		<li><a href="admin.php?page=tt-acs">Timetable</a></li>
+		<li><a href="admin.php?page=promo-acs">Promotions</a>
+			<ul>
+				<li><a href="admin.php?page=add-promo">Add Promo</a></li>
+				<li><a href="admin.php?page=edit-promo">Edit Promo</a></li>
+				<li><a href="admin.php?page=remove-promo">Remove Promo</a></li>
+			</ul>
+		</li>
+		<li><a href="admin.php?page=tt-acs">Timetable</a>
+			<ul>
+				<li><a href="admin.php?page=add-film-tt">Add Film</a></li>
+				<li><a href="admin.php?page=edit-film-tt">Edit Film</a></li>
+				<li><a href="admin.php?page=remove-film-tt">Remove Film</a></li>
+			</ul>
+		</li>
 		<li><a href="admin.php?page=stat-acs">Statistics</a></li>
 		<li><a href="admin.php?page=films-acs">Film Records</a>
 			<ul>
@@ -46,7 +58,7 @@ Computer Science and Information Systems Year 3
 				<li><a href="admin.php?page=edit-film">Edit Film</a></li>
 				<li><a href="admin.php?page=remove-film">Remove Film</a></li>
 			</ul>
-	`	</li>
+		</li>
 		
 	</nav>
 	</header>

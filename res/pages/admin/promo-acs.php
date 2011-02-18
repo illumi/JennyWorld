@@ -1,57 +1,55 @@
+<?php
+if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+{
+	header('Location: ./index.php?page=adminLogin');
+}
+?>
+
 <div id="body">
 <h1> Promotions Overview</h1>
 <center>
 <p>
-<div id="header">
-	<input type=button onClick="location.href'admin.php?page=promo-acs'" value='Promotions
-Overview'>
-	<input type=button onClick="location.href='admin.php?page=add-promo'" value='Add
-Promotion'>
-	<input type=button onClick="location.href='admin.php?page=edit-promo'" value='Edit
-Promotion'>
-	<input type=button onClick="location.href='admin.php?page=remove-promo'" value='Remove
-Promotion'>
-</div>
+
+<h3>
 <?php
 
-$username="js230"; /*username*/
-$password="js230"; /*password*/
-$database="js230"; /*database name*/
-$host = "anubis.macs.hw.ac.uk";  /*host name*/
+include 'sql-connection.php';
 
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
+echo date("Y-m-d");
 
-mysql_select_db($database) or die(mysql_error());
-
-$query = mysql_query("SELECT * FROM promotions");
+$query = "SELECT promotions.promo_id, films.film_title,  promotions.promo_name, promotions.start_date, promotions.end_date, promotions.description FROM promotions, films WHERE promotions.film_ID = films.film_ID";
+     
+$result = mysql_query($query) or die(mysql_error());
 
 echo "<table border='1'>
 <tr>
 <th>Promo ID</th>
-<th>Film</th>
-<th>Promo Name</th>
-<th>Start</th>
-<th>End</th>
+<th>Film Title</th>
+<th>Promotion Type</th>
+<th>Start Date</th>
+<th>End Date</th>
 <th>Description</th>
 </tr>";
+// Print out the contents of each row into a table 
+while($row = mysql_fetch_array($result)){
+  
 
-while($row = mysql_fetch_array($query))
-{
-	$film = $row['film_ID'];
-	echo $film;
-	$filmtitle = mysql_query("SELECT film_title FROM films WHERE film_ID=$film") or die(mysql_error());
 	echo "<tr>";
-	echo "<td>" . $row['promo_id'] . "</td>";
-	echo "<td>" . $filmtitle . "</td>";
+	echo "<td>" .$row['promo_id']. " </td> ";
+	echo "<td>" . $row['film_title'] . "</td>";
 	echo "<td>" . $row['promo_name'] . "</td>";
 	echo "<td>" . $row['start_date'] . "</td>";
 	echo "<td>" . $row['end_date'] . "</td>";
 	echo "<td>" . $row['description'] . "</td>";
-	echo"</tr>";
+	echo "</tr>";
 }
 echo "</table>";
+
 mysql_close($link);
 
-?>
+?> 
+</h3>
 </center>
 </div>
+
+

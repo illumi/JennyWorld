@@ -6,8 +6,8 @@ $con = mysql_connect($host,$username,$password) or die(mysql_error());
 mysql_select_db($database) or die(mysql_error());
 
 //New fields to change
-$start_date = $_POST['newStartDate'];
-$end_date =  $_POST['newEndDate'];
+$start_date = $_POST['startdate'];
+$end_date =  $_POST['enddate'];
 $start_time = $_POST['newTime'];
 $screen = $_POST['newScreen'];
 

@@ -2,20 +2,13 @@
 
 session_start();
 
-$username="js230";
-$password="js230";
-$database="js230";
-$host = "anubis.macs.hw.ac.uk";
+include 'sql-connection.php';
 
 $user = $_POST['username'];
 $pass = $_POST['password'];
 
 // encrypt the password into MD5
 $pass = md5($pass);
-
-$link = mysql_connect($host,$username,$password) or die('Could not connect: ' . mysql_error());
-
-mysql_select_db($database) or die( "Unable to select the database: " . $database . " ");
 
 $sql = "SELECT * FROM staff WHERE user_name = '$user' AND password = '$pass'";
 
@@ -33,14 +26,20 @@ if($count == 1){
             $_SESSION['login'] = $row[1];
 
             if($row[3] == 'manager')
-                $_SESSION['admin'] = true;
+            {
+                $_SESSION['admin'] = 1;
+            }
             else
-                $_SESSION['admin'] = false;
+            {
+                $_SESSION['admin'] = 0;
+            }
         }
-	header("location: ../../admin.php");
+        header("location: ../../admin.php");
 }
 //displays error message otherwise
 else {
 	echo "Wrong Username or Password";
 }
+
+mysql_close($link);
 ?>

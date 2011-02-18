@@ -21,10 +21,6 @@ body {
 	margin-left: auto;
 }
 
-a:link {color:#ffffff;}      /* unvisited link */
-a:visited {color:#ffffff;}      /* unvisited link */
-a:active {color:#ffffff;}      /* unvisited link */
-
 h1{
 	border-bottom:1px solid #000000;
 	letter-spacing:-1px;
@@ -190,3 +186,14 @@ footer p {
 	text-align:center;
 	margin-right:25px;
 }
+
+#gay { 
+	margin:3px; 
+	width:400px; 
+	height:300px;
+	display:none; 
+	float:center;
+	background:#ffffff;
+ }
+
+

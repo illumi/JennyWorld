@@ -23,7 +23,7 @@ Computer Science and Information Systems Year 3
 <h2>
 
 <img src="res/img/hp-thumb.jpg"/>
-Harry Potter: Deathly Hallows (Part 1)
+<a href="index.php?page=hp">Harry Potter: Deathly Hallows (Part 1)</a>
 
 </h2>
 
