@@ -7,21 +7,32 @@ include 'sql-connection.php';
 
 ?>
 
+<SCRIPT TYPE="text/javascript">
+<!--
+function loadUser(form)
+{
+   
+}
+//-->
+</SCRIPT>
+
+
+
 <div id="body">
 <h1> Staff Overview</h1>
 <center>
 <h2>
 
-<form method="POST" action="view_project.php" onclick="view_project.php" onselect="view_project.php">
+<form method="POST" action="view_project.php">
 	<!--<input type="hidden" name="sector" value="sector_list">-->
-	<select name="sector_list" class="inputstandard" onclick="view_project.php" onselect="view_project.php">
-	<option value="default" onclick="view_project.php" onselect="view_project.php">Staff Select</option>
+	<select name="sector_list" class="inputstandard" onChange="return confirm('place holder for JS function')">
+	<option value="default">Staff Select</option>
 
     <?php
 		$query = mysql_query("SELECT * FROM staff;");
         $i=1;
         while ($row = mysql_fetch_assoc($query)) {
-            echo '<option value="' . $i . '" name="' . $row['role_type']. '" onclick="view_project.php" onselect="view_project.php">' . $row['user_name']. '</option>';
+            echo '<option value="' . $i . '" name="' . $row['role_type']. '">' . $row['user_name']. '</option>';
 			$i++;
         }
 		mysql_close($link);
