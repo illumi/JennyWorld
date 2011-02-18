@@ -11,11 +11,13 @@ $titleQuery = "SELECT promo_id FROM promotions";
 $titleResult = mysql_query ($titleQuery);
 
 $options="";
+$i =1; 
   
   while ($row=mysql_fetch_array($titleResult)) {
   
   	$promoid=$row["promo_id"];
-  	$options.="<OPTION VALUE=\"$promoid\">".$promoid.'</option>';
+  	$options.="<OPTION VALUE=\"$i\">".$promoid.'</option>';
+  	$i++;
 }
 
 
@@ -31,9 +33,9 @@ $options="";
 			<tr>		
 				<td> Select Promotion to remove: </td>	
 				<td> 
-					<select NAME="removeid">
+					<select NAME="remove">
 					<option VALUE="0">Promotion ID
-					<? echo $options?>
+					<?php echo $options ?>
 					</select> 
 				</td>
 			</tr>

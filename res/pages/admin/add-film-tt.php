@@ -49,7 +49,7 @@ $screenResult= mysql_query ($screenQuery);
 		<td> 
 			 <select NAME="newfilm_title"  required>
  			 <option VALUE="0">Film Title
-			  <? echo $options?>
+			  <?php echo $options?>
  			 </select> 
 		</td>
 	</tr>
@@ -57,7 +57,7 @@ $screenResult= mysql_query ($screenQuery);
 	<tr>	<td>Screen: </td>
 		<td> <SELECT Name="newScreen">
 			<option value="0">Screen
-			<? echo $optionsScreen?>
+			<?php echo $optionsScreen?>
 			</select>
 		</td>
 	</tr>
@@ -74,7 +74,7 @@ $screenResult= mysql_query ($screenQuery);
 <tr>	<td NOWRAP>End Date: </td>
 	<td>
 			<?php
-			include('calendar/calendar.html');
+			include('calendar/calendar2.html');
 			?>
 	</td>
 </tr>
