@@ -1,32 +1,49 @@
 <?php
 	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ./index.php?page=adminLogin');
+	header('Location: ../../../index.php?page=adminLogin');
 }
 
 include 'sql-connection.php';
 
-$titleQuery = "SELECT film_ID, film_title FROM films";
+$con = mysql_connect($host,$username,$password) or die(mysql_error());
+mysql_select_db($database) or die(mysql_error());
+
+$showingIdQuery = "SELECT showing_ID FROM showings";
+//$titleQuery = "SELECT film_ID, film_title FROM films";
 $screenQuery = "SELECT screen_ID FROM screens";
 
-$titleResult = mysql_query ($titleQuery);
+
+$showingResult= mysql_query ($showingIdQuery);
+//$titleResult = mysql_query ($titleQuery);
 $screenResult= mysql_query ($screenQuery);
 
- $options="";
+
+ $optionsShowings="";
+// $options="";
  $optionsScreen="";
+
+
+while ($row=mysql_fetch_array($showingResult)) {
   
+  	$showingID=$row["showing_ID"];
+  	$optionsShowings.="<OPTION VALUE=\"$showingID\">".$showingID.'</option>';
+  }
+/**
   while ($row=mysql_fetch_array($titleResult)) {
   
   	$filmid=$row["film_ID"];
   	$filmname=$row["film_title"];
   	$options.="<OPTION VALUE=\"$filmid\">".$filmname.'</option>';
   }
-
+*/
   while ($row=mysql_fetch_array($screenResult)) {
   
   	$screenID=$row["screen_ID"];
   	$optionsScreen.="<OPTION VALUE=\"$screenID\">".$screenID.'</option>';
   }
+ 
+
  
 
 /**
@@ -54,15 +71,15 @@ and then applied
 	
 
 <tr>
-		
-		<td> Title: </td>	
-		<td> 
-			 <select NAME="newfilm_title"  required>
- 			 <option VALUE="0">Film Title
-			  <? echo $options?>
- 			 </select> 
+
+	<tr>	<td>Showing: </td>
+		<td> <SELECT Name="newShowingID">
+			<option value="0">Showings
+			<? echo $optionsShowings?>
+			</select>
 		</td>
 	</tr>
+		
 
 	<tr>	<td>Screen: </td>
 		<td> <SELECT Name="newScreen">
@@ -72,19 +89,20 @@ and then applied
 		</td>
 	</tr>
 
+
 <tr>	<td NOWRAP>Start Date	(yyyy-mm-dd):</td> 
-	<td><input type="text" value="" name="startDate" required>	</td>
+	<td><input type="text" value="" name="newStartDate" required>	</td>
 	
 </tr>
 
 <tr>	<td NOWRAP>End Date (yyyy-mm-dd): </td>
-	<td> <input type="text" value="" name="endDate" required>	</td>
+	<td> <input type="text" value="" name="newEndDate" required>	</td>
 </tr>
 
 
 
 <tr>	<td NOWRAP>Time (00:00:00): </td>
-	<td> <input type="text" value="" name="time" required>	</td>
+	<td> <input type="text" value="" name="newTime" required>	</td>
 	
 </tr>	
 
@@ -96,6 +114,10 @@ and then applied
 
 include 'sql-connection.php';
 
+$con = mysql_connect($host,$username,$password) or die(mysql_error());
+
+mysql_select_db($database) or die(mysql_error());
+
 $my_t=getdate(date("U"));
 print("$my_t[year]-$my_t[mon]-$my_t[mday]");
 
@@ -103,7 +125,7 @@ echo date("Y-m-d");
 
 
 
-$query = "SELECT showings.screen_ID, showings.film_ID,  films.film_title, showings.start_time, films.film_rating, showings.start_date, showings.end_date, showings.screen_ID FROM showings, films WHERE showings.film_ID = films.film_ID";
+$query = "SELECT showings.screen_ID, showings.film_ID,  films.film_title, showings.start_time, films.film_rating, showings.start_date, showings.end_date, showings.showing_ID FROM showings, films WHERE showings.film_ID = films.film_ID";
      
 $result = mysql_query($query) or die(mysql_error());
 
@@ -128,13 +150,13 @@ while($row = mysql_fetch_array($result)){
 	echo "<td>" . $row['film_rating'] . "</td>";
 	echo "<td>" . $row['start_date'] . "</td>";
 	echo "<td>" . $row['end_date'] . "</td>";
-	echo "<td>" . $row['screen_ID'] . "</td>";
+	echo "<td>" . $row['showing_ID'] . "</td>";
 
 	echo "</tr>";
 }
 echo "</table>";
 
-mysql_close($link);
+mysql_close($con);
 
 ?></h2>
 </center>

@@ -1,11 +1,13 @@
 <?php
 	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ./index.php?page=adminLogin');
+	header('Location: ../../../index.php?page=adminLogin');
 }
 
 include 'sql-connection.php';
 
+$con = mysql_connect($host,$username,$password) or die(mysql_error());
+mysql_select_db($database) or die(mysql_error());
 
 /**
 $startDateQuery = mysql_query ("SELECT start_date FROM showings");
@@ -199,7 +201,7 @@ while($row = mysql_fetch_array($timetable))
 	echo"</tr>";
 }
 echo "</table>";
-mysql_close($link);
+mysql_close($con);
 //}
 ?>
 

@@ -1,10 +1,9 @@
 <?php
-	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
-{
-	header('Location: ./index.php?page=adminLogin');
-}
 
 include 'sql-connection.php';
+
+$con = mysql_connect($host,$username,$password) or die(mysql_error());
+mysql_select_db($database) or die(mysql_error());
 
 //New fields to change
 $film_title = $_POST['remove_title'];
@@ -50,7 +49,7 @@ while($row = mysql_fetch_array($check)){
 
 echo "success";
 //header("location:../../../admin.php?page=remove-film-tt");
-mysql_close($link);
+mysql_close($con);
 
 
 ?>
