@@ -32,7 +32,7 @@ include 'sql-connection.php';
 				<td> 
 					<select NAME="filmid">
 					<option VALUE="0">Film ID</option>
-					<?
+					<?php
 					$query = mysql_query("SELECT film_ID FROM films;");
 					$i=1;
 					while ($row = mysql_fetch_assoc($query)) {
