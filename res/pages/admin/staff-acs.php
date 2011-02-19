@@ -7,30 +7,20 @@ include 'sql-connection.php';
 
 ?>
 
-<SCRIPT TYPE="text/javascript">
-<!--
-function loadUser(form)
-{
-   
-}
-//-->
-</SCRIPT>
-
-
-
 <div id="body">
 <h1> Staff Overview</h1>
 <center>
 <h2>
 
-<form method="POST" action="view_project.php">
+<form name="staffForm" method="POST" action="view_project.php">
 	<!--<input type="hidden" name="sector" value="sector_list">-->
-	<select name="sector_list" class="inputstandard" onChange="return confirm('place holder for JS function')">
-	<option value="default">Staff Select</option>
+	Staff Select: <select name="sector_list" class="inputstandard" onChange="enableFields()">
+	<option value="0">...</option>
+	<option value="1">New Staff Member</option>
 
     <?php
 		$query = mysql_query("SELECT * FROM staff;");
-        $i=1;
+        $i=2;
         while ($row = mysql_fetch_assoc($query)) {
             echo '<option value="' . $i . '" name="' . $row['role_type']. '">' . $row['user_name']. '</option>';
 			$i++;
@@ -40,6 +30,23 @@ function loadUser(form)
 
     </select>
 	<!--<input type="submit" value="Go!">-->
+	
+	    
+    
+	<!--<form method="POST" action="res/pages/admin/remove.php">-->
+	<br />
+	Login: <input type="text" value="" name="login" id="login"> <br />
+	Password: <input type="text" value="" name="password">  <br />
+	Role: <input type="radio" name="editrole" value="manager"> manager
+	<input type="radio" name="editrole" value="staff"> staff <br />
+	<br />
+	<br />
+	<input type="submit" name="submit" id="submit" value="Save Changes">
+	<input type="submit" name="submit" id="submit" value="Delete Staff Member"> 
+	<br />
+	 
+	<!--</form>-->
+	
 </form>
 
 </h2>
