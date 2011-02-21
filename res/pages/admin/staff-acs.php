@@ -12,9 +12,14 @@ include 'sql-connection.php';
 <center>
 <h2>
 
-<form name="staffForm" method="POST" action="view_project.php">
-	<!--<input type="hidden" name="sector" value="sector_list">-->
-	Staff Select: <select name="sector_list" class="inputstandard" onChange="enableFields()">
+<form name="staffForm" method="post">
+	Staff Select: <select name="sector_list" id="selector" class="inputstandard" onChange="enableFields(this);" autofocus>
+	<script>
+	if (!("autofocus" in document.createElement("select"))) {
+		document.getElementById("selector").focus();
+	}
+	</script>
+
 	<option value="0">...</option>
 	<option value="1">New Staff Member</option>
 
@@ -29,23 +34,19 @@ include 'sql-connection.php';
     ?>
 
     </select>
-	<!--<input type="submit" value="Go!">-->
-	
-	    
-    
+
+
 	<!--<form method="POST" action="res/pages/admin/remove.php">-->
 	<br />
-	Login: <input type="text" value="" name="login" id="login"> <br />
-	Password: <input type="text" value="" name="password">  <br />
-	Role: <input type="radio" name="editrole" value="manager"> manager
-	<input type="radio" name="editrole" value="staff"> staff <br />
+	Login: <input type="text" value="" name="login" id="login" disabled="disabled"> <br />
+	Password: <input type="text" value="" name="password" id="pass" disabled="disabled">  <br />
+	Role: <input type="radio" name="editrole" value="manager" id="managerRole" disabled="disabled"> manager
+	<input type="radio" name="editrole" value="staff" id="staffRole" disabled="disabled"> staff <br />
 	<br />
 	<br />
-	<input type="submit" name="submit" id="submit" value="Save Changes">
-	<input type="submit" name="submit" id="submit" value="Delete Staff Member"> 
+	<input type="submit" name="submit" id="buSubmit" value="Save Changes" disabled="disabled" onClick="onSubmit(this);">
+	<input type="submit" name="reset" id="buDelete" value="Delete Staff Member" disabled="disabled" onClick="onDelete(this);"> 
 	<br />
-	 
-	<!--</form>-->
 	
 </form>
 

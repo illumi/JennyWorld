@@ -1,18 +1,46 @@
-function enableFields() {
-	document.staffForm.login.disabled=true;
+function enableFields(Selection){
+Form=Selection.form;
+if(Selection.value=="0") {
+	Form.login.disabled=true;
+	Form.pass.disabled=true;
+	Form.managerRole.disabled=true;
+	Form.staffRole.disabled=true;
+	Form.buSubmit.disabled=true;
+	Form.buDelete.disabled=true;
+	Form.buDelete.value="Delete Staff Member";
+} else if(Selection.value=="1") {
+	Form.login.disabled=false;
+	Form.pass.disabled=false;
+	Form.managerRole.disabled=false;
+	Form.staffRole.disabled=false;
+	Form.buSubmit.disabled=false;
+	Form.buDelete.disabled=false;
+	Form.buDelete.value="Clear Form";
+} else {
+	Form.login.disabled=false;
+	Form.pass.disabled=false;
+	Form.managerRole.disabled=false;
+	Form.staffRole.disabled=false;
+	Form.buSubmit.disabled=false;
+	Form.buDelete.disabled=false;
+	Form.buDelete.value="Delete Staff Member";
+	
+	//load in data from DB
+}
 }
 
-function DisableText() {
-	var count = document.forms[0].elements.length;
-	for (i=0; i<count; i++) {
-		var element = document.forms[0].elements[i]; 
-		if (document.form1.check1.checked == true) { 
-			if (element.type == "text") { 
-				element.disabled=true; 
-			} 
-		} else { 
-			element.disabled=false; 
-		}
+function onSubmit(button){
+	f=button.form;
+	if (valid(f)) {
+		alert("yay");
+	}
+}
+
+function onDelete(button){
+	if (button.value=="Delete Staff Member") {
+		
+	} else {
+		
 	}
 }
 
@@ -21,100 +49,27 @@ function DisableText() {
 function validate_name(field, alerttxt){
 
     with (field) {
-
         if (value == null || value == "") {
-
             alert(alerttxt);
-
             return false;
-
         }
-
         else {
-
             return true;
-
         }
-
     }
-
 }
 
 function valid(thisform){
-
-    with (thisform) {
-
-		if (validate_dropdown(item1) == false && validate_dropdown(item2) == false && validate_dropdown(item3) == false) {
-
-			alert("You didn't select anything to buy!");
-
-			item1.focus();
-
-            return false;
-
-        }
-
-		
-
-		if (!validate_name(first, "Please enter a first name!")) {
-
-            first.focus();
-
-            return false;
-
-        }
-
-        if (!validate_name(last, "Please enter a last name!")) {
-
-            last.focus();
-
-            return false;
-
-        }
-
-        if (!validate_email(email, "Not a valid @hw.ac.uk e-mail address!")) {
-
-            email.focus();
-
-            return false;
-
-        }
-
-		if (!validate_name(adrStreet, "Please enter a street!")) {
-
-            last.focus();
-
-            return false;
-
-        }
-
-		if (!validate_name(adrCity, "Please enter a city!")) {
-
-            last.focus();
-
-            return false;
-
-        }
-
-		if (!validate_name(adrPostcode, "Please enter a postcode!")) {
-
-            last.focus();
-
-            return false;
-
-        }
-
-		if (!validate_phone(adrPhone, "Please enter a valid phone number")) {
-
-            last.focus();
-
-            return false;
-
-        }
-
-      
-
-    }
-
+	with (thisform) {
+		if (!validate_name(login, "Can't have a blank login!")) {
+			login.focus();
+			return false;
+		}
+		if (!validate_name(pass, "Can't have a blank password!")) {
+			pass.focus();
+			return false;
+		}
+	}
+	return true;
 }
 

@@ -17,7 +17,7 @@ Computer Science and Information Systems Year 3
 
 	<link href="res/css/admin.css" rel="stylesheet" type="text/css" />
 	<script language="JavaScript" src="calendar.js"></script>
-	<script type="text/javascript" src="../../js/funcs.js"></script>
+	<script type="text/javascript" src="res/js/funcs.js"></script>
 
 </head>
 
