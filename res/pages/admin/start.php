@@ -14,9 +14,14 @@ if( (!isset($_SESSION['login']) && !isset($_SESSION['admin'])))
 }
 ?>
 
+
+
 <div id="body">
 	<center><h1>Administration</h1></center>
 
-	<h1>Thank You for logging in.</h1>
+<?php	
+echo "<center><h2>Welcome " . $_SESSION['login'] . ", thank you for logging in.</h2></center>";	
+?>
+
 
 </div>

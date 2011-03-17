@@ -23,7 +23,7 @@ $query = "select films.film_title, promotions.promo_name, promotions.end_date, p
      
 $result = mysql_query($query) or die(mysql_error());
 
-echo "<h3><table border='1'>
+echo "<center><h3><table>
 <tr>
 <th>Film Title</th>
 <th>Name</th>
@@ -35,13 +35,13 @@ while($row = mysql_fetch_array($result)){
   
 
 	echo "<tr>";
-	echo "<td><a href='index.php?page=details1'>" . $row['film_title'] . "</td>";
+	echo "<td>" . $row['film_title'] . "</td>";
 	echo "<td>" . $row['promo_name'] . "</td>";
 	echo "<td>" . $row['end_date'] . "</td>";
 	echo "<td>" . $row['description'] . "</td>";
 	echo "</tr>";
 }
-echo "</table></h3>";
+echo "</table></h3></center>";
 
 mysql_close($link);
 

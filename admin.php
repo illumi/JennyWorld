@@ -27,7 +27,7 @@ session_start();
 	<div id="maincontent"> <!--define whatever gets loaded here as "mainconnent"-->
 	<?php
 	
-	echo 'Welcome : '.$_SESSION['login'];
+	//echo 'Welcome : '.$_SESSION['login'];
 	
 	//parse URL to load content
 	if(isset($_GET['page'])) {

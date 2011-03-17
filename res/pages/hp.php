@@ -21,7 +21,7 @@
 
 include 'sql-connection.php';
 
-$sql= "select start_time, end_time from showings where film_ID = 1";
+$sql= "select start_time, end_time from showings where film_ID = 2";
 
 $result = mysql_query($sql) or die(mysql_error());
 
