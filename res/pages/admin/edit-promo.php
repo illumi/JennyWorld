@@ -7,6 +7,5 @@
 
 <div id="body">
 <h1> Edit Promotions</h1>
-<center>
 <p>
 

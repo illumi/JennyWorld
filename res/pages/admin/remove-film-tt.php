@@ -35,41 +35,33 @@ $currentDate = date("Y-m-d");
 
 */
 
-
 ?>
 
 
 <div id="body">
 <h1> Remove Film from Timetable</h1>
-<center>
 <p>
-
 <h2>
 
-<table border="0">
 <form method="POST" action="res/pages/admin/remove-f-tt.php">
-	Please enter the details below of the showing you wish to remove:
-<tr><td>Film Title:</td>
-<td>	<input type="text" value="" name="remove_title" required> </td>
-</tr>
-<tr>	<td NOWRAP>Start Date	(yyyy-mm-dd):</td> 
-	<td><input type="text" value="" name="startDate" required>	</td>
-	
-</tr>
-
-<tr>	<td NOWRAP>End Date (yyyy-mm-dd): </td>
-	<td> <input type="text" value="" name="endDate" required>	</td>
-</tr>
-
-
-
-<tr>	<td NOWRAP>Time (00:00:00): </td>
-	<td> <input type="text" value="" name="time" required>	</td>
-	
-</tr>	
-
-</table>
-	<input type="submit" name="submit" id="submit" value="Submit"> <br />
+	<table border="0" class="center">Please enter the details below of the showing you wish to remove:
+		<tr><td>Film Title:</td>
+			<td><input type="text" value="" name="remove_title" required> </td>
+		</tr>
+		<tr>
+			<td NOWRAP>Start Date	(yyyy-mm-dd):</td> 
+			<td><input type="text" value="" name="startDate" required>	</td>
+		</tr>
+		<tr>
+			<td NOWRAP>End Date (yyyy-mm-dd): </td>
+			<td> <input type="text" value="" name="endDate" required>	</td>
+		</tr>
+		<tr>
+			<td NOWRAP>Time (00:00:00): </td>
+			<td> <input type="text" value="" name="time" required></td>
+		</tr>	
+	</table>
+		<input type="submit" name="submit" id="submit" value="Submit"> <br />
 </form>
 
 <?php
@@ -117,7 +109,7 @@ $query = "SELECT  showings.screen_ID, showings.film_ID,  films.film_title, showi
 $result = mysql_query($query) or die(mysql_error());
 
 echo "
-<table border='1'>
+<table border='1' class=\"center\">
 <tr>
 <th>Screen</th>
 <th>Film Title</th>
@@ -158,7 +150,7 @@ while($row = mysql_fetch_array($result)){
 */
 
 $timetable = mysql_query("SELECT * from showings");
-echo "<table border='1'>
+echo "<table border='1' class=\"center\">
 <tr>
 <th>Showing ID</th>
 <th>Start Date</th>
@@ -193,5 +185,4 @@ mysql_close($link);
 ?>
 
 </h2>
-</center>
 </div>

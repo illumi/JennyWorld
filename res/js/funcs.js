@@ -29,6 +29,7 @@ if(Selection.value=="0") {
 	Form.unique_id.value = "";
 	Form.buSubmit.value="Add New";
 	Form.buDelete.value="Clear Form";
+	Form.login.focus();
 } else {
 	Form.login.disabled=false;
 	Form.pass.disabled=false;

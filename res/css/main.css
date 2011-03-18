@@ -11,7 +11,6 @@ body {
 	padding: 0;
 }
 #container {
-	/*background-image: url(../img/jen.jpg);*/
 	background-repeat: no-repeat;
 	background-position: right top;
 	width: 840px;
@@ -47,13 +46,7 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
-
-section  {
-	text-align:center;
-}
-
 h1{
-	text-align:center;
 	border-bottom:1px solid #000000;
 	letter-spacing:-1px;
 	font-size:24px;
@@ -82,10 +75,7 @@ h3{
 	margin:10px 10px 3px 0;
 	font-family: Vera, Helvetica, Georgia;
 }
-
-
 img.align-left { float:left; margin: 0 15px 15px 0; } 
-
 #logo {
 	background-image: url(../img/log.png);
 	background-repeat: no-repeat;
@@ -128,8 +118,6 @@ nav ul a {
 	color: #fff;
 	border: 1px solid #fff;
 	margin: 5px 0px;
-	/*-moz-box-shadow: rgba(0,0,0,0.3) 1px 1px 3px;
-	-webkit-box-shadow: rgba(0,0,0,0.3) 1px 1px 3px;*/
 	box-shadow: 1px 1px 3px #000;
     text-shadow: 1px 1px 1px #000;
 }
@@ -159,6 +147,7 @@ nav ul a:hover, nav ul a:focus {
 	margin-bottom:20px;
 	margin-left:auto;
 	margin-right:auto;
+	text-align:center;
 }
 
 .pod {
@@ -228,22 +217,23 @@ footer p {
 	background:#ffffff;
  }
 
-table
-{
+.center {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+table {
 border-collapse:collapse;
 }
-table, td, th
-{
+table, td, th {
 border:0.5px solid #006BAF;
 padding:3px;
 }
-td
-{
+td {
 text-align:center;
 background-color:#FFFAFA;
 }
-th
-{
+th {
 background-color:#3492D1;
 color:black;
 }

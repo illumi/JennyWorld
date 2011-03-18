@@ -19,7 +19,6 @@ session_start();
 	{
 		header('location: ./index.php');
 	}
-
 	
 	include('res/config/admin/headder.php'); //loads the admin logo and the nav bar
 ?>

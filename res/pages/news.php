@@ -10,8 +10,8 @@ Computer Science and Information Systems Year 3
 
 ?>
 <div id="body">
-	<h1>Current promotions</h1>
-
+<h1>Current promotions</h1>
+<h3>
 	<p>
 
 	<?php
@@ -19,11 +19,11 @@ Computer Science and Information Systems Year 3
 	include 'sql-connection.php';
 
 
-	$query = "select films.film_title, promotions.promo_name, promotions.end_date, promotions.description from films, promotions";
+	$query = "SELECT f.film_title, p.promo_name, p.end_date, p.description FROM films f, promotions p WHERE f.film_ID = p.film_ID;";
 		 
 	$result = mysql_query($query) or die(mysql_error());
 
-	echo "<table>
+	echo "<table class=\"center\">
 	<tr>
 	<th>Film Title</th>
 	<th>Name</th>
@@ -45,6 +45,8 @@ Computer Science and Information Systems Year 3
 	mysql_close($link);
 
 	?> 
+	
+</h3>
 </div>
 
 

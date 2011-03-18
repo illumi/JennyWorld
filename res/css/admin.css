@@ -10,7 +10,6 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
 #booking {
 	
 	background-color:white;	
@@ -21,7 +20,6 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
-
 #container {
 
 	background-repeat: no-repeat;
@@ -32,9 +30,7 @@ body {
 	margin-bottom: 0px;
 	margin-left: auto;
 }
-
 h1{
-	text-align:center;
 	border-bottom:1px solid #000000;
 	letter-spacing:-1px;
 	font-size:24px;
@@ -43,7 +39,6 @@ h1{
 	margin:10px 10px 3px 0;
 	font-family:Vera, Helvetica, Georgia;
 }
-
 h2{
 	border-bottom:1px solid #000000;
 	letter-spacing:-1px;
@@ -53,9 +48,7 @@ h2{
 	margin:10px 10px 3px 0;
 	font-family:Vera, Helvetica, Georgia;
 }
-
 h3{
-
 	letter-spacing:-1px;
 	font-size:16px;
 	padding-bottom:6px;
@@ -63,7 +56,6 @@ h3{
 	margin:10px 10px 3px 0;
 	font-family:Vera, Helvetica, Georgia;
 }
-
 
 img.align-left { float:left; margin: 0 15px 15px 0; } 
 
@@ -80,8 +72,7 @@ img.align-left { float:left; margin: 0 15px 15px 0; }
 nav {
 	padding-top: 150px;
 	width: 980px;	
-	margin-left:auto;	
-	/*margin-left:-70px;*/
+	margin-left:auto;
 	margin-right:auto;
 }
 nav li {
@@ -115,7 +106,6 @@ nav .current a, nav li:hover > a {
 nav ul li:hover a, nav li:hover li a {
 	background: none;
 	border: none;
-	/*color: #666;*/
 	color: #000;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
@@ -178,6 +168,7 @@ nav:after {
 	margin-bottom:20px;
 	margin-left:auto;
 	margin-right:auto;
+	text-align:center;
 }
 
 .pod {
@@ -392,24 +383,23 @@ div#tcalShade table td {
   background-color: #632a2a;
   color: #fff;
 }
-
-
-table
-{
+.center {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+table {
 border-collapse:collapse;
 }
-table, td, th
-{
+table, td, th {
 border:0.5px solid #006BAF;
 padding:3px;
 }
-td
-{
+td {
 text-align:center;
 background-color:#FFFAFA;
 }
-th
-{
+th {
 background-color:#3492D1;
 color:black;
 }

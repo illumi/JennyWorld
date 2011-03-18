@@ -6,11 +6,9 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 ?>
 
 <div id="body">
-	<h1> Promotions Overview</h1>
-	<center>
-	<p>
+<h1> Promotions Overview</h1>
+<h3>
 
-	<h3>
 	<?php
 
 	include 'sql-connection.php';
@@ -21,7 +19,7 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 		 
 	$result = mysql_query($query) or die(mysql_error());
 
-	echo "<table border='1'>
+	echo "<table border='1' class=\"center\">
 	<tr>
 	<th>Promo ID</th>
 	<th>Film Title</th>
@@ -48,8 +46,7 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 	mysql_close($link);
 
 	?> 
-	</h3>
-	</center>
+</h3>
 </div>
 
 

@@ -2,9 +2,6 @@
 
 include 'sql-connection.php';
 
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-mysql_select_db($database) or die(mysql_error());
-
 //New fields to change
 $start_date = $_POST['startdate'];
 $end_date =  $_POST['enddate'];
@@ -35,7 +32,7 @@ $result = mysql_query($sql) or die(mysql_error());
 
 echo "success";
 header("location:../../../admin.php?page=add-film-tt");
-mysql_close($con);
+mysql_close($link);
 
 
 ?>

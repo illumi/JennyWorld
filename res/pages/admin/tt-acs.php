@@ -6,23 +6,21 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 ?>
 
 <div id="body">
-	<h1> Timetable Overview</h1>
-	<center>
-	<p>
+<h1> Timetable Overview</h1>
+<h3>
 
-	<h2>
 	<?php
 
 	include 'sql-connection.php';
 
-	echo date("Y-m-d");
+	echo date("Y-m-d") . "<p>";
 
 
 	$query = "SELECT showings.screen_ID, showings.film_ID,  films.film_title, showings.start_time, films.film_rating FROM showings, films WHERE showings.film_ID = films.film_ID"; //ORDER BY films.film_title";
 		 
 	$result = mysql_query($query) or die(mysql_error());
 
-	echo "<table border='1'>
+	echo "<table border='1' class=\"center\">
 	<tr>
 	<th>Screen ID</th>
 	<th>Film Title</th>
@@ -43,6 +41,6 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 	mysql_close($link);
 
 	?> 
-	</h2>
-	</center>
+</h3>
+	
 </div>

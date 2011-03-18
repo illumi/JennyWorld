@@ -20,7 +20,6 @@ Computer Science and Information Systems Year 3
 
 	<h1>Location</h1>
 	<br/>
-
 	<h2>Location: Riccarton Research park.</h2>
 	
 	<br/>
@@ -29,5 +28,4 @@ Computer Science and Information Systems Year 3
 	<br/>
 	By Bus: JWorld has a bus stop right outside the entrance. Buses that go to JWorld are the 25, 34 and 45 from Lothian Buses
 	</h3>
-
 </div>

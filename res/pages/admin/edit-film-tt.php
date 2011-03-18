@@ -6,9 +6,6 @@
 
 include 'sql-connection.php';
 
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-mysql_select_db($database) or die(mysql_error());
-
 $showingIdQuery = "SELECT showing_ID FROM showings";
 //$titleQuery = "SELECT film_ID, film_title FROM films";
 $screenQuery = "SELECT screen_ID FROM screens";
@@ -61,75 +58,56 @@ and then applied
 
 <div id="body">
 <h1> Edit Film in Timetable</h1>
-<center>
 <p>
 
 <h2>
 
-<table border="0">
 <form method="POST" action="res/pages/admin/edit-f-tt.php">
-	
-
-<tr>
-
-	<tr>	<td>Showing: </td>
-		<td> <SELECT Name="newShowingID">
-			<option value="0">Showings
-			<?php echo $optionsShowings?>
-			</select>
-		</td>
+	<table border="0" class="center">
+	<tr>
+		<tr>	<td>Showing: </td>
+			<td> <SELECT Name="newShowingID">
+				<option value="0">Showings
+				<?php echo $optionsShowings?>
+				</select>
+			</td>
+		</tr>
+		<tr>	<td>Screen: </td>
+			<td> <SELECT Name="newScreen">
+				<option value="0">Screen
+				<?php echo $optionsScreen?>
+				</select>
+			</td>
+		</tr>
+	<tr>	<td NOWRAP>Start Date	(yyyy-mm-dd):</td> 
+		<td><input type="text" value="" name="newStartDate" required>	</td>
 	</tr>
-		
-
-	<tr>	<td>Screen: </td>
-		<td> <SELECT Name="newScreen">
-			<option value="0">Screen
-			<?php echo $optionsScreen?>
-			</select>
-		</td>
+	<tr>	<td NOWRAP>End Date (yyyy-mm-dd): </td>
+		<td> <input type="text" value="" name="newEndDate" required>	</td>
 	</tr>
-
-
-<tr>	<td NOWRAP>Start Date	(yyyy-mm-dd):</td> 
-	<td><input type="text" value="" name="newStartDate" required>	</td>
-	
-</tr>
-
-<tr>	<td NOWRAP>End Date (yyyy-mm-dd): </td>
-	<td> <input type="text" value="" name="newEndDate" required>	</td>
-</tr>
-
-
-
-<tr>	<td NOWRAP>Time (00:00:00): </td>
-	<td> <input type="text" value="" name="newTime" required>	</td>
-	
-</tr>	
-
-</table>
-	<input type="submit" name="submit" id="submit" value="Submit"> <br />
+	<tr><td NOWRAP>Time (00:00:00): </td>
+		<td> <input type="text" value="" name="newTime" required>	</td>
+	</tr>
+	<tr>
+		<td><input type="submit" name="submit" id="submit" value="Submit"> </td>
+	</tr>
+	</table>
 </form>
 
+
+
 <?php
-
-include 'sql-connection.php';
-
-$con = mysql_connect($host,$username,$password) or die(mysql_error());
-
-mysql_select_db($database) or die(mysql_error());
 
 $my_t=getdate(date("U"));
 print("$my_t[year]-$my_t[mon]-$my_t[mday]");
 
 echo date("Y-m-d");
 
-
-
 $query = "SELECT showings.screen_ID, showings.film_ID,  films.film_title, showings.start_time, films.film_rating, showings.start_date, showings.end_date, showings.showing_ID FROM showings, films WHERE showings.film_ID = films.film_ID";
      
 $result = mysql_query($query) or die(mysql_error());
 
-echo "<table border='1'>
+echo "<table border='1' class=\"center\">
 <tr>
 <th>Screen ID</th>
 <th>Film Title</th>
@@ -156,8 +134,9 @@ while($row = mysql_fetch_array($result)){
 }
 echo "</table>";
 
-mysql_close($con);
+mysql_close($link);
 
-?></h2>
-</center>
+?>
+
+</h2>
 </div>

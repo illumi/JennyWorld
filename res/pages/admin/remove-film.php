@@ -7,26 +7,22 @@
 
 <div id="body">
 <h1> Remove Film</h1>
-<center>
+<h3>
 
 <section id="remove info">
-    <h3>
 	<form method="POST" action="res/pages/admin/rm-flm.php">
-	   <table border="0">
-		<tr>
-		<td>Enter the ID of the film you wish to remove:</td>
-		<td><input type="text" value="" name="removefilm" required></td>
-		<tr height="10px"></tr>
+		<table border="0" class="center">
+				<td>Enter the ID of the film you wish to remove:</td>
+				<td><input type="text" value="" name="removefilm" required></td>
+			<tr height="10px"></tr>
+		</table>
+		<table border="0" class="center">
+			<td><input type="submit" name="submit" id="submit" value="Submit"></td>
+			<td><input type="reset" name="reset" id="reset" value="Reset"></td>
 	   </table>
-	   <table border="0">
-		<td><input type="submit" name="submit" id="submit" value="Submit"></td>
-		<td><input type="reset" name="reset" id="reset" value="Reset"></td>
-		</tr>
-	   </table>
-        </form>
-    </h3>
+	</form>
 </section>
-<h3>
+
 <?php
 
 include 'sql-connection.php';
@@ -34,7 +30,7 @@ include 'sql-connection.php';
 $query = mysql_query("SELECT * FROM films");
 
 
-echo "<table border='1'>
+echo "<table border='1' class=\"center\">
 <tr>
 <th>Film ID</th>
 <th>Film Title</th>
@@ -58,6 +54,6 @@ while($row = mysql_fetch_array($query))
 echo "</table>";
 mysql_close($link);
 ?>
+
 </h3>
-</center>
 </div>

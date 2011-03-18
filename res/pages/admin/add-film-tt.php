@@ -31,66 +31,58 @@ $optionsScreen="";
 ?>
 
 <div id="body">
-	<h1> Add Film to Timetable</h1>
-	<center>
-	<p>
+<h1> Add Film to Timetable</h1>
+<p>
+<h2>
 
-	<h2>
-	<section id="add film timetable">
-		<form method="POST" action="res/pages/admin/add-f-tt.php">
-	  
-	<table border= "0">
-		<tr>
-			
-			<td> Title: </td>	
-			<td> 
-				 <select NAME="newfilm_title"  required>
-				 <option VALUE="0">Film Title
-				  <?php echo $options?>
-				 </select> 
-			</td>
-		</tr>
+<section id="add film timetable">
+	<form method="POST" action="res/pages/admin/add-f-tt.php"> 
+		<table border= "0" class="center">
+			<tr>
+				<td> Title:</td>	
+				<td> 
+					 <select NAME="newfilm_title"  required>
+					 <option VALUE="0">Film Title
+					  <?php echo $options?>
+					 </select> 
+				</td>
+			</tr>
 
-		<tr>	<td>Screen: </td>
-			<td> <SELECT Name="newScreen">
-				<option value="0">Screen
-				<?php echo $optionsScreen?>
-				</select>
-			</td>
-		</tr>
-	<!--Need to enforce the formatting of the date and time -->
-	<tr>	<td NOWRAP>Start Date:</td> 
-		<td>
-				<input type="date" id="start" name="start" size="20" required/>	
-		</td>
-		
-	</tr>
+			<tr>	<td>Screen: </td>
+				<td> <SELECT Name="newScreen">
+					<option value="0">Screen
+					<?php echo $optionsScreen?>
+					</select>
+				</td>
+			</tr>
+			<!--Need to enforce the formatting of the date and time -->
+			<tr>
+				<td NOWRAP>Start Date:</td> 
+				<td><input type="date" id="start" name="start" size="20" required/>	</td>
+			</tr>
 
-	<tr>	<td NOWRAP>End Date: </td>
-		<td>
-				<input type="date" id="end" name="end" size="20" required/>	
-		</td>
-	</tr>
+			<tr>
+				<td NOWRAP>End Date: </td>
+				<td><input type="date" id="end" name="end" size="20" required/>	</td>
+			</tr>
 
-
-
-	<tr>	<td NOWRAP>Time (00:00:00): </td>
-		<td> <input type="text" value="" name="newTime" required>	</td>
-		
-	</tr>	
-	<tr>
-		<td> <input type="submit" name="submit" id="submit" value="Submit">	</td>
-		<td> <input type="reset" name="reset" id="reset" value="Reset">		</td>
-	</tr>
-	</table>
-		</form>
+			<tr>
+				<td NOWRAP>Time (00:00:00): </td>
+				<td> <input type="text" value="" name="newTime" required></td>
+			</tr>	
+			<tr>
+				<td> <input type="submit" name="submit" id="submit" value="Submit">	</td>
+				<td> <input type="reset" name="reset" id="reset" value="Reset">		</td>
+			</tr>
+		</table>
+	</form>
 
 
 	<?php
 
 	$films = mysql_query("SELECT * FROM films");
 
-	echo "<table border='1'>
+	echo "<table border='1' class=\"center\">
 	<tr>
 	<th>ID</th>
 	<th>Title</th>
@@ -117,7 +109,6 @@ $optionsScreen="";
 	mysql_close($link);
 	?>
 
-		</section>
-	</h2>
-	</center>
+</section>
+</h2>
 </div>

@@ -26,8 +26,8 @@ Computer Science and Information Systems Year 3
 		datefield.setAttribute("type", "date")
 		if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
 			jQuery(function($){ //on document.ready
-				$('#start').datepicker();
-				$('#end').datepicker();
+				$('#start').datepicker({dateFormat: 'yy-mm-dd'});
+				$('#end').datepicker({dateFormat: 'yy-mm-dd'});
 			})
 		}
 	</script>
@@ -68,6 +68,5 @@ Computer Science and Information Systems Year 3
 				<li><a href="admin.php?page=remove-film">Remove Film</a></li>
 			</ul>
 		</li>
-		
 	</nav>
 	</header>

@@ -6,10 +6,9 @@
 ?>
 
 <div id="body">
-	<h1>Film Records</h1>
-	<center>
+<h1>Film Records</h1>
+<h3>
 
-	<h3>
 	<?php
 
 	include 'sql-connection.php';
@@ -17,7 +16,7 @@
 	$query = mysql_query("SELECT * FROM films");
 
 
-	echo "<table border='1'>
+	echo "<table border='1' class=\"center\">
 	<tr>
 	<th>Film ID</th>
 	<th>Film Title</th>
@@ -43,8 +42,7 @@
 
 	?>
 	
-	</h3>
-	</center>
+</h3>
 </div>
 
 

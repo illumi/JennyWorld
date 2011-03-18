@@ -9,10 +9,9 @@ include 'sql-connection.php';
 
 <div id="body">
 <h1> Staff Overview</h1>
-<center>
 <h2>
 
-<form name="staffForm" method="POST" action="">
+<form name="staffForm" method="POST" action="" class="center">
 	Staff Select: <select name="sector_list" id="selector" class="inputstandard" onChange="enableFields(this);" autofocus>
 	<script>
 	if (!("autofocus" in document.createElement("select"))) {
@@ -25,10 +24,8 @@ include 'sql-connection.php';
 
     <?php
 		$query = mysql_query("SELECT * FROM staff;");
-        $i=2;
         while ($row = mysql_fetch_assoc($query)) {
-			echo '<option value="' . $row['role_type'] . '" label="' . $row['user_name']. '"id="' . $row['staff_ID'] . '">' . $row['user_name']. '</option>';
-			$i++;
+			echo '<option value="' . $row['role_type'] . '" label="' . $row['user_name']. '" id="' . $row['staff_ID'] . '">' . $row['user_name']. '</option>';
         }
 		mysql_close($link);
     ?>
@@ -51,6 +48,4 @@ include 'sql-connection.php';
 </form>
 
 </h2>
-<h3></h3>
-</center>
 </div>

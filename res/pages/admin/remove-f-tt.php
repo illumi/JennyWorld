@@ -47,8 +47,7 @@ while($row = mysql_fetch_array($check)){
 
 
 
-echo "success";
-//header("location:../../../admin.php?page=remove-film-tt");
+header("location:../../../admin.php?page=remove-film-tt");
 mysql_close($link);
 
 
