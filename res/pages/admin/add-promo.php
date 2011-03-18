@@ -35,7 +35,7 @@ include 'sql-connection.php';
 				</td>
 			</tr>
 			<tr>
-			<td>Pomotion Type:</td> <td><select name="type" value="" id="type" required>
+			<td>Pomotion Type:</td> <td><select name="type" value="" id="type" required/>
 			<option value="2for1">2 For 1 Viewings</option>
 			<option value="halfprice">Half Price</option>
 			<option value="freedrink">Free Drink</option>
@@ -45,21 +45,17 @@ include 'sql-connection.php';
 			<tr>
 			<td>Start Date:</td> 
 			<td>
-			<?php
-			include('calendar/calendar.html');
-			?>
+				<input type="date" id="start" name="start" size="20" required/>				
 			</td>
 			</tr>
 			<tr>
 			<td>End Date:</td> 
 			<td>
-			<?php
-			include('calendar/calendar2.html');
-			?>
+				<input type="date" id="end" name="end" size="20" required/>				
 			</td>
 			</tr>
 			<tr>
-			<td>Description:</td> <td><input type="text" value="" name="desc" required></td>
+			<td>Description:</td> <td><input type="text" value="" name="desc" required/></td>
 			</tr>
 			<tr height="10px"></tr>
 	   		<table border="0">

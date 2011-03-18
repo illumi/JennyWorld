@@ -15,10 +15,22 @@ Computer Science and Information Systems Year 3
 
 	<title>Administration</title>
 
+	<link href="res/css/redmond/jquery-ui-1.8.10.custom.css" rel="stylesheet" type="text/css" />
 	<link href="res/css/admin.css" rel="stylesheet" type="text/css" />
-	<script language="JavaScript" src="calendar.js"></script>
+	<script type="text/javascript" src="res/js/jquery-1.5.1.js"></script>
 	<script type="text/javascript" src="res/js/funcs.js"></script>
-
+	<script type="text/javascript" src="res/js/jquery-ui-1.8.10.custom.min.js"></script>
+	
+	<script type="text/javascript">
+		var datefield=document.createElement("input")
+		datefield.setAttribute("type", "date")
+		if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+			jQuery(function($){ //on document.ready
+				$('#start').datepicker();
+				$('#end').datepicker();
+			})
+		}
+	</script>
 </head>
 
 <body>

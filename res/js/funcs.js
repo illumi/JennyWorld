@@ -112,6 +112,13 @@ function valid(thisform){
 			pass.focus();
 			return false;
 		}
+		if (managerRole.checked == true || staffRole.checked == true) {
+			return true;
+		} else {
+			alert("Need to pick a role!");
+			managerRole.focus();
+			return false;
+		}
 	}
 	return true;
 }
