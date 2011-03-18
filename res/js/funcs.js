@@ -1,20 +1,32 @@
 function enableFields(Selection){
 Form=Selection.form;
 if(Selection.value=="0") {
+	Form.managerRole.checked = false;
+	Form.staffRole.checked= false;
+	Form.login.value = "";
+	Form.pass.value= "";
+	
 	Form.login.disabled=true;
 	Form.pass.disabled=true;
 	Form.managerRole.disabled=true;
 	Form.staffRole.disabled=true;
 	Form.buSubmit.disabled=true;
 	Form.buDelete.disabled=true;
+	Form.buSubmit.value="Save Changes";
 	Form.buDelete.value="Delete Staff Member";
 } else if(Selection.value=="1") {
+	Form.managerRole.checked = false;
+	Form.staffRole.checked= false;
+	Form.login.value = "";
+	Form.pass.value= "";
+	
 	Form.login.disabled=false;
 	Form.pass.disabled=false;
 	Form.managerRole.disabled=false;
 	Form.staffRole.disabled=false;
 	Form.buSubmit.disabled=false;
 	Form.buDelete.disabled=false;
+	Form.buSubmit.value="Add New";
 	Form.buDelete.value="Clear Form";
 } else {
 	Form.login.disabled=false;
@@ -23,31 +35,64 @@ if(Selection.value=="0") {
 	Form.staffRole.disabled=false;
 	Form.buSubmit.disabled=false;
 	Form.buDelete.disabled=false;
+	Form.buSubmit.value="Save Changes";
 	Form.buDelete.value="Delete Staff Member";
 	
-	//load in data from DB
+	Form.login.value = Selection.options.item(Selection.selectedIndex).label;
+	Form.pass.value= "";
+	
+	if (Selection.value == "manager") {
+		Form.managerRole.checked = true;
+	} else {
+		Form.staffRole.checked=true;
+	}
 }
 }
 
 function onSubmit(button){
-	f=button.form;
-	if (valid(f)) {
-		alert("yay");
+	Form=button.form;
+	
+	if (button.value == "Add New") { //add a new staff member
+		if (valid(Form)) {
+			Form.action = "res/pages/admin/add.php";
+			//Form.submit();
+			//Form.submit(Form);
+			document.staffForm.submit();
+			//document.forms[0].submit()
+			//Form.buFormSubmit.click();
+			//Form.buFormSubmit.select();
+			//document.getElementById('staffForm').submit();
+			return true;
+		} else {
+			return false; //dont submit form
+		}
+	} else { //update an existing staff member
+		Form.action = "res/pages/admin/update.php";
+		document.staffForm.submit();
+		Form.submit();
+		return true;
 	}
+
 }
 
 function onDelete(button){
+	Form=button.form;
 	if (button.value=="Delete Staff Member") {
-		
+		var ans = confirm ("Are you sure you want to delete?")
+		if (ans) {
+			Form.action = "res/pages/admin/remove.php";
+			document.staffForm.submit();
+			
+			return true;
+		}
 	} else {
-		
+			return false; //dont submit form
 	}
 }
 
 
 
 function validate_name(field, alerttxt){
-
     with (field) {
         if (value == null || value == "") {
             alert(alerttxt);
