@@ -27,7 +27,7 @@ include 'sql-connection.php';
 		$query = mysql_query("SELECT * FROM staff;");
         $i=2;
         while ($row = mysql_fetch_assoc($query)) {
-			echo '<option value="' . $row['role_type'] . '" label="' . $row['user_name']. '">' . $row['user_name']. '</option>';
+			echo '<option value="' . $row['role_type'] . '" label="' . $row['user_name']. '"id="' . $row['staff_ID'] . '">' . $row['user_name']. '</option>';
 			$i++;
         }
 		mysql_close($link);
@@ -37,10 +37,10 @@ include 'sql-connection.php';
 
 	<br />
 	Login: <input type="text" value="" name="login" id="login" disabled="disabled"> <br />
-	Password: <input type="text" value="" name="password" id="pass" disabled="disabled">  <br />
+	Password: <input type="password" value="" name="password" id="pass" disabled="disabled">  <br />
 	Role: <input type="radio" name="editrole" value="manager" id="managerRole" disabled="disabled"> manager
 	<input type="radio" name="editrole" value="staff" id="staffRole" disabled="disabled"> staff <br />
-	<br />
+	<input type="text" value="" name="unique_id" id="unique_id" style="visibility:hidden">  <br />
 	<br />
 	<input type="button" name="submit" id="buSubmit" value="Save Changes" disabled="disabled" onClick="onSubmit(this);">
 	<input type="button" name="reset" id="buDelete" value="Delete Staff Member" disabled="disabled" onClick="onDelete(this);"> 

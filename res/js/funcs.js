@@ -26,6 +26,7 @@ if(Selection.value=="0") {
 	Form.staffRole.disabled=false;
 	Form.buSubmit.disabled=false;
 	Form.buDelete.disabled=false;
+	Form.unique_id.value = "";
 	Form.buSubmit.value="Add New";
 	Form.buDelete.value="Clear Form";
 } else {
@@ -40,6 +41,7 @@ if(Selection.value=="0") {
 	
 	Form.login.value = Selection.options.item(Selection.selectedIndex).label;
 	Form.pass.value= "";
+	Form.unique_id.value = Selection.options.item(Selection.selectedIndex).id;
 	
 	if (Selection.value == "manager") {
 		Form.managerRole.checked = true;
@@ -61,7 +63,7 @@ function onSubmit(button){
 			return false; //dont submit form
 		}
 	} else { //update an existing staff member
-		Form.action = "res/pages/admin/update.php";
+		Form.action = "res/pages/admin/edit.php";
 		Form.buFormSubmit.click();
 		return true;
 	}
@@ -78,7 +80,11 @@ function onDelete(button){
 			return true;
 		}
 	} else {
-			return false; //dont submit form
+		Form.login.value = "";
+		Form.pass.value= "";
+		Form.managerRole.checked = false;
+		Form.staffRole.checked= false;
+		return false; //Form clear!
 	}
 }
 

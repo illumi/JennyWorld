@@ -17,8 +17,8 @@ Computer Science and Information Systems Year 3
 
 	<link href="res/css/main.css" rel="stylesheet" type="text/css" />
 	<link href="calendar_eu.css" rel="stylesheet" type="text/css" />
-	<script language="JavaScript" src="calendar_eu.js"></script>
-	<script language="JavaScript" src="res/pages/in.js"></script>
+	<script type="text/javascript" src="calendar_eu.js"></script>
+	<script type="text/javascript" src="res/pages/in.js"></script>
 	
 </head>
 
@@ -29,13 +29,13 @@ Computer Science and Information Systems Year 3
 		<hgroup>
 			<h1>Jworld</h1>
 		</hgroup>
-	<nav>
-		<center><ul>
-			<li><a href="index.php?page=start">Home</a></li>
-			<li><a href="index.php?page=films">Films</a></li>
-			<li><a href="index.php?page=about">Information</a></li>
-			<li><a href="index.php?page=contact">Contact</a></li>
-			<li><a href="index.php?page=news">Events</a></li>
-		</ul></center>
-	</nav>
-</header>
+		<nav>
+			<ul>
+				<li><a href="index.php?page=start">Home</a></li>
+				<li><a href="index.php?page=films">Films</a></li>
+				<li><a href="index.php?page=about">Information</a></li>
+				<li><a href="index.php?page=contact">Contact</a></li>
+				<li><a href="index.php?page=news">Events</a></li>
+			</ul>
+		</nav>
+	</header>

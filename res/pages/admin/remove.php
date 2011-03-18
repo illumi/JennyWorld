@@ -5,12 +5,11 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 	header('Location: ./index.php?page=adminLogin');
 }
 
-$name = addslashes($_POST['login']);
-$role = $_POST['editrole'];
-
 include 'sql-connection.php';
 
-mysql_query("DELETE FROM staff WHERE user_name='$name'");
+$id = $_POST['unique_id'];
+
+mysql_query("DELETE FROM staff WHERE staff_ID='$id'");
 
 header("location:../../../admin.php?page=staff-acs");
 
