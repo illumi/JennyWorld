@@ -44,7 +44,8 @@ include 'sql-connection.php';
 	<br />
 	<input type="button" name="submit" id="buSubmit" value="Save Changes" disabled="disabled" onClick="onSubmit(this);">
 	<input type="button" name="reset" id="buDelete" value="Delete Staff Member" disabled="disabled" onClick="onDelete(this);"> 
-	<input type="submit" name="formSubmit" id="buFormSubmit" value="empty" style="visibility:hidden";> 
+	<br />
+	<input type="submit" name="formSubmit" id="buFormSubmit" value="empty" style="visibility:hidden"> 
 	<br />
 	
 </form>

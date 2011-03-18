@@ -55,21 +55,14 @@ function onSubmit(button){
 	if (button.value == "Add New") { //add a new staff member
 		if (valid(Form)) {
 			Form.action = "res/pages/admin/add.php";
-			//Form.submit();
-			//Form.submit(Form);
-			document.staffForm.submit();
-			//document.forms[0].submit()
-			//Form.buFormSubmit.click();
-			//Form.buFormSubmit.select();
-			//document.getElementById('staffForm').submit();
+			Form.buFormSubmit.click();
 			return true;
 		} else {
 			return false; //dont submit form
 		}
 	} else { //update an existing staff member
 		Form.action = "res/pages/admin/update.php";
-		document.staffForm.submit();
-		Form.submit();
+		Form.buFormSubmit.click();
 		return true;
 	}
 
@@ -81,8 +74,7 @@ function onDelete(button){
 		var ans = confirm ("Are you sure you want to delete?")
 		if (ans) {
 			Form.action = "res/pages/admin/remove.php";
-			document.staffForm.submit();
-			
+			Form.buFormSubmit.click();
 			return true;
 		}
 	} else {
