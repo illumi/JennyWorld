@@ -8,7 +8,7 @@ include 'sql-connection.php';
 ?>
 
 <div id="body">
-<h1> Staff Overview</h1>
+<h1>Staff Overview</h1>
 <h2>
 
 <form name="staffForm" method="POST" action="" class="center">

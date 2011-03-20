@@ -43,7 +43,11 @@ Computer Science and Information Systems Year 3
 		
 		
 	<nav>
-		<li><a href="admin.php">Home</a></li>
+		<li><a href="admin.php">Home</a>
+			<ul>
+				<li><a href="admin.php?page=edit-home">Edit Home</a></li>
+			</ul>
+		</li>
 		<li><a href="admin.php?page=staff-acs">Staff</a>
 		</li>
 		<li><a href="admin.php?page=promo-acs">Promotions</a>

@@ -23,9 +23,9 @@ if($count == 1){
         while($row = mysql_fetch_array($result))
         {
             $_SESSION['user_id']= $row[0];
-            $_SESSION['login'] = $row[1];
+            $_SESSION['login'] = $row[2];
 
-            if($row[3] == 'manager')
+            if($row[4] == 'manager')
             {
                 $_SESSION['admin'] = 1;
             }

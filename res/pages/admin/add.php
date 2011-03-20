@@ -14,11 +14,11 @@ if($role!="manager" && $role!="staff"){
 die("Role must be either manager or staff");
 }
 
-$sql="INSERT INTO staff (user_name,password,role_type)
+$sql="INSERT INTO staff (cinema_id, user_name,password,role_type)
 VALUES
-('$name','$userpassword','$role')";
+('1','$name','$userpassword','$role')";
 mysql_query($sql) or die(mysql_error());
-header("location: ../../../admin.php?page=staff-acs");
 
 mysql_close($link);
+header("location: ../../../admin.php?page=staff-acs");
 ?>

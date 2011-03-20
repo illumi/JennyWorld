@@ -8,6 +8,10 @@ Computer Science and Information Systems Year 3
 
 **********************************************/ 
 include 'sql-connection.php';
+
+$query = mysql_query("SELECT description FROM cinema;");
+
+$text = mysql_fetch_assoc($query)
 ?>
 
 
@@ -76,27 +80,14 @@ xmlhttp.send();
 		</div>
 
 		<div id="mainContent">
-			<h1>
-			
-			Welcome to Jworld
-			
-			</h1>
+		
+			<h1>Welcome to Jworld</h1>
 				
 			<h3>
-				We have many new and classic films for you to enjoy
-				at our cinema. We have _ large screens and _ seats for you to enjoy them in.
-				<br>
-				some more stuff here, and then some more etc etc
-				<br>
-				some more, some more, some more, some more, some more...
-				<br>
-				some more, some more, some more, some more, some more...
-				<br>
-				some more, some more, some more, some more, some more...
-				<br>
-				some more, some more, some more, some more, some more...
+			<?php
+				echo $text['description']
+			?>
+			</br>
 			</h3>
-
-		
 		</div>	
 	</div>
