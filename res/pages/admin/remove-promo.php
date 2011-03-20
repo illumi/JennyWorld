@@ -47,6 +47,7 @@ $options="";
 	</form>
 	</h3>
 
+<h2></h2>
 </div>
 
 <?php

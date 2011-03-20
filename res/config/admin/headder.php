@@ -41,36 +41,68 @@ Computer Science and Information Systems Year 3
 			<h1>Jworld</h1>
 		</hgroup>
 		
-		
+	<?php	
+	if($_SESSION['admin'] == 1 && $_SESSION['staff'] == 0){
+		echo "
 	<nav>
-		<li><a href="admin.php">Home</a>
+		<li><a href=\"admin.php\">Home</a>
 			<ul>
-				<li><a href="admin.php?page=edit-home">Edit Home</a></li>
+				<li><a href=\"admin.php?page=edit-home\">Edit Home</a></li>
 			</ul>
 		</li>
-		<li><a href="admin.php?page=staff-acs">Staff</a>
+		<li><a href=\"admin.php?page=staff-acs\">Staff</a>
 		</li>
-		<li><a href="admin.php?page=promo-acs">Promotions</a>
+		<li><a href=\"admin.php?page=promo-acs\">Promotions</a>
 			<ul>
-				<li><a href="admin.php?page=add-promo">Add Promo</a></li>
-				<li><a href="admin.php?page=edit-promo">Edit Promo</a></li>
-				<li><a href="admin.php?page=remove-promo">Remove Promo</a></li>
+				<li><a href=\"admin.php?page=add-promo\">Add Promo</a></li>
+				<li><a href=\"admin.php?page=edit-promo\">Edit Promo</a></li>
+				<li><a href=\"admin.php?page=remove-promo\">Remove Promo</a></li>
 			</ul>
 		</li>
-		<li><a href="admin.php?page=tt-acs">Timetable</a>
+		<li><a href=\"admin.php?page=tt-acs\">Timetable</a>
 			<ul>
-				<li><a href="admin.php?page=add-film-tt">Add Film</a></li>
-				<li><a href="admin.php?page=edit-film-tt">Edit Film</a></li>
-				<li><a href="admin.php?page=remove-film-tt">Remove Film</a></li>
+				<li><a href=\"admin.php?page=add-film-tt\">Add Film</a></li>
+				<li><a href=\"admin.php?page=edit-film-tt\">Edit Film</a></li>
+				<li><a href=\"admin.php?page=remove-film-tt\">Remove Film</a></li>
 			</ul>
 		</li>
-		<li><a href="admin.php?page=stat-acs">Statistics</a></li>
-		<li><a href="admin.php?page=films-acs">Film Records</a>
+		<li><a href=\"admin.php?page=stat-acs\">Statistics</a></li>
+		<li><a href=\"admin.php?page=films-acs\">Film Records</a>
 			<ul>
-				<li><a href="admin.php?page=add-film">Add Film</a></li>
-				<li><a href="admin.php?page=edit-film">Edit Film</a></li>
-				<li><a href="admin.php?page=remove-film">Remove Film</a></li>
+				<li><a href=\"admin.php?page=add-film\">Add Film</a></li>
+				<li><a href=\"admin.php?page=edit-film\">Edit Film</a></li>
+				<li><a href=\"admin.php?page=remove-film\">Remove Film</a></li>
 			</ul>
 		</li>
 	</nav>
+		";	
+	} else {
+		echo "
+	<nav>
+		<li><a href=\"admin.php\">Home</a>
+		</li>
+		<li><a href=\"admin.php?page=booktickets\">Tickets</a>
+		</li>
+		<li><a href=\"admin.php?page=tt-acs\">Timetable</a>
+			<ul>
+				<li><a href=\"admin.php?page=add-film-tt\">Add Film</a></li>
+				<li><a href=\"admin.php?page=edit-film-tt\">Edit Film</a></li>
+				<li><a href=\"admin.php?page=remove-film-tt\">Remove Film</a></li>
+			</ul>
+		</li>
+		<li><a href=\"admin.php?page=stat-acs\">Statistics</a></li>
+		<li><a href=\"admin.php?page=films-acs\">Film Records</a>
+			<ul>
+				<li><a href=\"admin.php?page=add-film\">Add Film</a></li>
+				<li><a href=\"admin.php?page=edit-film\">Edit Film</a></li>
+				<li><a href=\"admin.php?page=remove-film\">Remove Film</a></li>
+			</ul>
+		</li>
+	</nav>
+		";
+	}
+	?>
+
+	
+	
 	</header>

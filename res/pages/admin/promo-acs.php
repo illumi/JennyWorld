@@ -46,7 +46,9 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 	mysql_close($link);
 
 	?> 
+	
 </h3>
+<h2></h2>
 </div>
 
 

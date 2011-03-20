@@ -85,9 +85,11 @@ xmlhttp.send();
 				
 			<h3>
 			<?php
-				echo $text['description']
+				echo $text['description'];
 			?>
 			</br>
 			</h3>
+			<h2></h2>
 		</div>	
+	
 	</div>

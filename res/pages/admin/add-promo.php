@@ -67,7 +67,9 @@ include 'sql-connection.php';
 		</table>
 	</form>
     </h3>
-
+	
+<h2></h2>
+</div>
 <?php
 mysql_close($link);
 ?>

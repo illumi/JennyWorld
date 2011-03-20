@@ -80,32 +80,46 @@ CREATE TABLE booking (
 
 INSERT INTO cinema VALUES ('', 'JennyWorld', 'Welcome to Jenny World! lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots of information goes here', 'Edinburgh');
 
+
 INSERT INTO staff VALUES ('', '1', 'jenny', '098f6bcd4621d373cade4e832627b4f6', 'manager');
 INSERT INTO staff VALUES ('', '1', 'Jamie', '098f6bcd4621d373cade4e832627b4f6', 'manager');
 
-INSERT INTO screens VALUES ('', '1', '1', '1000');
-INSERT INTO screens VALUES ('', '2', '1', '1000');
-INSERT INTO screens VALUES ('', '3', '1', '500');
-INSERT INTO screens VALUES ('', '4', '1', '500');
-INSERT INTO screens VALUES ('', '5', '1', '100');
 
-INSERT INTO films VALUES ('', 'Harry Potter and the Deathly Hallows pt1', '146', 'Fanstasy', '12A', '2010');
-INSERT INTO films VALUES ('', '127 Hours', '96', 'Drama', '15', '2010');
-INSERT INTO films VALUES ('', 'Black Swan', '108', 'Thriller', '15', '2010');
-INSERT INTO films VALUES ('', 'Godfather', '170', 'crime', '18', '1980');
-INSERT INTO films VALUES ('', 'Battle:LA', '132', 'action', '12', '2011');
-INSERT INTO films VALUES ('', 'The attack of the shark', '12', 'horror', 'R18', '2011');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('1', '1', '1000');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('2', '1', '1000');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('3', '1', '500');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('4', '1', '500');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('5', '1', '100');
 
-INSERT INTO showings VALUES ('', '1', '1', '2010-12-12', '2011-01-12', '15:30:00', '17:30:00');
-INSERT INTO showings VALUES ('', '1', '1', '2010-12-12', '2011-01-12', '18:00:00', '20:00:00');
-INSERT INTO showings VALUES ('', '2', '2', '2010-12-12', '2011-01-12', '20:30:00', '22:30:00');
-INSERT INTO showings VALUES ('', '2', '2', '2011-01-12', '2011-02-12', '15:30:00', '17:30:00');
-INSERT INTO showings VALUES ('', '2', '2', '2011-01-12', '2011-02-12', '18:00:00', '20:00:00');
-INSERT INTO showings VALUES ('', '2', '2', '2011-01-12', '2011-02-12', '20:30:00', '22:30:00');
-INSERT INTO showings VALUES ('', '3', '3', '2011-02-12', '2011-03-12', '15:30:00', '22:30:00');
-INSERT INTO showings VALUES ('', '3', '3', '2011-02-12', '2011-03-12', '18:00:00', '22:00:00');
-INSERT INTO showings VALUES ('', '3', '3', '2011-02-12', '2011-03-12', '20:30:00', '22:30:00');
 
-INSERT INTO booking VALUES ('', '1', 'John Doe', '2010-12-12', '4', '0');
+INSERT INTO films (film_title, film_length, film_genre, film_rating, film_year) VALUES ('Harry Potter and the Deathly Hallows pt1', '146', 'Fanstasy', '12A', '2010');
+INSERT INTO films (film_title, film_length, film_genre, film_rating, film_year) VALUES ('127 Hours', '96', 'Drama', '15', '2010');
+INSERT INTO films (film_title, film_length, film_genre, film_rating, film_year) VALUES ('Black Swan', '108', 'Thriller', '15', '2010');
+INSERT INTO films (film_title, film_length, film_genre, film_rating, film_year) VALUES ('Godfather', '170', 'crime', '18', '1980');
+INSERT INTO films (film_title, film_length, film_genre, film_rating, film_year) VALUES ('Battle:LA', '132', 'action', '12', '2011');
+INSERT INTO films (film_title, film_length, film_genre, film_rating, film_year) VALUES ('The attack of the shark', '12', 'horror', 'R18', '2011');
 
-INSERT INTO promotions VALUES ('', '1', 'BOGOF', '2011-03-1', '2011-03-31', 'Buy one get one free.');
+
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('1', '1', '2011-02-12', '2011-03-12', '20:30:00', '22:30:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('3', '2', '2011-02-12', '2011-03-12', '20:30:00', '22:30:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('4', '3', '2011-02-12', '2011-03-12', '20:30:00', '22:30:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('5', '3', '2011-02-12', '2011-03-12', '20:30:00', '22:30:00');
+
+
+INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('1', 'John Doe', '2010-12-12', '500', '0');
+INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('2', 'John Doe', '2010-12-12', '600', '0');
+INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('3', 'John Doe', '2010-12-12', '30', '0');
+INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('4', 'John Doe', '2010-12-12', '90', '0');
+
+
+INSERT INTO promotions (promo_name, start_date, end_date, description) VALUES ('BOGOF', '2011-03-1', '2011-03-31', 'Buy one get one free.');
+
+
+
+
+
+
+
+
+
+

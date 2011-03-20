@@ -103,7 +103,7 @@ foreach( $startDateQuery as $id => $d){
 **/
 
 //$query = "SELECT * FROM showings";
-$query = "SELECT  showings.screen_ID, showings.film_ID,  films.film_title, showings.start_time, films.film_rating, showings.start_date, showings.end_date, showings.end_time, showings.available_tickets,  showings.demand_for_more FROM showings, films WHERE showings.film_ID = films.film_ID";
+$query = "SELECT  showings.screen_ID, showings.film_ID,  films.film_title, showings.start_time, films.film_rating, showings.start_date, showings.end_date, showings.end_time FROM showings, films WHERE showings.film_ID = films.film_ID";
     
 
 $result = mysql_query($query) or die(mysql_error());
@@ -119,25 +119,21 @@ echo "
 
 
 <th>Rating</th>
-<th>available tickets</th>
 
 </tr>";
 // Print out the contents of each row into a table 
 while($row = mysql_fetch_array($result)){
-  
-
 	echo "<tr>";
-echo "<td>" . $row['screen_ID'] . "</td>";
-echo "<td NOWRAP>" . $row['film_title'] . "</td>";
+	echo "<td>" . $row['screen_ID'] . "</td>";
+	echo "<td NOWRAP>" . $row['film_title'] . "</td>";
 	echo "<td>" . $row['start_date'] . "</td>";
 	echo "<td>" . $row['end_date'] . "</td>";
 	echo "<td>" . $row['start_time'] . "</td>";
-//	echo "<td>" . $row['end_time'] . "</td>";
-	
+	//	echo "<td>" . $row['end_time'] . "</td>";
+		
 	echo "<td>" . $row['film_rating'] . "</td>";
-	
-echo "<td>" . $row['available_tickets'] . "</td>";
-//echo "<td>" . $row['demand_for_more'] . "</td>";
+		
+	//echo "<td>" . $row['demand_for_more'] . "</td>";
 	echo "</tr>";
 }
 echo "</table>";
