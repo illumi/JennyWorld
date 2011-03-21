@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+if(!isset($_SESSION['login']) && !$_SESSION['admin'] == 1)
 {
 	header('Location: ./index.php?page=adminLogin');
 }

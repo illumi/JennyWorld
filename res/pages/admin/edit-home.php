@@ -1,5 +1,5 @@
 <?php
-	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+	if(!isset($_SESSION['login']) && !$_SESSION['admin'] == 1)
 {
 	header('Location: ./index.php?page=adminLogin');
 }
@@ -15,9 +15,8 @@ $text = mysql_fetch_assoc($query)
 <h1>Edit Home Page</h1>
 <h2>
 
-	<form name="homeForm" method="POST" action="" class="center">
+	<form name="homeForm" method="POST" action="res/pages/admin/edit-home-do.php" class="center">
 		<input type="text" value="<?php echo $text['description']?>" name="text" id="text" required>
-		
 		
 		<input type="submit" name="formSubmit" id="buFormSubmit" value="Save!"> 
 	</form>
