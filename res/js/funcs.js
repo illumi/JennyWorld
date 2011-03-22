@@ -64,9 +64,12 @@ function onSubmit(button){
 			return false; //dont submit form
 		}
 	} else { //update an existing staff member
+	 if (validate_name(Form.login, "Can't have a blank username"))
+	 {
 		Form.action = "res/pages/admin/edit.php";
 		Form.buFormSubmit.click();
 		return true;
+	}
 	}
 
 }
@@ -88,6 +91,8 @@ function onDelete(button){
 		return false; //Form clear!
 	}
 }
+
+
 
 
 

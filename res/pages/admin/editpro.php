@@ -8,13 +8,14 @@ session_start();
 
 include 'sql-connection.php';
 
-$filmid = $_POST['filmid'];
-$promoname = $_POST['name'];
+$promoid = $_POST['promoid'];
+$name = $_POST['name'];
 $start = $_POST['start'];
 $end = $_POST['end'];
 $description = mysql_escape_string($_POST['desc']);
 
-$sql="INSERT INTO promotions (film_ID, promo_name, start_date, end_date, description) VALUES('$filmid','$promoname','$start','$end','$description')";
+$sql="UPDATE promotions SET promo_name = '$name', start_date = '$start', 
+end_date = '$end', description = '$description' WHERE promo_id = '$promoid'";
 mysql_query($sql) or die(mysql_error());
 
 

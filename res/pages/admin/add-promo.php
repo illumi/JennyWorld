@@ -32,14 +32,9 @@ include 'sql-connection.php';
 				</td>
 			</tr>
 			<tr>
-				<td>Pomotion Type:</td>
+				<td>Pomotion name:</td>
 				<td>
-					<select name="type" value="" id="type" required>
-						<option value="2for1">2 For 1 Viewings</option>
-						<option value="halfprice">Half Price</option>
-						<option value="freedrink">Free Drink</option>
-						<option value="freepop">Free Popcorn</option>
-					</select>
+					<input type="text" name="name" id="name"></input>
 				</td>
 			</tr>
 			<tr>
