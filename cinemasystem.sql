@@ -1,10 +1,10 @@
-DROP TABLE IF EXISTS booking;
-DROP TABLE IF EXISTS showings;
-DROP TABLE IF EXISTS screens;
-DROP TABLE IF EXISTS staff;
-DROP TABLE IF EXISTS cinema;
-DROP TABLE IF EXISTS promotions;
-DROP TABLE IF EXISTS films;
+DROP TABLE IF EXISTS booking CASCADE;
+DROP TABLE IF EXISTS showings CASCADE;
+DROP TABLE IF EXISTS screens CASCADE;
+DROP TABLE IF EXISTS staff CASCADE;
+DROP TABLE IF EXISTS cinema CASCADE;
+DROP TABLE IF EXISTS promotions CASCADE;
+DROP TABLE IF EXISTS films CASCADE;
 
 CREATE TABLE films (
   film_ID int(11) NOT NULL AUTO_INCREMENT,
@@ -78,11 +78,13 @@ CREATE TABLE booking (
   FOREIGN KEY (showing_id) REFERENCES showings(showing_ID) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
-INSERT INTO cinema VALUES ('', 'JennyWorld', 'Welcome to Jenny World! lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots of information goes here', 'Edinburgh');
+INSERT INTO cinema (name, description, location) VALUES ('JennyWorld', 'Welcome to Jenny World! lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots of information goes here', 'Edinburgh');
 
 
-INSERT INTO staff VALUES ('', '1', 'jenny', '098f6bcd4621d373cade4e832627b4f6', 'manager');
-INSERT INTO staff VALUES ('', '1', 'Jamie', '098f6bcd4621d373cade4e832627b4f6', 'manager');
+INSERT INTO staff (cinema_id, user_name, password, role_type) VALUES ('1', 'jenny', '098f6bcd4621d373cade4e832627b4f6', 'manager');
+INSERT INTO staff (cinema_id, user_name, password, role_type) VALUES ('1', 'Jamie', '098f6bcd4621d373cade4e832627b4f6', 'manager');
+INSERT INTO staff (cinema_id, user_name, password, role_type) VALUES ('1', 'jonas', '9c5ddd54107734f7d18335a5245c286b', 'staff');
+INSERT INTO staff (cinema_id, user_name, password, role_type) VALUES ('1', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'manager');
 
 
 INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('1', '1', '1000');
@@ -112,7 +114,7 @@ INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, col
 INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('4', 'John Doe', '2010-12-12', '90', '0');
 
 
-INSERT INTO promotions (promo_name, start_date, end_date, description) VALUES ('BOGOF', '2011-03-1', '2011-03-31', 'Buy one get one free.');
+INSERT INTO promotions (film_ID, promo_name, start_date, end_date, description) VALUES ( 1, 'BOGOF', '2011-03-1', '2011-03-31', 'Buy one get one free.');
 
 
 
