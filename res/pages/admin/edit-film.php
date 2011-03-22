@@ -3,7 +3,9 @@
 {
 	header('Location: ./index.php?page=adminLogin');
 }
+
 ?>
+
 
 <div id="body">
 <h1>Edit Film</h1>
@@ -16,11 +18,16 @@
 	<table border="0" class="center">
 		<tr>
 		<td>Film ID:</td>
-			<td><input type="text" value="" name="edit_filmid" required></td>
+			<td>
+ 		<input type="text" value="" name="edit_filmid" required>
+				</td>
 		</tr>
 		<tr>
-			<td>Film Title:</td> <td><input type="text" value="" name="edit_filmtitle" required></td>
-		</tr>
+		<td>Film Title: </td>	
+		<td> 
+ 			 <input type="text" value="" name="edit_filmtitle" required>
+		</td>
+	</tr>
 		<tr>
 			<td>Film Length (minutes):</td> <td><input type="text" value="" name="edit_filmlength" required></td>
 		</tr>
