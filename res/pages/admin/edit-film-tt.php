@@ -79,8 +79,8 @@ and then applied
 				</select>
 			</td>
 		</tr>
-	<tr>	<td NOWRAP>Start Date	(yyyy-mm-dd):</td> 
-		<td><input type="text" value="" name="newStartDate" required>	</td>
+	<tr>	<td NOWRAP>Start Date:</td> 
+		<td><input type="text" value="" name="newstartDate" required>	</td>
 	</tr>
 	<tr>	<td NOWRAP>End Date (yyyy-mm-dd): </td>
 		<td> <input type="text" value="" name="newEndDate" required>	</td>

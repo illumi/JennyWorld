@@ -3,8 +3,8 @@
 include 'sql-connection.php';
 
 //New fields to change
-$start_date = $_POST['startdate'];
-$end_date =  $_POST['enddate'];
+$start_date = $_POST['start'];
+$end_date =  $_POST['end'];
 $start_time = $_POST['newTime'];
 $screen = $_POST['newScreen'];
 
@@ -23,9 +23,9 @@ $filmIDDD = mysql_query($filmIDD) or die(my_sql_error());
 if ($filmIDDD = $film_title) {
 echo "SUCCESS MATCH";
 }
-$sql= "INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID, available_tickets)
+$sql= "INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID)
 VALUES
-('$start_date', '$end_date', '$start_time', '$end_time', '$filmIDDD', '$screen', '1')";
+('$start_date', '$end_date', '$start_time', '$end_time', '$filmIDDD', '$screen')";
 
 $result = mysql_query($sql) or die(mysql_error());
 

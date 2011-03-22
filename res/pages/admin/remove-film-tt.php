@@ -130,10 +130,7 @@ while($row = mysql_fetch_array($result)){
 	echo "<td>" . $row['end_date'] . "</td>";
 	echo "<td>" . $row['start_time'] . "</td>";
 	//	echo "<td>" . $row['end_time'] . "</td>";
-		
 	echo "<td>" . $row['film_rating'] . "</td>";
-		
-	//echo "<td>" . $row['demand_for_more'] . "</td>";
 	echo "</tr>";
 }
 echo "</table>";
@@ -155,9 +152,6 @@ echo "<table border='1' class=\"center\">
 <th>end time</th>
 <th>Film ID</th>
 <th>Screen ID</th>
-<th>Available Tickets</th>
-<th>Audience Size</th>
-<th>Demand for More</th>
 </tr>";
 
 while($row = mysql_fetch_array($timetable))
@@ -170,9 +164,6 @@ while($row = mysql_fetch_array($timetable))
 	echo "<td>" . $row['end_time'] . "</td>";
 	echo "<td>" . $row['film_ID'] . "</td>";
 	echo "<td>" . $row['screen_ID'] . "</td>";
-	echo "<td>" . $row['available_tickets'] . "</td>";
-	echo "<td>" . $row['audience_size'] . "</td>";
-	echo "<td>" . $row['demand_for_more'] . "</td>";
 	echo"</tr>";
 }
 echo "</table>";
