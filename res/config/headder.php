@@ -17,8 +17,8 @@ Computer Science and Information Systems Year 3
 
 	<link href="res/css/main.css" rel="stylesheet" type="text/css" />
 	<link href="calendar_eu.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="calendar_eu.js"></script>
-	<script type="text/javascript" src="res/pages/in.js"></script>
+	<script type="text/javascript" src="res/js/jquery-1.5.1.js"></script>
+	<script type="text/javascript" src="res/js/bookings.js"></script>
 	
 </head>
 

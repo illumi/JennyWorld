@@ -7,69 +7,88 @@ Software Engineering Group Project
 Computer Science and Information Systems Year 3
 
 **********************************************/ 
-include 'sql-connection.php';
+include('res/lib/class_dbcon.php');
+$connect = new doConnect();
 
 $query = mysql_query("SELECT description FROM cinema;");
 
-$text = mysql_fetch_assoc($query)
+$text = mysql_fetch_assoc($query);
+$connect->disc();
 ?>
 
-
 <script type="text/javascript">
-function showUser(str)
-{
-if (str=="")
-  {
-  document.getElementById("txtHint").innerHTML="";
-  return;
-  }
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
-    }
-  }
-xmlhttp.open("GET","getUser.php?q="+str,true);
-xmlhttp.send();
-}
+	$(document).ready(function() {
+	$('#loader').hide();
+
+	$('#film').change(function(){
+
+		$('#fdate').fadeOut();
+		$('#loader').show();
+
+		$.post("res/pages/get_date.php", {
+			film: $('#film').val()
+		}, function(response){
+			setTimeout("finishAjax('fdate', '"+escape(response)+"')", 400);
+		});
+		return false;
+	});
+
+	$('#fdate').change(function(){
+
+		$('#ftime').fadeOut();
+		$('#loader').show();
+
+		$.post("res/pages/get_time.php", {
+			film: $('#film').val(),
+			fdate: $('#fdate').val()
+		}, function(response){
+			setTimeout("finishAjax('ftime', '"+escape(response)+"')", 400);
+		});
+		return false;
+	});
+
+	});
+
+	function finishAjax(id, response){
+	 $('#loader').hide();
+	 $('#'+id).html(unescape(response));
+	 $('#'+id).fadeIn();
+	}
 </script>
-
-
 
 	<div id="body">
 		<div id="booking">
 		
-			<form name="testform" method="POST" onchange=showUser(this.value) action="">
+			<form name="testform" method="POST" action="">
 				<table>
 					<tr>
 						<th>Book Tickets</th>
 					<tr>
 						<td>		
-						Name:
-							<select NAME="filmname">					
-							<option VALUE="0">----</option>
-							<?php
-							$query = mysql_query("SELECT film_title FROM films;");
-							$i=1;
-							while ($row = mysql_fetch_assoc($query)) {
-								echo '<option value="' . $i . '">' . $row['film_title']. '</option>';
-								$i++;
-							}
-							?>
-							</select> 
+							<label for="film">Film:</label>
+								<select id="film" name="film">
+									<option id="0">-- Select Film --</option>
+									<?php
+										$connect = new doConnect();
+							
+										$q = mysql_query("SELECT * FROM films;");
+										while($row = mysql_fetch_assoc($q))
+										{
+											echo '<option value="'.$row['film_ID'].'">'.$row['film_title'].'</option>';
+										}
+										$connect->disc();
+									?>
+								</select>
 							<p>
-							Time:
-							<select NAME="time">	
-							</select> 
+							<label for="fdate">Date:</label>
+								<select id="fdate" name="fdate">
+									<option value="">-- Select Date --</option>
+								</select>
+							<p>
+							<label for="ftime">Time:</label>
+								<select id="ftime" name="ftime">
+									<option value="">-- Select Time --</option>
+								</select>
 							<p>
 							<input type="submit" name="submit" id="submit" value="Submit">
 							<input type="reset" name="reset" id="reset" value="Reset">
