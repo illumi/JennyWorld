@@ -30,9 +30,9 @@
 					<option value="drama">Drama</option>
 					<option value="fantasy">Fantasy</option>
 					<option value="horror">Horror</option>
-					<option value="romcom">Romantic Comedy</option
+					<option value="romcom">Romantic Comedy</option>
 					<option value="thriller">Thriller</option>
-					<option value="scifi">Science Fiction</option
+					<option value="scifi">Science Fiction</option>
 				</select></td>
 			</tr>
 			<tr>

@@ -104,7 +104,7 @@ function onSubmitEditFilms(submit)
 	
 		if (validate_editfilm(Form))
 		{
-			Form.action = "res/pages/admin/edit-flm.php";
+			Form.action = "res/pages/admin/edt-flm.php";
 			return true;
 		} 
 		else return false;
@@ -117,18 +117,6 @@ function onSubmitAddFilms(submit)
 		if (validate_addfilm(Form))
 		{
 			Form.action = "res/pages/admin/add-flm.php";
-			return true;
-		} 
-		else return false;
-}
-
-function onSubmitAddTimetable(submit)
-{
-	Form=submit.form;
-	
-		if (validate_timetable(Form))
-		{
-			Form.action = "res/pages/admin/add-f-tt.php";
 			return true;
 		} 
 		else return false;

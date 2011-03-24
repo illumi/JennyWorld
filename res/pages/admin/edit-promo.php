@@ -21,7 +21,7 @@ include 'sql-connection.php'
 					<select name="id">
 					<option value="0">Promotion</option>
 					<?php
-					$query = mysql_query(" select promo_name, film_title from promotions p, films f where p.film_ID = f.film_ID");
+					$query = mysql_query(" select promo_id, promo_name, film_title from promotions p, films f where p.film_ID = f.film_ID;");
 					while ($row = mysql_fetch_assoc($query)) {
 						echo '<option value="' . $row['promo_id'] . '">' . $row['promo_name']. " - " .$row['film_title']. '</option>';
 					}

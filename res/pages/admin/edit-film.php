@@ -43,15 +43,24 @@ include 'sql-connection.php';
 		</tr>
 		<tr>
 			<td>Film Genre:</td> <td><select name="edit_genre" value="" id="genre" required>
-				<option value="action">Action</option>
-				<option value="crime">Crime</option>
-				<option value="fantasy">Fantasy</option>
-				<option value="horror">Horror</option>
+					<option value="0">Genre</option>
+					<option value="action">Action</option>
+					<option value="animation">Animation</option>
+					<option value="comedy">Comedy</option>
+					<option value="crime">Crime</option>
+					<option value="documentary">Documentary</option>
+					<option value="drama">Drama</option>
+					<option value="fantasy">Fantasy</option>
+					<option value="horror">Horror</option>
+					<option value="romcom">Romantic Comedy</option>
+					<option value="thriller">Thriller</option>
+					<option value="scifi">Science Fiction</option>
 			</select><br /></td>
 		</tr>
 		<tr>
 			<td>Film Rating:</td> 
 			<td><select name="edit_rating" value="" id="rating" required>
+				<option value="0">Rating</option>
 				<option value="U">U</option>
 				<option value="PG">PG</option>
 				<option value="12">12</option>
