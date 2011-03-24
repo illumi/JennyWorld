@@ -22,14 +22,24 @@ Computer Science and Information Systems Year 3
 	<script type="text/javascript" src="res/js/jquery-ui-1.8.10.custom.min.js"></script>
 	
 	<script type="text/javascript">
-		var datefield=document.createElement("input")
-		datefield.setAttribute("type", "date")
-		if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
-			jQuery(function($){ //on document.ready
-				$('#start').datepicker({dateFormat: 'yy-mm-dd'});
-				$('#end').datepicker({dateFormat: 'yy-mm-dd'});
-			})
+	$(function() {
+		var dates = $( "#start, #end" ).datepicker({
+		defaultDate: "+1w",
+		dateFormat: 'yy-mm-dd',
+		minDate: 0,
+		changeMonth: true,
+		numberOfMonths: 1,
+		onSelect: function( selectedDate ) {
+		var option = this.id == "start" ? "minDate" : "maxDate",
+		instance = $( this ).data( "datepicker" ),
+		date = $.datepicker.parseDate(
+		instance.settings.dateFormat ||
+		$.datepicker._defaults.dateFormat,
+		selectedDate, instance.settings );
+		dates.not( this ).datepicker( "option", option, date );
 		}
+		});
+		});
 	</script>
 </head>
 

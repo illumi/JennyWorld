@@ -33,7 +33,7 @@ include 'sql-connection.php';
     </select>
 
 	<br />
-	Login: <input type="text" value="" name="login" id="login" disabled="disabled" required> <br />
+	Login: <input type="text" value="" name="login" id="login" disabled="disabled"> <br />
 	Password: <input type="password" value="" name="password" id="pass" disabled="disabled">  <br />
 	Role: <input type="radio" name="editrole" value="manager" id="managerRole" disabled="disabled"> manager
 	<input type="radio" name="editrole" value="staff" id="staffRole" disabled="disabled"> staff <br />

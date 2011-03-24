@@ -36,12 +36,12 @@ $optionsScreen="";
 <h2>
 
 <section id="add film timetable">
-	<form method="POST" action="res/pages/admin/add-f-tt.php"> 
+	<form name="tt" method="POST" action="" > 
 		<table border= "0" class="center">
 			<tr>
 				<td> Title:</td>	
 				<td> 
-					 <select NAME="newfilm_title"  required>
+					 <select name="newfilm_title"  required>
 					 <option VALUE="0">Film Title
 					  <?php echo $options?>
 					 </select> 
@@ -49,7 +49,7 @@ $optionsScreen="";
 			</tr>
 
 			<tr>	<td>Screen: </td>
-				<td> <SELECT Name="newScreen">
+				<td> <SELECT name="newScreen">
 					<option value="0">Screen
 					<?php echo $optionsScreen?>
 					</select>
@@ -70,44 +70,14 @@ $optionsScreen="";
 				<td NOWRAP>Time (00:00:00): </td>
 				<td> <input type="text" value="" name="newTime" required></td>
 			</tr>	
-			<tr>
-				<td> <input type="submit" name="submit" id="submit" value="Submit">	</td>
-				<td> <input type="reset" name="reset" id="reset" value="Reset">		</td>
+		<table border="0" class="center">				
+				<p>
+				<input type="submit" name="submit" id="submit" value="Submit" onClick="onSubmitAddTimetable(this);">
+				<input type="reset" name="reset" id="reset" value="Reset">	
 			</tr>
+			</table>
 		</table>
 	</form>
-
-
-	<?php
-
-	$films = mysql_query("SELECT * FROM films");
-
-	echo "<table border='1' class=\"center\">
-	<tr>
-	<th>ID</th>
-	<th>Title</th>
-	<th>length</th>
-	<th>Genre</th>
-	<th>Rating</th>
-	<th>Year</th>
-	</tr>";
-
-	while($row = mysql_fetch_array($films))
-	{
-		echo "<tr>";
-		echo "<td>" . $row['film_ID'] . "</td>";
-		echo "<td NOWRAP>" . $row['film_title'] . "</td>";
-		echo "<td>" . $row['film_length'] . "</td>";
-		echo "<td>" . $row['film_genre'] . "</td>";
-		echo "<td>" . $row['film_rating'] . "</td>";
-		echo "<td>" . $row['film_year'] . "</td>";
-
-		echo"</tr>";
-	}
-
-	echo "</table>";
-	mysql_close($link);
-	?>
 
 </section>
 </h2>

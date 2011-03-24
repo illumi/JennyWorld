@@ -62,7 +62,7 @@ and then applied
 
 <h2>
 
-<form method="POST" action="res/pages/admin/edit-f-tt.php">
+<form name="tt" method="POST" action="">
 	<table border="0" class="center">
 	<tr>
 		<tr>	<td>Showing: </td>
@@ -80,17 +80,19 @@ and then applied
 			</td>
 		</tr>
 	<tr>	<td NOWRAP>Start Date:</td> 
-		<td><input type="text" value="" name="newstartDate" required>	</td>
+		<td><input type="text" value="" name="start" required>	</td>
 	</tr>
 	<tr>	<td NOWRAP>End Date (yyyy-mm-dd): </td>
-		<td> <input type="text" value="" name="newEndDate" required>	</td>
+		<td> <input type="text" value="" name="end" required>	</td>
 	</tr>
 	<tr><td NOWRAP>Time (00:00:00): </td>
 		<td> <input type="text" value="" name="newTime" required>	</td>
 	</tr>
-	<tr>
-		<td><input type="submit" name="submit" id="submit" value="Submit"> </td>
-	</tr>
+	<table border="0" class="center">
+				<p>
+				<input type="submit" name="submit" id="submit" value="Submit">
+				<input type="reset" name="reset" id="reset" value="Reset">
+	   		</table>
 	</table>
 </form>
 

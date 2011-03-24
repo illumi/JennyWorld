@@ -14,18 +14,18 @@ include 'sql-connection.php';
 <h1>Add Promotion</h1>
 
     <h3>
-	<form name="testform" method="POST" action="res/pages/admin/add-pro.php" class="center">
+	<form name="promo" method="POST" action="" class="center">
 		<table border= "0" class="center">
 			
 			<tr>		
-				<td> Film ID: </td>	
+				<td> Film Name: </td>	
 				<td> 
-					<select name="filmid">
-					<option value="0">Film ID</option>
+					<select name="id">
+					<option value="0">Film Name</option>
 					<?php
-					$query = mysql_query("SELECT film_ID FROM films;");
+					$query = mysql_query("SELECT film_ID, film_title FROM films;");
 					while ($row = mysql_fetch_assoc($query)) {
-						echo '<option value="' . $row['film_ID'] . '">' . $row['film_ID']. '</option>';
+						echo '<option value="' . $row['film_ID'] . '">' . $row['film_title']. '</option>';
 					}
 					?>
 					</select> 
@@ -34,30 +34,30 @@ include 'sql-connection.php';
 			<tr>
 				<td>Pomotion name:</td>
 				<td>
-					<input type="text" name="name" id="name"></input>
+					<input type="text" name="name" id="name"/>
 				</td>
 			</tr>
 			<tr>
 			<td>Start Date:</td> 
 			<td>
-				<input type="date" id="start" name="start" size="20" required/>				
+				<input type="date" id="start" name="start" size="20"/>				
 			</td>
 			</tr>
 			<tr>
 			<td>End Date:</td> 
 			<td>
-				<input type="date" id="end" name="end" size="20" required/>				
+				<input type="date" id="end" name="end" size="20"/>				
 			</td>
 			</tr>
 			<tr>
-			<td>Description:</td> <td><input type="text" value="" name="desc" required/></td>
+			<td>Description:</td> <td><textarea rows="3" cols="26" name="desc"></textarea></td>
 			</tr>
-			<tr height="10px"></tr>
+
 	   		<table border="0" class="center">
-				<tr>
-				<td><input type="submit" name="submit" id="submit" value="Submit"></td>
-				<td><input type="reset" name="reset" id="reset" value="Reset"></td>
-				</tr>
+				<p>
+				<input type="submit" name="submit" id="submit" value="Submit" onClick="onSubmitAddPromo(this);">
+				<input type="reset" name="reset" id="reset" value="Reset"/>
+				
 	   		</table>
 		</table>
 	</form>

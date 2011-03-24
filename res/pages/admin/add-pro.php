@@ -8,7 +8,7 @@ session_start();
 
 include 'sql-connection.php';
 
-$filmid = $_POST['filmid'];
+$filmid = $_POST['id'];
 $promoname = $_POST['name'];
 $start = $_POST['start'];
 $end = $_POST['end'];
