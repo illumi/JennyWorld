@@ -16,10 +16,17 @@ Computer Science and Information Systems Year 3
 	<title>Administration</title>
 
 	<link href="res/css/redmond/jquery-ui-1.8.10.custom.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="res/css/redmond/jquery-ui-timepicker.css?v=0.1.0" type="text/css" />
 	<link href="res/css/admin.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="res/js/jquery-1.5.1.js"></script>
 	<script type="text/javascript" src="res/js/funcs.js"></script>
 	<script type="text/javascript" src="res/js/jquery-ui-1.8.10.custom.min.js"></script>
+	<script type="text/javascript" src="res/js/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="res/js/jquery.ui.timepicker.js?v=0.1.0"></script>
+
+
+
+<script type="text/javascript" src="jquery.ui.timepicker.js?v=0.1.0"></script>
 	
 	<script type="text/javascript">
 	$(function() {
@@ -40,6 +47,11 @@ Computer Science and Information Systems Year 3
 		}
 		});
 		});
+		
+		 $(document).ready(function() {
+                $('#timepicker_1').timepicker();
+            });
+
 	</script>
 </head>
 
