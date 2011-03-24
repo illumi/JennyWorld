@@ -12,5 +12,5 @@ mysql_query("UPDATE cinema SET description = '$name' WHERE id = '1'");
 
 mysql_close($link);
 
-header("location: ../../../admin.php?page=staff-acs");
+header("location: ../../../admin.php?page=edit-home");
 ?>
