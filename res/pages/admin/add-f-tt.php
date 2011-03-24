@@ -1,10 +1,5 @@
 <?php
 
-if(!isset($_SESSION['login']) || !$_SESSION['admin']  || empty($_SESSION['login']))
-{
-	header('Location: ./index.php?page=adminLogin');
-}
-
 include 'sql-connection.php';
 
 //New fields to change
@@ -24,6 +19,10 @@ $end_time = '0'; //Need to calculate the end time start time - length?
 $filmIDD = "SELECT films.film_ID, showings.film_ID, films.film_title FROM films, showings WHERE films.film_ID = showings.film_ID";
 $filmIDDD = mysql_query($filmIDD) or die(my_sql_error());
 
+//take film length from films and add it to the start time to get accurate endtime
+$calc_end = "SELECT * FROM films";
+$length = 
+$end_time = '0';
 
 if ($filmIDDD = $film_title) {
 echo "SUCCESS MATCH";

@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($_SESSION['login']) || !$_SESSION['admin']  || empty($_SESSION['login']))
+if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
 	header('Location: ./index.php?page=adminLogin');
 }
@@ -18,7 +18,7 @@ mysql_close($link);
 
 <div id="body">
 <h1> Remove Film from timetable</h1>
-<h3>
+<h2>
 
 <section id="remove info">
 	<form method="POST" action="res/pages/admin/remove-f-tt.php">
@@ -55,5 +55,5 @@ mysql_close($link);
 	</form>
 </section>
 
-</h3>
+</h2>
 </div>

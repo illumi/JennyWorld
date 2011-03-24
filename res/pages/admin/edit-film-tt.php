@@ -1,9 +1,7 @@
 <?php
-
-
-if(!isset($_SESSION['login']) || !$_SESSION['admin'] || empty($_SESSION['login']))
+	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ./index.php?page=adminLogin');
+	header('Location: ../../../index.php?page=adminLogin');
 }
 
 include 'sql-connection.php';
@@ -56,8 +54,6 @@ and then applied
 
 ?>
 
-
-
 <div id="body">
 <h1> Edit Film in Timetable</h1>
 <p>
@@ -81,12 +77,15 @@ and then applied
 				</select>
 			</td>
 		</tr>
-	<tr>	<td NOWRAP>Start Date:</td> 
-		<td><input type="text" value="" name="start" required>	</td>
-	</tr>
-	<tr>	<td NOWRAP>End Date (yyyy-mm-dd): </td>
-		<td> <input type="text" value="" name="end" required>	</td>
-	</tr>
+	<tr>
+				<td NOWRAP>Start Date:</td> 
+				<td><input type="date" id="start" name="start" size="20" required/>	</td>
+			</tr>
+
+			<tr>
+				<td NOWRAP>End Date: </td>
+				<td><input type="date" id="end" name="end" size="20" required/>	</td>
+			</tr>
 	<tr><td NOWRAP>Time (00:00:00): </td>
 		<td> <input type="text" value="" name="newTime" required>	</td>
 	</tr>
@@ -99,11 +98,7 @@ and then applied
 </form>
 
 
-
 <?php
-
-$my_t=getdate(date("U"));
-print("$my_t[year]-$my_t[mon]-$my_t[mday]");
 
 echo date("Y-m-d");
 
