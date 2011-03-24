@@ -61,6 +61,15 @@ img.align-left { float:left; margin: 0 15px 15px 0; }
 	position: absolute;
 	top: -500px;
 }
+
+.txtBox {
+	border: 1px solid #CCC;
+	color: #999;
+	height: 75px;
+	width: 500px;
+}
+
+
 nav {
 	padding-top: 150px;
 	width: 980px;	

@@ -6,7 +6,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['admin'] || empty($_SESSION['login']
 
 include 'sql-connection.php';
 
-$name = mysql_escape_string($_POST['text']);
+$name = mysql_escape_string($_POST['TxtareaInput']);
 
 mysql_query("UPDATE cinema SET description = '$name' WHERE id = '1'");
 
