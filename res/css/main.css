@@ -14,7 +14,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: right top;
 	width: 840px;
-	height:100%
+	height:100%;
 	margin-top: 0px;
 	margin-right: auto;
 	margin-bottom: 0px;
@@ -22,16 +22,12 @@ body {
 }
 
 #booking {
-	float:right;
+	float: right;
+	//position: relative;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:18px;
 	font-weight:bold;	
 	width: 180px;
-	height:100% no repeat;
-	padding:20px 20px 20px 30px;
-	margin-bottom:20px;
-	margin-left:auto;
-	margin-right:auto;
 }
 
 #mainContent {
@@ -67,7 +63,6 @@ h2{
 }
 
 h3{
-
 	letter-spacing:-1px;
 	font-size:16.5px;
 	padding-bottom:6px;
