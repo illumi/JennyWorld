@@ -8,6 +8,9 @@ Software Engineering Group Project
 Computer Science and Information Systems Year 3
 
 **********************************************/
+
+session_start();
+
 if( isset($_SESSION['login']) && isset($_SESSION['admin']))
 {
     header('Location: ./admin.php');

@@ -8,7 +8,7 @@ Computer Science and Information Systems Year 3
 
 **********************************************/ 
 
-if( (!isset($_SESSION['login']) && !isset($_SESSION['admin'])))
+if( !isset($_SESSION['login']) || empty($_SESSION['login']))
 {
 	header('Location: ./index.php?page=adminLogin');
 }

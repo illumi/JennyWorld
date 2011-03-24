@@ -1,5 +1,10 @@
 <?php
 
+if(!isset($_SESSION['login']) || !$_SESSION['admin']  || empty($_SESSION['login']))
+{
+	header('Location: ./index.php?page=adminLogin');
+}
+
 include 'sql-connection.php';
 
 //New fields to change

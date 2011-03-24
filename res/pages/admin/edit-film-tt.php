@@ -1,7 +1,9 @@
 <?php
-	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
+
+
+if(!isset($_SESSION['login']) || !$_SESSION['admin'] || empty($_SESSION['login']))
 {
-	header('Location: ../../../index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin');
 }
 
 include 'sql-connection.php';
