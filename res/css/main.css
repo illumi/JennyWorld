@@ -7,29 +7,22 @@ body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	color: #000;
 	background: #006BAF;
-	margin: 0;
-	padding: 0;
 }
 #container {
-	background-repeat: no-repeat;
-	background-position: right top;
 	width: 840px;
 	height:100%;
-	margin-top: 0px;
 	margin-right: auto;
-	margin-bottom: 0px;
 	margin-left: auto;
 }
 
 #booking {
 	float: right;
-	//position: relative;
+	margin-right:100px;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:18px;
 	font-weight:bold;	
 	width: 180px;
 }
-
 #mainContent {
 	float:left;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -37,7 +30,6 @@ body {
 	font-weight:bold;
 	width: 450px;
 	height:100%;
-	padding:20px 20px 20px 30px;
 	margin-bottom:20px;
 	margin-left:auto;
 	margin-right:auto;

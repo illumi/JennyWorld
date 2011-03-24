@@ -7,28 +7,20 @@ body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	color: #000;
 	background: #006BAF;
-	margin: 0;
-	padding: 0;
+}
+#container {
+	width: 980px;	
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
 }
 #booking {
-	
 	background-color:white;	
 	width: 100px;
 	height:100%;
-	padding:20px 20px 20px 30px;
 	margin-bottom:20px;
 	margin-left:auto;
 	margin-right:auto;
-}
-#container {
-
-	background-repeat: no-repeat;
-	background-position: right top;
-	width: 980px;	
-	margin-top: 0px;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-left: auto;
 }
 h1{
 	border-bottom:1px solid #000000;
