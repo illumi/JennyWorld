@@ -74,6 +74,214 @@ function onSubmit(button){
 
 }
 
+function onSubmitAddPromo(submit)
+{
+	Form=submit.form;
+	
+		if (validate_addPromo(Form))
+		{
+			Form.action = "res/pages/admin/add-pro.php";
+			return true;
+		} 
+		else return false;
+}
+
+function onSubmitEditPromo(submit)
+{
+	Form=submit.form;
+	
+		if (validate_addPromo(Form))
+		{
+			Form.action = "res/pages/admin/editpro.php";
+			return true;
+		} 
+		else return false;
+}
+
+function onSubmitEditFilms(submit)
+{
+	Form=submit.form;
+	
+		if (validate_editfilm(Form))
+		{
+			Form.action = "res/pages/admin/edt-flm.php";
+			return true;
+		} 
+		else return false;
+}
+
+function onSubmitAddFilms(submit)
+{
+	Form=submit.form;
+	
+		if (validate_addfilm(Form))
+		{
+			Form.action = "res/pages/admin/add-flm.php";
+			return true;
+		} 
+		else return false;
+}
+
+function onSubmitEditTimetable(submit)
+{
+	Form=submit.form;
+	
+		if (validate_timetable(Form))
+		{
+			Form.action = "res/pages/admin/edit-f-tt.php";
+			return true;
+		} 
+		else return false;
+}
+
+function onSubmitAddTimetable(submit)
+{
+	Form=submit.form;
+	
+		if (validate_addtimetable(Form))
+		{
+			Form.action = "res/pages/admin/add-f-tt.php";
+			return true;
+		} 
+		else return false;
+}
+
+
+function validate_addfilm(thisform)
+{
+	with (thisform) 
+	{
+		if (!validate_name(filmtitle, "You must enter a film title!")) 
+		{
+			return false;
+		}
+		if (!validate_name(filmlength, "You must enter the running time of the film!")) 
+		{
+			return false;
+		}
+		if(document.addfilm.genre.selectedIndex==0)
+		{
+			alert("Please select a genre.");
+			return false;
+		}
+		if(document.addfilm.rating.selectedIndex==0)
+		{
+			alert("Please select a rating.");
+			return false;
+		}
+		if (!validate_name(year, "You must enter year of release!")) 
+		{
+			return false;
+		}
+
+
+	}
+	return true;
+	
+}
+
+function validate_editfilm(thisform)
+{
+	with (thisform) 
+	{
+		if(document.editfilm.id.selectedIndex==0)
+		{
+			alert("Please select a filme name.");
+			return false;
+		}
+		if (!validate_name(edit_filmtitle, "Please must enter a film title!")) 
+		{
+			return false;
+		}
+		if (!validate_name(edit_filmlength, "Please enter the running time of the film!")) 
+		{
+			return false;
+		}
+		if(document.editfilm.edit_genre.selectedIndex==0)
+		{
+			alert("Please select a rating.");
+			return false;
+		}
+		if(document.editfilm.edit_rating.selectedIndex==0)
+		{
+			alert("Please select a rating.");
+			return false;
+		}
+		if (!validate_name(edit_year, "You must enter year of release!")) 
+		{
+			return false;
+		}
+
+
+	}
+	return true;
+	
+}
+
+function validate_addtimetable(thisform)
+{
+	with (thisform) 
+	{
+		if(document.tt.newfilm_title.selectedIndex==0)
+		{
+			alert("Please select a film title.");
+			return false;
+		}
+		if(document.tt.newScreen.selectedIndex==0)
+		{
+			alert("Please select a screen.");
+			return false;
+		}
+		if (!validate_name(start, "Please enter a start date!")) 
+		{
+			return false;
+		}
+		if (!validate_name(end, "Please enter an end date.")) 
+		{
+			return false;
+		}
+		if (!validate_name(newTime, "Pleae enter a start time.")) 
+		{
+			return false;
+		}
+
+
+	}
+	return true;
+	
+}
+
+function validate_addPromo(thisform)
+{
+	with (thisform) 
+	{
+		if(document.promo.id.selectedIndex==0)
+		{
+			alert("Please select an option.");
+			return false;
+		}
+		if (!validate_name(name, "Please enter a promotion name!")) 
+		{
+			return false;
+		}
+		if (!validate_name(start, "Please enter a start date!")) 
+		{
+			return false;
+		}
+		if (!validate_name(end, "Please enter a end date!")) 
+		{
+			return false;
+		}
+		if (!validate_name(desc, "Please enter a description!"))
+		{
+			return false;
+		}
+
+	}
+	return true;
+	
+}
+
 function onDelete(button){
 	Form=button.form;
 	if (button.value=="Delete Staff Member") {

@@ -31,7 +31,7 @@ $result = mysql_query($sql) or die(mysql_error());
 
 
 echo "success";
-header("location:../../../admin.php?page=add-film-tt");
+header("location:../../../admin.php?page=tt-acs");
 mysql_close($link);
 
 

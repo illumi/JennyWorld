@@ -6,7 +6,7 @@
 
 include 'sql-connection.php';
 
-$edit_filmid=$_POST['edit_filmid'];
+$edit_filmid=$_POST['id'];
 $edit_filmtitle=addslashes($_POST['edit_filmtitle']);
 $edit_filmlength=($_POST['edit_filmlength']);
 $edit_genre=($_POST['edit_genre']);
@@ -22,7 +22,7 @@ WHERE film_ID = '$edit_filmid'";
 mysql_query($sql) or die(mysql_error());
 
 
-header("location:../../../admin.php?page=edit-film");
+header("location:../../../admin.php?page=films-acs");
 mysql_close($link);
 
 ?>

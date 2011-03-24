@@ -4,6 +4,8 @@
 	header('Location: ./index.php?page=adminLogin');
 }
 
+include 'sql-connection.php';
+
 ?>
 
 
@@ -14,12 +16,20 @@
 <section id="edit info">
 
     <P>Please enter new details (enter old values for unchanged fields)</p>
-	<form method="POST" action="res/pages/admin/edt-flm.php">
+	<form name="editfilm" method="POST" action="">
 	<table border="0" class="center">
 		<tr>
-		<td>Film ID:</td>
+		<td>Film Name:</td>
 			<td>
- 		<input type="text" value="" name="edit_filmid" required>
+					<select name="id">
+					<option value="0">Film Name</option>
+					<?php
+					$query = mysql_query("SELECT film_ID, film_title FROM films;");
+					while ($row = mysql_fetch_assoc($query)) {
+						echo '<option value="' . $row['film_ID'] . '">' . $row['film_title']. '</option>';
+					}
+					?>
+					</select> 
 				</td>
 		</tr>
 		<tr>
@@ -33,15 +43,24 @@
 		</tr>
 		<tr>
 			<td>Film Genre:</td> <td><select name="edit_genre" value="" id="genre" required>
-				<option value="action">Action</option>
-				<option value="crime">Crime</option>
-				<option value="fantasy">Fantasy</option>
-				<option value="horror">Horror</option>
+					<option value="0">Genre</option>
+					<option value="action">Action</option>
+					<option value="animation">Animation</option>
+					<option value="comedy">Comedy</option>
+					<option value="crime">Crime</option>
+					<option value="documentary">Documentary</option>
+					<option value="drama">Drama</option>
+					<option value="fantasy">Fantasy</option>
+					<option value="horror">Horror</option>
+					<option value="romcom">Romantic Comedy</option>
+					<option value="thriller">Thriller</option>
+					<option value="scifi">Science Fiction</option>
 			</select><br /></td>
 		</tr>
 		<tr>
 			<td>Film Rating:</td> 
 			<td><select name="edit_rating" value="" id="rating" required>
+				<option value="0">Rating</option>
 				<option value="U">U</option>
 				<option value="PG">PG</option>
 				<option value="12">12</option>
@@ -54,48 +73,14 @@
 		<tr>
 			<td>Year Released:</td> <td><input type="text" value="" name="edit_year" required></td>
 		</tr>
-		<tr height="10px"></tr>
 		<table border="0" class="center">
 			<tr>
-				<td><input type="submit" name="submit" id="submit" value="Submit"></td>
-				<td><input type="reset" name="reset" id="reset" value="Reset"></td>
+				<p>
+				<input type="submit" name="submit" id="submit" value="Submit" onClick="onSubmitEditFilms(this);">
+				<input type="reset" name="reset" id="reset" value="Reset">
 			</tr>
 		</table>
 	</table>
 	</form>
 </section>
-<h3>
-<?php
-
-include 'sql-connection.php';
-
-$query = mysql_query("SELECT * FROM films");
-
-
-echo "<table border='1' class=\"center\">
-<tr>
-<th>Film ID</th>
-<th>Film Title</th>
-<th>Film Length</th>
-<th>Film Genre</th>
-<th>Film Rating</th>
-<th>Film Year</th>
-</tr>";
-
-while($row = mysql_fetch_array($query))
-{
-	echo "<tr>";
-	echo "<td>" . $row['film_ID'] . "</td>";
-	echo "<td>" . $row['film_title'] . "</td>";
-	echo "<td>" . $row['film_length'] . "</td>";
-	echo "<td>" . $row['film_genre'] . "</td>";
-	echo "<td>" . $row['film_rating'] . "</td>";
-	echo "<td>" . $row['film_year'] . "</td>";
-	echo"</tr>";
-}
-echo "</table>";
-mysql_close($link);
-?>
-
-</h3>
 </div>

@@ -1,54 +1,40 @@
 <?php
+session_start();
 
 if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ./index.php?page=adminLogin');
+	header('Location: ../../../index.php?page=adminLogin');
 }
 
-include 'sql-connection.php';
+// check if the $POST variable exists
+if(isset($_POST['delete']))
+{
+    $delete= $_POST['delete'];
+    $nElement = count($delete);
+    // check that the user has selected at least one checkbox
+    
+    if(is_array($delete) && ($nElement > 0))
+    {
+        include 'sql-connection.php';
 
-//New fields to change
-$film_title = $_POST['remove_title'];
-$start_date = $_POST['startDate'];
-$end_date =  $_POST['endDate'];
-$start_time = $_POST['time'];
+        $query= "DELETE FROM showings WHERE showing_ID=";
 
+        foreach($delete as $key => $id)
+        {
+            // if there is only one checkbox that has been selected or if this is the last row of our array.
+            if(($nElement - 1) == $key || $key == $nElement)
+                $query= $query.$id.";";
 
-$query = "SELECT films.film_ID, showings.film_ID, films.film_title, showings.showing_ID FROM films, showings WHERE films.film_ID = '$film_title'";//films.film_ID = showings.film_ID";
-$result = mysql_query($query) or die(mysql_error());
+            else
+                $query= $query.$id." OR showing_ID=";
 
-while($row = mysql_fetch_array($result)){
-	echo $row['film_ID']. " - ". $row['film_title']. " - ". $row['showing_ID'];
-	echo "<br />";
+        }
+
+        mysql_query($query);
+        mysql_close($link);
+
+        header("location: ../../../admin.php?page=remove-film-tt");
+    }
 }
-
-$deleteQuery = mysql_query("SELECT showing_ID FROM showings WHERE start_date='$start_date' AND end_date = '$end_date' AND start_time = '$start_time' ") or die(mysql_error()); //  AND film_ID = '$film_title'
-
-
-while($row = mysql_fetch_array($deleteQuery)){
-	echo "DeleteQuery - " .$row['showing_ID'];
-	echo "<br />";
-}
-
-echo "WTF <br />";
-
-mysql_query("DELETE FROM `showings` WHERE `showing_ID` = '$deleteQuery'") or die(mysql_error()) ;
-
-
-echo "FFS <br />";
-
-$check = mysql_query("SELECT showing_ID FROM showings") or die(mysql_error());
-
-while($row = mysql_fetch_array($check)){
-	echo $row['showing_ID'];
-	echo "<br />";
-}
-
-
-
-
-header("location:../../../admin.php?page=remove-film-tt");
-mysql_close($link);
-
 
 ?>

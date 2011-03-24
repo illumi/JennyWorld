@@ -47,11 +47,12 @@ mysql_close($link);
                                 echo"</tr>";
                         }
                     ?>
-			<tr height="10px"></tr>
+			
 		</table>
 		<table border="0" class="center">
-			<td><input type="submit" name="submit" id="submit" value="Submit"></td>
-			<td><input type="reset" name="reset" id="reset" value="Reset"></td>
+			<p>
+			<input type="submit" name="submit" id="submit" value="Delete">
+			<input type="reset" name="reset" id="reset" value="Reset">
                 </table>
 	</form>
 </section>

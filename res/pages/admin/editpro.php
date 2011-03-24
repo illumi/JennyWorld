@@ -8,7 +8,7 @@ session_start();
 
 include 'sql-connection.php';
 
-$promoid = $_POST['promoid'];
+$promoid = $_POST['id'];
 $name = $_POST['name'];
 $start = $_POST['start'];
 $end = $_POST['end'];

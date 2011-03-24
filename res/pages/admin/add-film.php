@@ -10,7 +10,7 @@
 <h1>Add Film</h1>
 <h3>
 <section id="new film info">
-	<form method="POST" action="res/pages/admin/add-flm.php">
+	<form name="addfilm" method="POST" action="">
 		<table border= "0" class="center">
 			<tr>
 				<td>Film Title:</td> <td><input type="text" value="" name="filmtitle" required></td>
@@ -21,6 +21,7 @@
 			<tr>
 				<td>Film Genre:</td> 
 				<td><select name="genre" value="" id="genre" required>
+					<option value="0">Genre</option>
 					<option value="action">Action</option>
 					<option value="animation">Animation</option>
 					<option value="comedy">Comedy</option>
@@ -29,14 +30,15 @@
 					<option value="drama">Drama</option>
 					<option value="fantasy">Fantasy</option>
 					<option value="horror">Horror</option>
-					<option value="romcom">Romantic Comedy</option
+					<option value="romcom">Romantic Comedy</option>
 					<option value="thriller">Thriller</option>
-					<option value="scifi">Science Fiction</option
+					<option value="scifi">Science Fiction</option>
 				</select></td>
 			</tr>
 			<tr>
 				<td>Film Rating (BBFC):</td>
 				<td><select name="rating" value="" id="rating" required>
+					<option value="0">Rating</option>
 					<option value="U">U</option>
 					<option value="PG">PG</option>
 					<option value="12">12</option>
@@ -50,49 +52,16 @@
 			<td>Year Released:</td>
 				<td><input type="text" value="" name="year" required></td>
 			</tr>
-			<tr height="10px"></tr>
 	   		<table border="0" class="center">
 				<tr>
-					<td><input type="submit" name="submit" id="submit" value="Submit"></td>
-					<td><input type="reset" name="reset" id="reset" value="Reset"></td>
+				<p>
+				<input type="submit" name="submit" id="submit" value="Submit" onClick="onSubmitAddFilms(this);">
+				<input type="reset" name="reset" id="reset" value="Reset">
 				</tr>
 	   		</table>
 		</table>
 	</form>
 </section>
-
-
-<?php
-
-include 'sql-connection.php';
-
-$query = mysql_query("SELECT * FROM films");
-
-
-echo "<table border='1' class=\"center\">
-<tr>
-<th>Film ID</th>
-<th>Film Title</th>
-<th>Film Length</th>
-<th>Film Genre</th>
-<th>Film Rating</th>
-<th>Film Year</th>
-</tr>";
-
-while($row = mysql_fetch_array($query))
-{
-	echo "<tr>";
-	echo "<td>" . $row['film_ID'] . "</td>";
-	echo "<td>" . $row['film_title'] . "</td>";
-	echo "<td>" . $row['film_length'] . "</td>";
-	echo "<td>" . $row['film_genre'] . "</td>";
-	echo "<td>" . $row['film_rating'] . "</td>";
-	echo "<td>" . $row['film_year'] . "</td>";
-	echo"</tr>";
-}
-echo "</table>";
-mysql_close($link);
-?>
 
 </h3>
 </div>
