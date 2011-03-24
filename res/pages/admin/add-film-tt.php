@@ -1,4 +1,4 @@
-<?php
+ <?php
 	if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
 	header('Location: ./index.php?page=adminLogin');
@@ -67,8 +67,8 @@ $optionsScreen="";
 			</tr>
 
 			<tr>
-				<td NOWRAP>Time (00:00:00): </td>
-				<td> <input type="text" value="" name="newTime" required></td>
+				<td NOWRAP>Time: </td>
+				<td> <input type="text" id="timepicker_1" value="" name="newTime" required></td>
 			</tr>	
 		<table border="0" class="center">				
 				<p>
