@@ -4,7 +4,8 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'] == 1)
 	header('Location: ./index.php?page=adminLogin');
 }
 
-include 'sql-connection.php';
+include ('../../lib/class_dbcon.php');
+$connect = new doConnect();
 
 $editid = $_POST['unique_id'];
 $editname= mysql_escape_string($_POST['login']);
@@ -23,7 +24,7 @@ mysql_query("UPDATE staff SET user_name = '$editname', password='$editpassword',
 mysql_query("UPDATE staff SET user_name = '$editname', role_type = '$editrole' WHERE staff_ID = '$editid'");
 }
 
+$connect->disc();
 header("location:../../../admin.php?page=staff-acs");
-mysql_close($link);
 
 ?>

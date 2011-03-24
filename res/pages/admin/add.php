@@ -4,7 +4,8 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'] == 1)
 	header('Location: ./index.php?page=adminLogin');
 }
 
-include 'sql-connection.php';
+include ('../../lib/class_dbcon.php');
+$connect = new doConnect();
 
 $name = mysql_escape_string($_POST['login']);
 $userpassword = md5($_POST['password']);
@@ -19,6 +20,6 @@ VALUES
 ('1','$name','$userpassword','$role')";
 mysql_query($sql) or die(mysql_error());
 
-mysql_close($link);
+$connect->disc();
 header("location: ../../../admin.php?page=staff-acs");
 ?>

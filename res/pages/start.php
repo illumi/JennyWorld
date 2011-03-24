@@ -59,7 +59,7 @@ $connect->disc();
 	<div id="body">
 		<div id="booking">
 		
-			<form name="testform" method="POST" action="">
+			<form name="bookForm" method="POST" action="index.php?page=booking-do">
 				<table>
 					<tr>
 						<th>Book Tickets</th>
@@ -71,7 +71,7 @@ $connect->disc();
 									<?php
 										$connect = new doConnect();
 							
-										$q = mysql_query("SELECT * FROM films;");
+										$q = mysql_query("SELECT * FROM films ORDER BY film_title;");
 										while($row = mysql_fetch_assoc($q))
 										{
 											echo '<option value="'.$row['film_ID'].'">'.$row['film_title'].'</option>';
