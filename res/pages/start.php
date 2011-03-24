@@ -23,12 +23,14 @@ $connect->disc();
 	$('#film').change(function(){
 
 		$('#fdate').fadeOut();
+		$('#ftime').fadeOut();
 		$('#loader').show();
 
 		$.post("res/pages/get_date.php", {
 			film: $('#film').val()
 		}, function(response){
 			setTimeout("finishAjax('fdate', '"+escape(response)+"')", 400);
+			setTimeout("finishAjax('ftime', '<option id=\"0\">-- Select Date --</option>')", 400); 
 		});
 		return false;
 	});
@@ -82,12 +84,12 @@ $connect->disc();
 							<p>
 							<label for="fdate">Date:</label>
 								<select id="fdate" name="fdate">
-									<option value="">-- Select Date --</option>
+									<option value="">-- Select Film --</option>
 								</select>
 							<p>
 							<label for="ftime">Time:</label>
 								<select id="ftime" name="ftime">
-									<option value="">-- Select Time --</option>
+									<option value="">-- Select Film --</option>
 								</select>
 							<p>
 							<input type="submit" name="submit" id="submit" value="Submit">
