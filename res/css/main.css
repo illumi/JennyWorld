@@ -95,10 +95,6 @@ nav ul {
 nav ul li {
 	float: left;
 }
-
-nav1 ul li {
-	float: center;
-}
 nav ul a {
 	display: block;
 	width:140px;
@@ -108,6 +104,8 @@ nav ul a {
 	color: #fff;
 	border: 1px solid #fff;
 	margin: 5px 0px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
 	box-shadow: 1px 1px 3px #000;
     text-shadow: 1px 1px 1px #000;
 }
@@ -203,10 +201,8 @@ footer p {
 	width:400px; 
 	height:300px;
 	display:none; 
-	float:center;
 	background:#ffffff;
  }
-
 .center {
 	margin-left:auto;
 	margin-right:auto;

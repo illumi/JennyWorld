@@ -95,6 +95,8 @@ nav a {
 	color: #fff;
 	border: 1px solid #fff;
 	margin: 5px 0px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
 	box-shadow: 1px 1px 3px #000;
     text-shadow: 1px 1px 1px #000;
 	background: rgba(255,255,255,0.2);
@@ -123,6 +125,8 @@ nav ul {
 	text-decoration: none;
 	color: #fff;
 	border: 1px solid #fff;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
 	box-shadow: 1px 1px 3px #000;
     text-shadow: 1px 1px 1px #000;
 }

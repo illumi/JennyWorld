@@ -13,7 +13,7 @@ Computer Science and Information Systems Year 3
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<title>Jennyworld</title>
+	<title>JWorld</title>
 
 	<link href="res/css/main.css" rel="stylesheet" type="text/css" />
 	<link href="res/css/redmond/jquery-ui-1.8.10.custom.css" rel="stylesheet" type="text/css"/>
