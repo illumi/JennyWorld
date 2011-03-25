@@ -89,6 +89,21 @@ function onSubmit(button){
 
 }
 
+function onBookingSubmit(submit) {
+	Form=submit.form;
+	
+	var pattern = "[0-9]*";
+	
+	if (Form.tickets.value.match(pattern) && Form.tickets.value < 7) {
+	
+		Form.buFormSubmit.click();
+		return true;
+	} else {
+		alert("Input needs to be a number, you can only reserve upto 6 tickets with one booking.");
+		return false;
+	}
+}
+
 function onSubmitAddPromo(submit)
 {
 	Form=submit.form;
