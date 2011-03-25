@@ -22,9 +22,9 @@ if( !isset($_SESSION['login']) || empty($_SESSION['login']))
 	
 	
 	if($_SESSION['admin'] == 1  && $_SESSION['staff'] == 1){
-		echo "Click <a href=\"admin.php?page=switchStaffView\">here</a> to go to manager view </br></br></h2>";
+		echo "Click <a href=\"admin.php?page=switchStaffView\">here</a> to go to manager view <p><p></h2>";
 	} else if ($_SESSION['admin'] == 1) {
-		echo "Click <a href=\"admin.php?page=switchStaffView\">here</a> to go to staff view </br></br></h2>";
+		echo "Click <a href=\"admin.php?page=switchStaffView\">here</a> to go to staff view <p><p></h2>";
 	}
 	
 	?>

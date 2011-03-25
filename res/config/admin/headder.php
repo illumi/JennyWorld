@@ -82,6 +82,7 @@ Computer Science and Information Systems Year 3
 				<li><a href=\"admin.php?page=add-film-tt\">Add Film</a></li>
 				<li><a href=\"admin.php?page=edit-film-tt\">Edit Film</a></li>
 				<li><a href=\"admin.php?page=remove-film-tt\">Remove Film</a></li>
+				<li><a href=\"admin.php?page=auto-rotate\">Auto Rotate</a></li>
 			</ul>
 		</li>
 		<li><a href=\"admin.php?page=stat-acs\">Statistics</a></li>
@@ -100,7 +101,7 @@ Computer Science and Information Systems Year 3
 		<li><a href=\"admin.php\">Home</a></li>
 		<li><a href=\"admin.php?page=booktickets\">Tickets</a></li>
 		<li><a href=\"admin.php?page=tt-acs\">Timetable</a></li>
-                <li><a href=\"admin.php?page=stat-acs\">Statistics</a></li>
+		<li><a href=\"admin.php?page=stat-acs\">Statistics</a></li>
 		<li><a href=\"admin.php?page=films-acs\">Film Records</a></li>
 	</nav>
 		";

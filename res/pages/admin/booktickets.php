@@ -55,8 +55,7 @@ include('res/lib/class_dbcon.php');
 <h1>Book Tickets</h1>
 <h2>
 
-<<<<<<< HEAD
-<center><form name="findForm" method="POST" action="admin.php?page=findbooking" class="center">
+<form name="findForm" method="POST" action="admin.php?page=findbooking" class="center">
 <table>
 	<tr>
 	<td>Booking Ref:</td> <td><input type="text" value="" name="ref" id="ref" required></td><br />
@@ -66,9 +65,7 @@ include('res/lib/class_dbcon.php');
 	<input type="submit" name="formSubmit" id="buFormSubmit" value="Find Booking!"> 
 	</table>
 </table>
-</form></center>
-
-
+</form>
 
 <br />
 
@@ -106,7 +103,6 @@ include('res/lib/class_dbcon.php');
 							<option value="">-- Select Film --</option>
 						</select>
 					<p>
-					
 					Customer name:<input type="text" value="" name="name" id="name" required><p>
 					Number of tickets: <input type="text" value="" name="tickets" id="tickets" required><p>
 					<p>
