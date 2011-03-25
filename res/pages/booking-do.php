@@ -29,7 +29,7 @@ $connect->disc();
 						Number of Tickets:
 					</td>
 					<td>
-						<input type="text" name="tickets" id="tickets" pattern="[0-9]*" value="1" />
+						<input type="text" name="tickets" id="tickets" pattern="[0-9]*" value="1" required/>
 					</td>
 				</tr>
 				<tr>
@@ -37,7 +37,7 @@ $connect->disc();
 						Enter your Name:
 					</td>
 					<td>
-						<input type="text" name="name" id="name" value="" />
+						<input type="text" name="name" id="name" value="" required/>
 					</td>
 				</tr>
 			</table>

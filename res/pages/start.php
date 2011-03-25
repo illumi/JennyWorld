@@ -72,9 +72,12 @@ $connect->disc();
 								<select id="film" name="film">
 									<option id="0">-- Select Film --</option>
 									<?php
+										$start_date = date('Y-m-d');
+										$end_date = date('Y-m-d', strtotime("+10 days"));
+										
 										$connect = new doConnect();
 							
-										$q = mysql_query("SELECT * FROM films ORDER BY film_title;");
+										$q = mysql_query("SELECT DISTINCT f.film_ID, f.film_title FROM films f, showings s WHERE f.film_ID = s.film_ID AND s.start_date >= \"$start_date\" AND s.start_date <= \"$end_date\" ORDER BY film_title;");
 										while($row = mysql_fetch_assoc($q))
 										{
 											echo '<option value="'.$row['film_ID'].'">'.$row['film_title'].'</option>';
@@ -94,7 +97,6 @@ $connect->disc();
 								</select>
 							<p>
 							<input type="submit" name="submit" id="submit" value="Submit">
-							<input type="reset" name="reset" id="reset" value="Reset">
 						</td>
 					</tr>
 				</table>
@@ -109,12 +111,9 @@ $connect->disc();
 			<?php
 				echo $text['description'];
 			?>
-			</br>
+			<p>
 			</h3>
 			<h2></h2>
 		</div>	
-		<div style="clear: both;"></div>
-
-	
 
 	</div>

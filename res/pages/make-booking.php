@@ -34,6 +34,7 @@ $connect->disc();
 		<p>Please take this number with you when you pick up your tickets.
 	</h3>
 	
-	
+	<p>
 	<h2></h2>
 	</div>
+	
