@@ -59,7 +59,8 @@ $connect->disc();
 	<ul>
 		<li><a href="#tabs-1">Customer Statisitcs</a></li>
 		<li><a href="#tabs-2">Film Statistics</a></li>
-		<li><a href="#tabs-3">Next Tab</a></li>
+		<li><a href="#tabs-3">Previous Promotions</a></li>
+		<li><a href="#tabs-4">Previous Timetables</a></li>
 	</ul>
 	<div id="tabs-1">
 		<p>
@@ -108,7 +109,11 @@ $connect->disc();
 		</p>
 	</div>
 	<div id="tabs-3">
-		<p>Some other statistical data here :)</p>
+		<p>Previous promotions here :)</p>
+	</div>
+	
+	<div id="tabs-4">
+		<p>Old timetable listings here :)</p>
 	</div>
 </div>
 

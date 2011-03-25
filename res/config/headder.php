@@ -16,9 +16,12 @@ Computer Science and Information Systems Year 3
 	<title>Jennyworld</title>
 
 	<link href="res/css/main.css" rel="stylesheet" type="text/css" />
-	<link href="calendar_eu.css" rel="stylesheet" type="text/css" />
+	<link href="res/css/redmond/jquery-ui-1.8.10.custom.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="res/css/redmond/jquery-ui-timepicker.css" type="text/css"/>
 	<script type="text/javascript" src="res/js/jquery-1.5.1.js"></script>
 	<script type="text/javascript" src="res/js/bookings.js"></script>
+	<script type="text/javascript" src="res/js/jquery-ui-1.8.10.custom.min.js"></script>
+
 	
 </head>
 
