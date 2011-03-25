@@ -86,9 +86,6 @@ $connect->disc();
 	</div>
 	<div id="tabs-2">
 		<p>
-		<?php	
-			echo "<p> The most popular film to date is showing: " . $mostPopular['showing_id'] . " with number of viewers: ". $mostPopular['total'];
-		?>	
 			 <!-- table containing the showings schedule and the number of tickets -->
     <table>
         <tr>
