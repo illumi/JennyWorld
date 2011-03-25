@@ -11,23 +11,39 @@
 <h1>Book Tickets</h1>
 <h2>
 
-<form name="findForm" method="POST" action="findbooking.php" class="center">
-	Booking Ref: <input type="text" value="" name="login" id="login" required><br />
+<center><form name="findForm" method="POST" action="admin.php?page=findbooking" class="center">
+<table>
+	<tr>
+	<td>Booking Ref:</td> <td><input type="text" value="" name="ref" id="ref" required></td><br />
+	</tr>
+	<table>
+	<p>
 	<input type="submit" name="formSubmit" id="buFormSubmit" value="Find Booking!"> 
-</form>
+	</table>
+</table>
+</form></center>
 
-<br />
-<form name="bookForm" method="POST" action="makebooking.php" class="center">
-	
-	Film: <input type="text" value="" name="login" id="login" required><br />
-	Showing: <input type="text" value="" name="login" id="login" required><br />
-	
-	Customer name:<input type="text" value="" name="login" id="login" required><br />
-	
-	Number of tickets: <input type="text" value="" name="login" id="login" required><br />
-	
+	<center><form name="bookForm" method="POST" action="makebooking.php" class="center">
+	<table>
+	<tr>
+	<td>Film:</td> <td><input type="text" value="" name="login" id="login" required></td><br />
+	</tr>
+	<tr>
+	<td>Showing:</td> <td><input type="text" value="" name="login" id="login" required></td><br />
+	</tr>
+	<tr>
+	<td>Customer name:</td><td><input type="text" value="" name="login" id="login" required></td><br />
+	</tr>
+	<tr>
+	<td>Number of tickets:</td> <td><input type="text" value="" name="login" id="login" required></td><br />
+	</tr>
+	<table>
+	<p>
 	<input type="submit" name="formSubmit" id="buFormSubmit" value="Make Booking!"> 
-</form>
+	</table>
+</table>	
+</form></center>
+
 
 <br />
 
