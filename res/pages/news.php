@@ -20,7 +20,7 @@ $today = date('Y-m-d');
 	include 'sql-connection.php';
 
 
-	$query = " SELECT promo_name, film_title, description, end_date FROM promotions p, films f WHERE p.film_ID = f.film_ID AND p.end_date >= $today;";
+	$query = "select promo_name, film_title, description, end_date from promotions p, films f where p.film_ID = f.film_ID and p.start_date <= '$today' and p.end_date >= '$today';";
 		 
 	$result = mysql_query($query) or die(mysql_error());
 
