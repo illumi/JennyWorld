@@ -79,7 +79,6 @@ $connect = new doConnect();
 	</table>
 	<br />
 	<input type="submit" name="formSubmit" id="buFormSubmit" value="empty" style="visibility:hidden"/> 
-	<br />
 	</table>
 </form>
 
