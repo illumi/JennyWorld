@@ -58,6 +58,7 @@ $connect->disc();
 	}
 </script>
 
+
 	<div id="body">
 		<div id="booking">
 		
@@ -112,5 +113,8 @@ $connect->disc();
 			</h3>
 			<h2></h2>
 		</div>	
+		<div style="clear: both;"></div>
+
 	
+
 	</div>
