@@ -68,7 +68,6 @@ include('res/lib/class_dbcon.php');
 </form>
 
 
-
 <br />
 
 	<form name="bookForm" method="POST" action="admin.php?page=booking-do">
@@ -105,7 +104,6 @@ include('res/lib/class_dbcon.php');
 							<option value="">-- Select Film --</option>
 						</select>
 					<p>
-					
 					Customer name:<input type="text" value="" name="name" id="name" required><p>
 					Number of tickets: <input type="text" value="" name="tickets" id="tickets" required><p>
 					<p>
