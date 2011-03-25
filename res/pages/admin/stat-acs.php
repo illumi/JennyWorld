@@ -17,14 +17,47 @@ $connect->disc();
 ?>
 
 <div id="body">
-<h1>Staff Overview</h1>
+<h1>Statistics</h1>
 <h2>
 
-<?php
-	echo "Total number of customers: " . $total['SUM(numof_tickets)'];
-	
-	echo "<p> The most popular film to date is showing: " . $mostPopular['showing_id'] . " with number of viewers: ". $mostPopular['total'];
-?>
+
+<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+	</script>
+
+
+
+<div class="demo">
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Customer Statisitcs</a></li>
+		<li><a href="#tabs-2">Film Statistics</a></li>
+		<li><a href="#tabs-3">Next Tab</a></li>
+	</ul>
+	<div id="tabs-1">
+		<p>
+		<?php
+			echo "Total number of customers: " . $total['SUM(numof_tickets)'];
+		?>
+		</p>
+	</div>
+	<div id="tabs-2">
+		<p>
+		<?php	
+			echo "<p> The most popular film to date is showing: " . $mostPopular['showing_id'] . " with number of viewers: ". $mostPopular['total'];
+		?>
+		</p>
+	</div>
+	<div id="tabs-3">
+		<p>Some other statistical data here :)</p>
+	</div>
+</div>
+
+</div>
+
 
 </h2>
 </div>
