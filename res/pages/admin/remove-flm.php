@@ -13,9 +13,10 @@ if(isset($_POST['delete']))
     $nElement = count($delete);
     // check that the user has selected at least one checkbox
     
-    if(is_array($delete) && ($nElement > 0))
-    {
-        include 'sql-connection.php';
+    if(is_array($delete) && ($nElement > 0)) {
+	
+        include('res/lib/class_dbcon.php');
+		$connect = new doConnect();
 
         $query= "DELETE FROM films WHERE film_ID=";
 
@@ -31,11 +32,14 @@ if(isset($_POST['delete']))
         }
 
         mysql_query($query);
-        mysql_close($link);
+		
+		
+        $connect->disc();
 
         $msg= "The films have been successfully deleted";
-        header("location: ../../../admin.php?page=remove-film&msg=".$msg);
+        
     }
 }
 
+header("location: admin.php?page=remove-film&msg=".$msg);
 ?>

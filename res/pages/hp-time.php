@@ -1,6 +1,7 @@
 <?php
 
-include 'sql-connection.php';
+include('../lib/class_dbcon.php');
+$connect = new doConnect();
 
 $sql= "select showings.start_time from showings, films where films.film_title = 'HP6'";
 
@@ -21,6 +22,6 @@ while($row = mysql_fetch_array($result)){
 }
 echo "</table></h3></div>";
 
-mysql_close($link);
+$connect->disc();
 
 ?>

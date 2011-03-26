@@ -17,7 +17,8 @@ $today = date('Y-m-d');
 
 	<?php
 
-	include 'sql-connection.php';
+	include ('res/lib/class_dbcon.php');
+	$connect = new doConnect();
 
 
 	$query = "select promo_name, film_title, description, end_date from promotions p, films f where p.film_ID = f.film_ID and p.start_date <= '$today' and p.end_date >= '$today';";
@@ -43,7 +44,7 @@ $today = date('Y-m-d');
 	}
 	echo "</table>";
 
-	mysql_close($link);
+	$connect->disc();
 
 	?> 
 	
@@ -51,8 +52,3 @@ $today = date('Y-m-d');
 </br>
 <h2></h2>
 </div>
-
-
-
-
-

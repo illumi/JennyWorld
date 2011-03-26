@@ -17,6 +17,7 @@
 		
         $query = mysql_query("SELECT showing_ID, start_date FROM showings WHERE film_id = \"$film\" AND start_date >= \"$start_date\" AND start_date <= \"$end_date\";") or die(mysql_error());
 		
+		$connect->disc();
 		
         while($row = mysql_fetch_assoc($query))
         {

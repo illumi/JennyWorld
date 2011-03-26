@@ -1,6 +1,7 @@
 <?php
 
-include 'sql-connection.php';
+include('res/lib/class_dbcon.php');
+$connect = new doConnect();
 
 //New fields to change
 $start_date = $_POST['start'];
@@ -33,10 +34,6 @@ VALUES
 
 $result = mysql_query($sql) or die(mysql_error());
 
-
-echo "success";
-header("location:../../../admin.php?page=tt-acs");
-mysql_close($link);
-
-
+$connect->disc();
+header("location: admin.php?page=tt-acs");
 ?>

@@ -11,7 +11,8 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'] || empty($_SESSION['login']
 
 	<?php
 
-	include 'sql-connection.php';
+	include('res/lib/class_dbcon.php');
+	$connect = new doConnect();
 
 	echo date("Y-m-d");
 
@@ -43,7 +44,7 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'] || empty($_SESSION['login']
 	}
 	echo "</table>";
 
-	mysql_close($link);
+	$connect->disc();
 
 	?> 
 	

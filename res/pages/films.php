@@ -36,6 +36,8 @@ $connect = new doConnect();
 	
 	$sql2 = mysql_query("select film_title from films f, showings s where s.film_ID = f.film_ID and s.start_date <= '$today' and s.end_date >= '$today';");
 
+	$connect->disc();
+	
 	$title = array();
 	
 	for( $i=0; $i< mysql_num_rows($sql2); $i++)

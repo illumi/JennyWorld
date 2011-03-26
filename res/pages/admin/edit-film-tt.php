@@ -4,7 +4,8 @@
 	header('Location: ../../../index.php?page=adminLogin');
 }
 
-include 'sql-connection.php';
+include('res/lib/class_dbcon.php');
+$connect = new doConnect();
 
 $showingIdQuery = "SELECT showing_ID FROM showings";
 //$titleQuery = "SELECT film_ID, film_title FROM films";
@@ -133,7 +134,7 @@ while($row = mysql_fetch_array($result)){
 }
 echo "</table>";
 
-mysql_close($link);
+$connect->disc();
 
 ?>
 

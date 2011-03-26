@@ -4,7 +4,8 @@
 	header('Location: ./index.php?page=adminLogin');
 }
 
-include 'sql-connection.php';
+include('res/lib/class_dbcon.php');
+$connect = new doConnect();
 
 $titleQuery = "SELECT film_ID, film_title FROM films";
 $screenQuery = "SELECT screen_ID FROM screens";
@@ -27,7 +28,8 @@ $optionsScreen="";
   	$screenID=$row["screen_ID"];
   	$optionsScreen.="<OPTION VALUE=\"$screenID\">".$screenID.'</option>';
   }
-
+  
+$connect->disc();
 ?>
 
 <div id="body">

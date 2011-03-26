@@ -10,11 +10,12 @@ if(isset($_GET['msg']))
     echo $_GET['msg'];
 }
 
-include 'sql-connection.php';
+include('res/lib/class_dbcon.php');
+$connect = new doConnect();
 
 $query = mysql_query("SELECT promo_id, promo_name, film_title, start_date, end_date, description FROM promotions p, films f WHERE p.film_ID = f.film_ID;
 ");
-mysql_close($link);
+$connect->disc();
 ?>
 
 <div id="body">
@@ -22,7 +23,7 @@ mysql_close($link);
 <h3>
 
 <section id="remove info">
-	<form method="POST" action="res/pages/admin/remove-pro.php">
+	<form method="POST" action="admin.php?page=remove-pro">
 		<table border="0" class="center">
                     <tr>
                         <th>Delete</th>

@@ -15,7 +15,8 @@ if(isset($_POST['delete']))
     
     if(is_array($delete) && ($nElement > 0))
     {
-        include 'sql-connection.php';
+        include('res/lib/class_dbcon.php');
+		$connect = new doConnect();
 
         $query= "DELETE FROM promotions WHERE promo_id=";
 
@@ -31,9 +32,10 @@ if(isset($_POST['delete']))
         }
 
         mysql_query($query);
-        mysql_close($link);
+		
+        $connect->disc();
 
-        header("location: ../../../admin.php?page=remove-promo");
+        header("location: admin.php?page=remove-promo");
     }
 }
 

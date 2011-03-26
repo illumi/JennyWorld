@@ -6,7 +6,8 @@ session_start();
 	header('Location: ../../../index.php?page=adminLogin');
 }
 
-include 'sql-connection.php';
+include('res/lib/class_dbcon.php');
+$connect = new doConnect();
 
 $promoid = $_POST['id'];
 $name = $_POST['name'];
@@ -20,7 +21,7 @@ mysql_query($sql) or die(mysql_error());
 
 
 
-header("location: ../../../admin.php?page=promo-acs");
-mysql_close($link);
+header("location: admin.php?page=promo-acs");
+$connect->disc();
 
 ?>

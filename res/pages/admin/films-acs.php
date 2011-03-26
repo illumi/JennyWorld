@@ -12,7 +12,8 @@ if(!isset($_SESSION['login']) || empty($_SESSION['login']))
 
 	<?php
 
-	include 'sql-connection.php';
+	include('res/lib/class_dbcon.php');
+	$connect = new doConnect();
 
 	$query = mysql_query("SELECT * FROM films");
 
@@ -39,7 +40,8 @@ if(!isset($_SESSION['login']) || empty($_SESSION['login']))
 		echo"</tr>";
 	}
 	echo "</table>";
-	mysql_close($link);
+	
+	$connect->disc();
 
 	?>
 	

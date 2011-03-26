@@ -10,10 +10,12 @@ if(isset($_GET['msg']))
     echo $_GET['msg'];
 }
 
-include 'sql-connection.php';
+include('res/lib/class_dbcon.php');
+$connect = new doConnect();
 
 $query = mysql_query("SELECT * FROM films");
-mysql_close($link);
+
+$connect->disc();
 ?>
 
 <div id="body">
@@ -21,7 +23,7 @@ mysql_close($link);
 <h3>
 
 <section id="remove info">
-	<form method="POST" action="res/pages/admin/rm-flm.php">
+	<form method="POST" action="admin.php?page=remove-flm">
 		<table border="0" class="center">
                     <tr>
                         <th>Delete</th>

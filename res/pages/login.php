@@ -2,7 +2,8 @@
 
 session_start();
 
-include 'sql-connection.php';
+include('../lib/class_dbcon.php');
+$connect = new doConnect();
 
 $user = $_POST['username'];
 $pass = $_POST['password'];
@@ -16,6 +17,8 @@ $result = mysql_query($sql);
 
 // Mysql_num_row is counting table row
 $count = mysql_num_rows($result);
+
+$connect->disc();
 
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count == 1){
@@ -42,6 +45,4 @@ if($count == 1){
 else {
 	echo "Wrong Username or Password";
 }
-
-mysql_close($link);
 ?>

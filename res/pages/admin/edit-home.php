@@ -17,7 +17,7 @@ $connect->disc();
 	<h1>Edit Home Page</h1>
 	<h2>
 	<p>
-		<form name="homeForm" method="POST" action="res/pages/admin/edit-home-do.php" class="center">
+		<form name="homeForm" method="POST" action="admin.php?page=edit-home-do" class="center">
 
 			<textarea rows="5" cols="75" name="TxtareaInput" id="TxtareaInput" class="txtBox"
 				onfocus="SetMsg(this, true);"

@@ -11,7 +11,8 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 
 	<?php
 	
-	include 'sql-connection.php';
+	include('res/lib/class_dbcon.php');
+	$connect = new doConnect();
 
 	echo date("Y-m-d") . "<p>";
 	
@@ -61,8 +62,9 @@ while($row = mysql_fetch_array($result)){
 
 	echo "</tr>";
 }
-echo "</table>";
-	mysql_close($link);
+	echo "</table>";
+	
+	$connect->disc();
 
 	?> 
 </h2>

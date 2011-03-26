@@ -72,7 +72,7 @@ function onSubmit(button){
 	
 	if (button.value == "Add New") { //add a new staff member
 		if (valid(Form)) {
-			Form.action = "res/pages/admin/add.php";
+			Form.action = "admin.php?page=add";
 			Form.buFormSubmit.click();
 			return true;
 		} else {
@@ -81,7 +81,7 @@ function onSubmit(button){
 	} else { //update an existing staff member
 	 if (validate_name(Form.login, "Can't have a blank username"))
 	 {
-		Form.action = "res/pages/admin/edit.php";
+		Form.action = "admin.php?page=edit";
 		Form.buFormSubmit.click();
 		return true;
 	}
@@ -110,7 +110,7 @@ function onSubmitAddPromo(submit)
 	
 		if (validate_addPromo(Form))
 		{
-			Form.action = "res/pages/admin/add-pro.php";
+			Form.action = "admin.php?page=add-pro";
 			return true;
 		} 
 		else return false;
@@ -122,7 +122,7 @@ function onSubmitEditPromo(submit)
 	
 		if (validate_addPromo(Form))
 		{
-			Form.action = "res/pages/admin/editpro.php";
+			Form.action = "admin.php?page=editpro";
 			return true;
 		} 
 		else return false;
@@ -134,7 +134,7 @@ function onSubmitEditFilms(submit)
 	
 		if (validate_editfilm(Form))
 		{
-			Form.action = "res/pages/admin/edt-flm.php";
+			Form.action = "admin.php?page=edit-flm";
 			return true;
 		} 
 		else return false;
@@ -146,7 +146,7 @@ function onSubmitAddFilms(submit)
 	
 		if (validate_addfilm(Form))
 		{
-			Form.action = "res/pages/admin/add-flm.php";
+			Form.action = "admin.php?page=add-flm";
 			return true;
 		} 
 		else return false;
@@ -158,7 +158,7 @@ function onSubmitEditTimetable(submit)
 	
 		if (validate_timetable(Form))
 		{
-			Form.action = "res/pages/admin/edit-f-tt.php";
+			Form.action = "admin.php?page=edit-f-tt";
 			return true;
 		} 
 		else return false;
@@ -170,7 +170,7 @@ function onSubmitAddTimetable(submit)
 	
 		if (validate_addtimetable(Form))
 		{
-			Form.action = "res/pages/admin/add-f-tt.php";
+			Form.action = "admin.php?page=add-f-tt";
 			return true;
 		} 
 		else return false;
@@ -317,7 +317,7 @@ function onDelete(button){
 	if (button.value=="Delete Staff Member") {
 		var ans = confirm ("Are you sure you want to delete?")
 		if (ans) {
-			Form.action = "res/pages/admin/remove.php";
+			Form.action = "admin.php?page=remove";
 			Form.buFormSubmit.click();
 			return true;
 		}

@@ -6,7 +6,8 @@ session_start();
 	header('Location: ../../../index.php?page=adminLogin');
 }
 
-include 'sql-connection.php';
+include('res/lib/class_dbcon.php');
+$connect = new doConnect();
 
 $filmid = $_POST['id'];
 $promoname = $_POST['name'];
@@ -18,8 +19,6 @@ $sql="INSERT INTO promotions (film_ID, promo_name, start_date, end_date, descrip
 mysql_query($sql) or die(mysql_error());
 
 
-
-header("location: ../../../admin.php?page=promo-acs");
-mysql_close($link);
-
+$connect->disc();
+header("location: admin.php?page=promo-acs");
 ?>

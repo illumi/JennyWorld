@@ -4,7 +4,8 @@
 	header('Location: ./index.php?page=adminLogin');
 }
 
-include 'sql-connection.php';
+include('res/lib/class_dbcon.php');
+$connect = new doConnect();
 
 ?>
 
@@ -28,6 +29,7 @@ include 'sql-connection.php';
 					while ($row = mysql_fetch_assoc($query)) {
 						echo '<option value="' . $row['film_ID'] . '">' . $row['film_title']. '</option>';
 					}
+					$connect->disc();
 					?>
 					</select> 
 				</td>

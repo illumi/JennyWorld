@@ -10,10 +10,12 @@ if(isset($_GET['msg']))
     echo $_GET['msg'];
 }
 
-include 'sql-connection.php';
+include('res/lib/class_dbcon.php');
+$connect = new doConnect();
 
 $query = mysql_query("SELECT screen_number, showing_ID, film_title, start_date, end_date, start_time FROM screens x, films y, showings z WHERE (x.screen_ID = z.screen_ID) AND z.film_ID = y.film_ID;");
-mysql_close($link);
+
+$connect->disc();
 ?>
 
 <div id="body">
@@ -21,7 +23,7 @@ mysql_close($link);
 <h2>
 
 <section id="remove info">
-	<form method="POST" action="res/pages/admin/remove-f-tt.php">
+	<form method="POST" action="admin.php?page=remove-f-tt">
 		<table border="0" class="center">
                     <tr>
                         <th>Delete</th>
