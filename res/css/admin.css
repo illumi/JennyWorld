@@ -68,11 +68,10 @@ img.align-left { float:left; margin: 0 15px 15px 0; }
 	height: 75px;
 	width: 500px;
 }
-
-
 nav {
-	padding-top: 150px;
-	width: 980px;	
+	text-align:center;
+	padding-top: 150px;	
+	width: 100%;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -90,7 +89,6 @@ nav a {
 	display: block;
 	width:140px;
 	padding: 10px;
-	text-align:center;
 	text-decoration: none;
 	color: #fff;
 	border: 1px solid #fff;
@@ -121,7 +119,6 @@ nav ul {
 	width: 140px;
 	position: absolute;
 	top: 200px;
-	text-align:center;
 	text-decoration: none;
 	color: #fff;
 	border: 1px solid #fff;
@@ -226,168 +223,6 @@ footer {
 }
 footer p {
 	margin:0 0 5px 0;
-}
-
-/* calendar icon */
-img.tcalIcon {
-	cursor: pointer;
-	margin-left: 1px;
-	vertical-align: middle;
-}
-/* calendar container element */
-div#tcal {
-	position: absolute;
-	visibility: hidden;
-	z-index: 100;
-	width: 158px;
-	padding: 2px 0 0 0;
-}
-/* all tables in calendar */
-div#tcal table {
-	width: 100%;
-	border: 1px solid silver;
-	border-collapse: collapse;
-	background-color: white;
-}
-/* navigation table */
-div#tcal table.ctrl {
-	border-bottom: 0;
-}
-/* navigation buttons */
-div#tcal table.ctrl td {
-	width: 15px;
-	height: 20px;
-}
-/* month year header */
-div#tcal table.ctrl th {
-	background-color: white;
-	color: black;
-	border: 0;
-}
-/* week days header */
-div#tcal th {
-	border: 1px solid silver;
-	border-collapse: collapse;
-	text-align: center;
-	padding: 3px 0;
-	font-family: tahoma, verdana, arial;
-	font-size: 10px;
-	background-color: gray;
-	color: white;
-}
-/* date cells */
-div#tcal td {
-	border: 0;
-	border-collapse: collapse;
-	text-align: center;
-	padding: 2px 0;
-	font-family: tahoma, verdana, arial;
-	font-size: 11px;
-	width: 22px;
-	cursor: pointer;
-}
-/* date highlight
-   in case of conflicting settings order here determines the priority from least to most important */
-div#tcal td.othermonth {
-	color: silver;
-}
-div#tcal td.weekend {
-	background-color: #ACD6F5;
-}
-div#tcal td.today {
-	border: 1px solid red;
-}
-div#tcal td.selected {
-	background-color: #FFB3BE;
-}
-/* iframe element used to suppress windowed controls in IE5/6 */
-iframe#tcalIF {
-	position: absolute;
-	visibility: hidden;
-	z-index: 98;
-	border: 0;
-}
-/* transparent shadow */
-div#tcalShade {
-	position: absolute;
-	visibility: hidden;
-	z-index: 99;
-}
-div#tcalShade table {
-	border: 0;
-	border-collapse: collapse;
-	width: 100%;
-}
-div#tcalShade table td {
-	border: 0;
-	border-collapse: collapse;
-	padding: 0;
-}
-
-/**/
-
-
-.pretty-table
-{
-  padding: 0;
-  margin: 0;
-  border-collapse: collapse;
-  border: 1px solid #333;
-  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-  font-size: 0.9em;
-  color: #000;
-  background: #bcd0e4 url("widget-table-bg.jpg") top left repeat-x;
-}
-
-.pretty-table caption
-{
-  caption-side: bottom;
-  font-size: 0.9em;
-  font-style: italic;
-  text-align: right;
-  padding: 0.5em 0;
-}
-
-.pretty-table th, .pretty-table td
-{
-  border: 1px dotted #666;
-  padding: 0.5em;
-  text-align: left;
-  color: #632a39;
-}
-
-.pretty-table th[scope=col]
-{
-  color: #000;
-  background-color: #8fadcc;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  border-bottom: 2px solid #333;
-  border-right: 2px solid #333;
-}
-
-.pretty-table th+th[scope=col]
-{
-  color: #fff;
-  background-color: #7d98b3;
-  border-right: 1px dotted #666;
-}
-
-.pretty-table th[scope=row]
-{
-  background-color: #b8cfe5;
-  border-right: 2px solid #333;
-}
-
-.pretty-table tr.alt th, .pretty-table tr.alt td
-{
-  color: #2a4763;
-}
-
-.pretty-table tr:hover th[scope=row], .pretty-table tr:hover td
-{
-  background-color: #632a2a;
-  color: #fff;
 }
 .center {
 	margin-left:auto;
