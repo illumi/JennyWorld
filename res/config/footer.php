@@ -13,19 +13,19 @@ Computer Science and Information Systems Year 3
 
 			<div id="valid" > <!--footer float area right--> 
 				<?php
-					if(isset($_SESSION['login']))
-					{
-				?>
-					<a href="admin.php?page=logOut">Log Out</a>
-				<?php
+					if($_SESSION['admin'] == 1  && $_SESSION['staff'] == 1){
+						echo "<a href=\"admin.php?page=switchStaffView\">Manager View</a><p></h2>";
+					} else if ($_SESSION['admin'] == 1) {
+						echo "<a href=\"admin.php?page=switchStaffView\">Staff view</a><p></h2>";
 					}
-					else
-					{
+
+					if(isset($_SESSION['login'])) {
+						echo "<a href=\"admin.php?page=logOut\">Log Out</a>";
+					}
+					else {
+						echo "<a href=\"index.php?page=adminLogin\">Staff Login</a>";
+					}
 				?>
-
-				<a href="index.php?page=adminLogin">Staff Login</a>
-
-				<?php } ?>
 				<br/>
 
 				&copy; JWorld Cinema Complex 2011
