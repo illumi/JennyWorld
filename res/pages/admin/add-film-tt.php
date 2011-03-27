@@ -12,7 +12,7 @@ $connect = new doConnect();
 
 
 <div id="body">
-<h1>Add Promotion</h1>
+<h1>Add Film to Timetable</h1>
 
     <h3>
 	<form name="tt" method="POST" action="" class="center">
