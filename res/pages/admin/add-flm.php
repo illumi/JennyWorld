@@ -16,7 +16,7 @@ $connect = new doConnect();
 	$rating	= mysql_escape_string($_POST['filmrating']);
 	
 	//$content = file_get_contents("\"" . addslashes($_POST['filmposter']) . "\"");
-	$test = "http://imgs.xkcd.com/comics/turing_test.png";
+	$test = "http://www.testinprivate.co.uk/images/Home%20Test%20Products.jpg";
 	$content = addslashes(file_get_contents($test));
 
 	$poster	= mysql_escape_string($_POST['filmposter']);	
