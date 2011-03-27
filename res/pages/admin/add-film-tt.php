@@ -1,5 +1,5 @@
- <?php
-	if(!isset($_SESSION['login']) || !$_SESSION['admin']  || empty($_SESSION['login']))
+<?php
+	if(!isset($_SESSION['login']) || !$_SESSION['admin'] || empty($_SESSION['login']))
 {
 	header('Location: ./index.php?page=adminLogin');
 }
@@ -7,80 +7,70 @@
 include('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
-$titleQuery = "SELECT film_ID, film_title FROM films";
-$screenQuery = "SELECT screen_ID FROM screens";
-
-$titleResult = mysql_query ($titleQuery);
-$screenResult= mysql_query ($screenQuery);
-
-$options="";
-$optionsScreen="";
-  
-  while ($row=mysql_fetch_array($titleResult)) {
-  
-  	$filmid=$row["film_ID"];
-  	$filmname=$row["film_title"];
-  	$options.="<OPTION VALUE=\"$filmid\">".$filmname.'</option>';
-  }
-
-  while ($row=mysql_fetch_array($screenResult)) {
-  
-  	$screenID=$row["screen_ID"];
-  	$optionsScreen.="<OPTION VALUE=\"$screenID\">".$screenID.'</option>';
-  }
-  
-$connect->disc();
 ?>
 
+
+
 <div id="body">
-<h1> Add Film to Timetable</h1>
-<p>
-<h2>
+<h1>Add Promotion</h1>
 
-<section id="add film timetable">
-	<form name="tt" method="POST" action="" > 
+    <h3>
+	<form name="tt" method="POST" action="" class="center">
 		<table border= "0" class="center">
-			<tr>
-				<td> Title:</td>	
+			
+			<tr>		
+				<td> Film Name: </td>	
 				<td> 
-					 <select name="newfilm_title"  required>
-					 <option VALUE="0">Film Title
-					  <?php echo $options?>
-					 </select> 
+					<select name="id" style="width:200px;">
+					<option value="0">--select film to add--</option>
+					<?php
+					$query = mysql_query("SELECT film_ID, film_title FROM films;");
+					while ($row = mysql_fetch_assoc($query)) {
+						echo '<option value="' . $row['film_ID'] . '">' . $row['film_title']. '</option>';
+					}
+					$connect->disc();
+					?>
+					</select> 
 				</td>
 			</tr>
-
-			<tr>	<td>Screen: </td>
-				<td> <SELECT name="newScreen">
-					<option value="0">Screen
-					<?php echo $optionsScreen?>
-					</select>
+			<tr>
+			<td>Start Date:</td> 
+			<td>
+				<input type="date" id="start" name="start" size="20"/>				
+			</td>
+			</tr>
+			<tr>
+			<td>End Date:</td> 
+			<td>
+				<input type="date" id="end" name="end" size="20"/>				
+			</td>
+			</tr>
+			<tr>		
+				<td> Number of showings: </td>	
+				<td> 
+					<select name="numshowings">
+					<option value="0">--select number of showings--</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					
+					</select> 
 				</td>
-			</tr>
-			<!--Need to enforce the formatting of the date and time -->
-			<tr>
-				<td NOWRAP>Start Date:</td> 
-				<td><input type="date" id="start" name="start" size="20" required/>	</td>
-			</tr>
-
-			<tr>
-				<td NOWRAP>End Date: </td>
-				<td><input type="date" id="end" name="end" size="20" required/>	</td>
-			</tr>
-
-			<tr>
-				<td NOWRAP>Time: </td>
+							<tr>
+				<td NOWRAP>Time of first showing: </td>
 				<td> <input type="text" id="timepicker_1" value="" name="newTime" required></td>
 			</tr>	
-		<table border="0" class="center">				
+			</tr>
+
+	   		<table border="0" class="center">
 				<p>
 				<input type="submit" name="submit" id="submit" value="Submit" onClick="onSubmitAddTimetable(this);">
-				<input type="reset" name="reset" id="reset" value="Reset">	
-			</tr>
-			</table>
+				<input type="reset" name="reset" id="reset" value="Reset"/>
+				
+	   		</table>
 		</table>
 	</form>
-
-</section>
-</h2>
+    </h3>
+	
+<h2></h2>
 </div>
