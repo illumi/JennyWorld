@@ -69,7 +69,7 @@ $connect->disc();
 					<tr>
 						<td>		
 							<label for="film">Film:</label>
-								<select id="film" name="film" style="width:200px;">
+								<select id="film" name="film" style="width:250px;">
 									<option id="0">-- Select Film --</option>
 									<?php
 										$start_date = date('Y-m-d');
@@ -80,19 +80,19 @@ $connect->disc();
 										$q = mysql_query("SELECT DISTINCT f.film_ID, f.film_title FROM films f, showings s WHERE f.film_ID = s.film_ID AND s.start_date >= \"$start_date\" AND s.start_date <= \"$end_date\" ORDER BY film_title;");
 										while($row = mysql_fetch_assoc($q))
 										{
-											echo '<option width="40" value="'.$row['film_ID'].'">'.$row['film_title'].'</option>';
+											echo '<option value="'.$row['film_ID'].'">'.$row['film_title'].'</option>';
 										}
 										$connect->disc();
 									?>
 								</select>
 							<p>
 							<label for="fdate">Date:</label>
-								<select id="fdate" name="fdate" style="width:200px;">
+								<select id="fdate" name="fdate" style="width:250px;">
 									<option value="">-- Select Film --</option>
 								</select>
 							<p>
 							<label for="ftime">Time:</label>
-								<select id="ftime" name="ftime"style="width:200px;">
+								<select id="ftime" name="ftime" style="width:250px;">
 									<option value="">-- Select Film --</option>
 								</select>
 							<p>
@@ -111,8 +111,8 @@ $connect->disc();
 			<?php
 				echo $text['description'];
 			?>
-			<p>
 			</h3>
+			<p>
 			<h2></h2>
 		</div>	
 

@@ -12,7 +12,7 @@ CREATE TABLE films (
 	film_year char(4) NOT NULL,
 	film_plot text(65535) NOT NULL,
 	film_length int(11) NOT NULL,
-	film_genre varchar(20) NOT NULL,
+	film_genre varchar(50) NOT NULL,
 	film_rating varchar(5) NOT NULL,
 	film_poster varchar(255) NOT NULL,
 	imdb_id varchar(50) NOT NULL,

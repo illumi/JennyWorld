@@ -65,6 +65,8 @@ $(function() {
 				echo	"<div id='filmheaders'>Length:</div><div id='filmdetails'>" . $row['film_length'] . "</div><br/>";
 				echo	"<div id='filmheaders'>Genre:</div><div id='filmdetails'>" . $row['film_genre'] . "</div><br/>";
 				echo	"<div id='filmheaders'>Rating:</div><div id='filmdetails'>" . $row['film_rating'] . "</div><br/></table>";
+
+
 			}    
 			
 			 echo "</table></div>";
