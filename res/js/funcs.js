@@ -252,14 +252,9 @@ function validate_addtimetable(thisform)
 {
 	with (thisform) 
 	{
-		if(document.tt.newfilm_title.selectedIndex==0)
+		if(document.tt.id.selectedIndex==0)
 		{
 			alert("Please select a film title.");
-			return false;
-		}
-		if(document.tt.newScreen.selectedIndex==0)
-		{
-			alert("Please select a screen.");
 			return false;
 		}
 		if (!validate_name(start, "Please enter a start date!")) 
@@ -270,12 +265,15 @@ function validate_addtimetable(thisform)
 		{
 			return false;
 		}
-		if (!validate_name(newTime, "Pleae enter a start time.")) 
+		if(document.tt.numshowings.selectedIndex==0)
+		{
+			alert("Please select the number of daily showings.");
+			return false;
+		}
+		if (!validate_name(end, "Please enter the start time of the first film.")) 
 		{
 			return false;
 		}
-
-
 	}
 	return true;
 	

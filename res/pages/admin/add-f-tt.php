@@ -3,37 +3,61 @@
 include('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
-//New fields to change
+
+$film = $_POST['id'];
 $start_date = $_POST['start'];
 $end_date =  $_POST['end'];
-$start_time = $_POST['newTime'];
-$screen = $_POST['newScreen'];
+$showings = $_POST['numshowings'];
+$start_time = $_POST['newTime']; 
 
-$film_title = $_POST['newfilm_title'];
-
-
-//Fields that need to be found from other tables or calculated
-
-$end_time = '0'; //Need to calculate the end time start time - length?
+$mins = substr($start_time, -2);
+$hours = substr($start_time, 0, -3);
 
 
-$filmIDD = "SELECT films.film_ID, showings.film_ID, films.film_title FROM films, showings WHERE films.film_ID = showings.film_ID";
-$filmIDDD = mysql_query($filmIDD) or die(my_sql_error());
 
-//take film length from films and add it to the start time to get accurate endtime
-$calc_end = "SELECT * FROM films";
-$length = 
-$end_time = '0';
+$length = "select film_length from films where film_ID = '$film'";
+$start = "select film_length from films where film_ID = '$film'";
+$run = mysql_query($length) or die(mysql_error());
 
-if ($filmIDDD = $film_title) {
-echo "SUCCESS MATCH";
-}
-$sql= "INSERT INTO showings (start_date, end_date, start_time, end_time, film_ID, screen_ID)
-VALUES
-('$start_date', '$end_date', '$start_time', '$end_time', '$filmIDDD', '$screen')";
+while($row = mysql_fetch_array($run)){
+	  
+		$length = $row['film_length'];
+	} 
+	
+	for( $i=0; $i < $showings; $i++)
+	{
+		if ($i == 0)
+		{
+			$time = $hours . ":" . $mins;
+			
+			$sql= "INSERT INTO showings (start_date, end_date, start_time, film_ID, screen_ID) 
+				   VALUES('$start_date', '$end_date', '$time', '$film', '1')";
+			$result = mysql_query($sql) or die(mysql_error());
 
-$result = mysql_query($sql) or die(mysql_error());
+		}
+		else
+		{
+			
+			$length = $length + 30;
+			$temp = round($length / 60);
+			
+			if ($hours < 22)
+			{
+				$hours = $hours + $temp;
+				$time = $hours . ":" . $mins;
+				
+				$sql= "INSERT INTO showings (start_date, end_date, start_time, film_ID, screen_ID) 
+					   VALUES('$start_date', '$end_date', '$time', '$film', '1')";
+				$result = mysql_query($sql) or die(mysql_error());
 
+			}
+		}
+			
+	}
+	
+	
+	
 $connect->disc();
 header("location: admin.php?page=tt-acs");
+
 ?>
