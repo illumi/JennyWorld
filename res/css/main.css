@@ -14,16 +14,14 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 }
-
 #booking {
 	float: right;
-	margin-right:120px;
+	margin-right:180px;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:15px;
-	font-weight:bold;	
+	font-weight:bold;
 	width: 100px;
 }
-
 #mainContent {
 	float:left;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -35,8 +33,6 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
-
-
 h1{
 	border-bottom:1px solid #000000;
 	letter-spacing:-1px;
@@ -56,7 +52,6 @@ h2{
 	margin:10px 10px 3px 0;
 	font-family: Helvetica, Georgia;
 }
-
 h3{
 	letter-spacing:-1px;
 	font-size:16.5px;
@@ -137,7 +132,6 @@ nav ul a:hover, nav ul a:focus {
 	margin-right:auto;
 	text-align:center;
 }
-
 .pod {
 	background: #fff;
 	padding: 10px;

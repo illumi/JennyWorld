@@ -24,14 +24,16 @@
 				$('#title').val(d.Title);
 				$('#year').val(d.Year);
 				$('#filmdesc').val(d.Plot);
-				
+
 				var time, rawtime = d.Runtime.split(" ");
 				if (rawtime.length == 4) {
 					time = parseInt(rawtime[0]*60) + parseInt(rawtime[2]);
+				} else if (rawtime[1] == "hrs") {
+					time = parseInt(rawtime[0]*60);
 				} else {
-					time = parseInt(rawtime[0]);
+				time = parseInt(rawtime[0]);
 				}
-				
+
 				$('#filmlength').val(time);
 				$('#filmgenre').val(d.Genre);
 				$('#filmrating').val(d.Rated);
@@ -89,7 +91,6 @@
 			</tr>
 	   	</table>
 	</table>
-	
 	<input type="text" value="" name="imdb_id" id="imdb_id"  style="visibility:hidden"/>
 </form>
 

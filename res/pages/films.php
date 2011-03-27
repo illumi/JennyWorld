@@ -59,7 +59,7 @@ $(function() {
 				echo	"<td><table><tr><td>Plot</td><td>" . $row['film_plot'] . "</td></tr>";
 				echo	"<tr><td>Length</td><td>" . $row['film_length'] . "</td></tr>";
 				echo	"<tr><td>Genre</td><td>" . $row['film_genre'] . "</td></tr>";
-				echo	"<tr><td>Rating</td><td>" . $row['film_rating'] . "</td></tr></tr></table>";
+				echo	"<tr><td>Rating</td><td>" . $row['film_rating'] . "</td></tr></table>";
 			}    
 			
 			 echo "</table></div>";
