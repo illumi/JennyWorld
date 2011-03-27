@@ -4,7 +4,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['admin']  || empty($_SESSION['login'
 	header('Location: ./index.php?page=adminLogin');
 }
 
-include ('../../lib/class_dbcon.php');
+include ('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
 $name = mysql_escape_string($_POST['login']);
@@ -21,5 +21,5 @@ VALUES
 mysql_query($sql) or die(mysql_error());
 
 $connect->disc();
-header("location: ../../../admin.php?page=staff-acs");
+header("location: admin.php?page=staff-acs");
 ?>

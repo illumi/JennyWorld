@@ -55,7 +55,9 @@ $(function() {
 			// Print out the contents of each row into a table 
 			while($row = mysql_fetch_array($result))
 			{
-				echo	"<tr><td><img src=\"" . addslashes($row['film_poster']) . "\" alt=\"poster\"/></td>";
+				//echo	"<tr><td><img src=\"" . addslashes($row['film_poster']) . "\" alt=\"poster\"/></td>";
+				header("Content-type: image/jpeg");
+				echo 	"<tr><td>".mysql_result($result, 0)."</td>";
 				echo	"<td><table><tr><td>Plot</td><td>" . $row['film_plot'] . "</td></tr>";
 				echo	"<tr><td>Length</td><td>" . $row['film_length'] . "</td></tr>";
 				echo	"<tr><td>Genre</td><td>" . $row['film_genre'] . "</td></tr>";
