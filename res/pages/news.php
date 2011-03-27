@@ -11,9 +11,8 @@ $today = date('Y-m-d');
 ?>
 
 <div id="body">
-<h1>Current promotions</h1>
+<h1>Current promotions</h1><p>
 <h3>
-	<p>
 
 	<?php
 
@@ -49,6 +48,6 @@ $today = date('Y-m-d');
 	?> 
 	
 </h3>
-</br>
+
 <h2></h2>
 </div>
