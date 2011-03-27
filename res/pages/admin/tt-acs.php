@@ -67,6 +67,8 @@ while($row = mysql_fetch_array($result)){
 	$connect->disc();
 
 	?> 
+	
+	<p>
 </h2>
 	
 </div>

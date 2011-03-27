@@ -19,7 +19,7 @@ $connect->disc();
 ?>
 
 <div id="body">
-<h1> Remove Film</h1>
+<h1> Remove Film</h1><p>
 <h3>
 
 <section id="remove info">
@@ -60,4 +60,6 @@ $connect->disc();
 </section>
 
 </h3>
+
+<h2></h2>
 </div>

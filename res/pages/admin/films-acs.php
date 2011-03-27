@@ -7,7 +7,7 @@ if(!isset($_SESSION['login']) || empty($_SESSION['login']))
 ?>
 
 <div id="body">
-<h1>Film Records</h1>
+<h1>Film Records</h1><p>
 <h3>
 
 	<?php
@@ -46,6 +46,8 @@ if(!isset($_SESSION['login']) || empty($_SESSION['login']))
 	?>
 	
 </h3>
+
+<h2></h2>
 </div>
 
 
