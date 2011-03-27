@@ -139,7 +139,6 @@ function onSubmitEditFilms(submit)
 		} 
 		else return false;
 }
-
 function onSubmitAddFilms(submit)
 {
 	Form=submit.form;

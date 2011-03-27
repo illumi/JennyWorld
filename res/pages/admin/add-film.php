@@ -8,60 +8,91 @@
 
 <div id="body">
 <h1>Add Film</h1>
-<h3>
-<section id="new film info">
-	<form name="addfilm" method="POST" action="">
-		<table border= "0" class="center">
+<h3><p>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+	$('#buSsearch').click(function(){
+		
+		$.ajax({ 
+			url: "http://www.imdbapi.com/?t=" + $('#title').val() + "&y="+$('#year').val(), 
+			dataType: "jsonp", 
+			error: function(j,s,e) {
+				alert("Error: "+e);
+			}, success: function(d) {
+				$('#title').val(d.Title);
+				$('#year').val(d.Year);
+				$('#filmdesc').val(d.Plot);
+				
+				var time, rawtime = d.Runtime.split(" ");
+				if (rawtime.length == 4) {
+					time = parseInt(rawtime[0]*60) + parseInt(rawtime[2]);
+				} else {
+					time = parseInt(rawtime[0]);
+				}
+				
+				$('#filmlength').val(time);
+				$('#filmgenre').val(d.Genre);
+				$('#filmrating').val(d.Rated);
+				$('#filmposter').val(d.Poster);
+				$('#imdb_id').val(d.ID);
+			}
+		});
+		
+		return false;
+	});
+
+	});
+
+</script>
+
+<form name="filmForm" method="POST" action="admin.php?page=add-flm" class="center">
+	<table border= "0" class="center">
+		<tr>
+			<td>Film Title:</td> 
+			<td><input type="text" value="" name="title" id="title" required/></td>
+		</tr>
+		<tr>
+			<td>Film Year:</td> 
+			<td><input type="text" value="" name="year" id="year" required/></td>
+		</tr>
+		<tr>
+			<td>Click to find:</td> 
+			<td><input type="button" name="buSsearch" id="buSsearch" value="Find film"/></td>
+		</tr>
+		<tr>
+			<td>Film Description:</td>
+			<td><input type="text" value="" name="filmdesc" id="filmdesc" required/></td>
+		</tr>
+		<tr>
+			<td>Film Length (mins):</td>
+			<td><input type="text" value="" name="filmlength" id="filmlength" required/></td>
+		</tr>
+		<tr>
+			<td>Film Genre:</td> 
+			<td><input type="text" value="" name="filmgenre" id="filmgenre" required/></td>
+		</tr>
+		<tr>
+			<td>Film Rating (BBFC):</td>
+			<td><input type="text" value="" name="filmrating" id="filmrating" required/></td>
+		</tr>
+		<tr>
+			<td>Film Poster (img):</td>
+			<td><input type="text" value="" name="filmposter" id="filmposter" required/></td>
+		</tr>
+		<table border="0" class="center">
 			<tr>
-				<td>Film Title:</td> <td><input type="text" value="" name="filmtitle" required></td>
-			</tr>
-			<tr>
-				<td>Film Length (minutes):</td> <td><input type="text" value="" name="filmlength" required></td>
-			</tr>
-			<tr>
-				<td>Film Genre:</td> 
-				<td><select name="genre" value="" id="genre" required>
-					<option value="0">Genre</option>
-					<option value="action">Action</option>
-					<option value="animation">Animation</option>
-					<option value="comedy">Comedy</option>
-					<option value="crime">Crime</option>
-					<option value="documentary">Documentary</option>
-					<option value="drama">Drama</option>
-					<option value="fantasy">Fantasy</option>
-					<option value="horror">Horror</option>
-					<option value="romcom">Romantic Comedy</option>
-					<option value="thriller">Thriller</option>
-					<option value="scifi">Science Fiction</option>
-				</select></td>
-			</tr>
-			<tr>
-				<td>Film Rating (BBFC):</td>
-				<td><select name="rating" value="" id="rating" required>
-					<option value="0">Rating</option>
-					<option value="U">U</option>
-					<option value="PG">PG</option>
-					<option value="12">12</option>
-					<option value="12A">12A</option>
-					<option value="15">15</option>
-					<option value="18">18</option>
-					<option value="R18">R18</option>
-		        </select></td>
-			</tr>
-			<tr>
-			<td>Year Released:</td>
-				<td><input type="text" value="" name="year" required></td>
-			</tr>
-	   		<table border="0" class="center">
-				<tr>
 				<p>
 				<input type="submit" name="submit" id="submit" value="Submit" onClick="onSubmitAddFilms(this);">
 				<input type="reset" name="reset" id="reset" value="Reset">
-				</tr>
-	   		</table>
-		</table>
-	</form>
-</section>
+			</tr>
+	   	</table>
+	</table>
+	
+	<input type="text" value="" name="imdb_id" id="imdb_id"  style="visibility:hidden"/>
+</form>
 
 </h3>
+<h2></h2>
 </div>
