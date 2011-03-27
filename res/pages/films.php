@@ -22,6 +22,11 @@ $(function() {
 });
 </script>
 
+<head>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/base/jquery-ui.css" type="text/css" media="all" />
+
+</head>
+
 	
 <div class="demo">
 

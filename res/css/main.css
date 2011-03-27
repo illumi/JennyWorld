@@ -14,14 +14,32 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 }
+
+#filmdetails{
+	float: right;
+	text-align: left;	
+	margin-right:10px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:15px;	
+	width: 600px;
+}
+#filmheaders{
+	float: left;	
+	margin-right:10px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:15px;	
+	width: 50px;
+}
+
 #booking {
 	float: right;
-	margin-right:180px;
+	margin-right:150px;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:15px;
-	font-weight:bold;
+	font-weight:bold;	
 	width: 100px;
 }
+
 #mainContent {
 	float:left;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -33,6 +51,8 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
+
+
 h1{
 	border-bottom:1px solid #000000;
 	letter-spacing:-1px;
@@ -52,6 +72,7 @@ h2{
 	margin:10px 10px 3px 0;
 	font-family: Helvetica, Georgia;
 }
+
 h3{
 	letter-spacing:-1px;
 	font-size:16.5px;
@@ -121,7 +142,7 @@ nav ul a:hover, nav ul a:focus {
 #body{
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:28px;
-	min-height:250px;
+	overflow:auto;
 	font-weight:bold;
 	background-color: #EBEBEB;
 	width: 760px;
@@ -132,6 +153,7 @@ nav ul a:hover, nav ul a:focus {
 	margin-right:auto;
 	text-align:center;
 }
+
 .pod {
 	background: #fff;
 	padding: 10px;
