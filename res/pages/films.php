@@ -13,15 +13,20 @@ $connect = new doConnect();
 
 ?>
 
+
 	
 
-	<div id="body">
+
 	
-			<script>
+	<script>
 	$(function() {
-		$( "#accordion" ).accordion();
+		$( "#accordion" ).accordion({
+			autoHeight: false,
+			collapsible: true
+		});
 	});
 	</script>
+
 	
 	<div class="demo">
 
@@ -56,7 +61,9 @@ $connect = new doConnect();
 		// Print out the contents of each row into a table 
 		while($row = mysql_fetch_array($result))
 		{
-			echo	"<tr><td>Title</td><td>" . $row['film_title'] . "</td></tr>";
+			
+			
+			echo	"<img src=" . $row['film_poster'] . "' alt='poster'/>";
 			echo	"<tr><td>Plot</td><td>" . $row['film_plot'] . "</td></tr>";
 			echo	"<tr><td>Length</td><td>" . $row['film_length'] . "</td></tr>";
 			echo	"<tr><td>Genre</td><td>" . $row['film_genre'] . "</td></tr>";
@@ -71,5 +78,3 @@ $connect = new doConnect();
 
 </div><!-- End demo -->
 
-			
-	</div>
