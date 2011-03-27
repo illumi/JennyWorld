@@ -11,6 +11,7 @@ $connect = new doConnect();
 
 <div id="body">
 <h1> Edit Promotions</h1>
+<p>
 
 <h3>
 	<form name="promo" method="POST" action="" class="center">
@@ -60,6 +61,8 @@ $connect = new doConnect();
 	   		</table>
 		</table>
 	</form>
-    </h3>
-<p>
+</h3>
+
+<h2></h2>
+</div>
 

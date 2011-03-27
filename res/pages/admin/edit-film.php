@@ -85,4 +85,7 @@ $connect = new doConnect();
 	</table>
 	</form>
 </section>
+</h3>
+
+<h2></h2>
 </div>
