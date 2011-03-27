@@ -60,13 +60,13 @@ $(function() {
 			// Print out the contents of each row into a table 
 			while($row = mysql_fetch_array($result))
 			{
-				echo	"<tr><td><img src=\"" . addslashes($row['film_poster']) . "\" alt=\"poster\"/></td>";
+				//echo	"<tr><td><img src=\"" . addslashes($row['film_poster']) . "\" alt=\"poster\"/></td>";
+				header("Content-type: image/jpeg");
+				echo 	"<tr><td>".mysql_result($result, 0)."</td>";
 				echo	"<td><table><div id='filmheaders'>Plot:</div><div id='filmdetails'>" . $row['film_plot'] . "</div><br/><br/>";
 				echo	"<div id='filmheaders'>Length:</div><div id='filmdetails'>" . $row['film_length'] . "</div><br/>";
 				echo	"<div id='filmheaders'>Genre:</div><div id='filmdetails'>" . $row['film_genre'] . "</div><br/>";
 				echo	"<div id='filmheaders'>Rating:</div><div id='filmdetails'>" . $row['film_rating'] . "</div><br/></table>";
-
-
 			}    
 			
 			 echo "</table></div>";

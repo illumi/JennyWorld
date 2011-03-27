@@ -4,7 +4,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['admin'] || empty($_SESSION['login']
 	header('Location: ./index.php?page=adminLogin');
 }
 
-include ('../../lib/class_dbcon.php');
+include ('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
 $editid = $_POST['unique_id'];
@@ -25,6 +25,6 @@ mysql_query("UPDATE staff SET user_name = '$editname', role_type = '$editrole' W
 }
 
 $connect->disc();
-header("location:../../../admin.php?page=staff-acs");
+header("location: admin.php?page=staff-acs");
 
 ?>
