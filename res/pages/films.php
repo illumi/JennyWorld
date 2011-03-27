@@ -22,6 +22,11 @@ $(function() {
 });
 </script>
 
+<head>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/base/jquery-ui.css" type="text/css" media="all" />
+
+</head>
+
 	
 <div class="demo">
 
@@ -56,10 +61,10 @@ $(function() {
 			while($row = mysql_fetch_array($result))
 			{
 				echo	"<tr><td><img src=\"" . addslashes($row['film_poster']) . "\" alt=\"poster\"/></td>";
-				echo	"<td><table><tr><td>Plot</td><td>" . $row['film_plot'] . "</td></tr>";
-				echo	"<tr><td>Length</td><td>" . $row['film_length'] . "</td></tr>";
-				echo	"<tr><td>Genre</td><td>" . $row['film_genre'] . "</td></tr>";
-				echo	"<tr><td>Rating</td><td>" . $row['film_rating'] . "</td></tr></tr></table>";
+				echo	"<td><table><div id='filmheaders'>Plot:</div><div id='filmdetails'>" . $row['film_plot'] . "</div><br/><br/>";
+				echo	"<div id='filmheaders'>Length:</div><div id='filmdetails'>" . $row['film_length'] . "</div><br/>";
+				echo	"<div id='filmheaders'>Genre:</div><div id='filmdetails'>" . $row['film_genre'] . "</div><br/>";
+				echo	"<div id='filmheaders'>Rating:</div><div id='filmdetails'>" . $row['film_rating'] . "</div><br/></table>";
 			}    
 			
 			 echo "</table></div>";

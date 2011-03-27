@@ -22,6 +22,7 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
+
 h1{
 	border-bottom:1px solid #000000;
 	letter-spacing:-1px;
@@ -93,8 +94,6 @@ nav a {
 	color: #fff;
 	border: 1px solid #fff;
 	margin: 5px 0px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
 	box-shadow: 1px 1px 3px #000;
     text-shadow: 1px 1px 1px #000;
 	background: rgba(255,255,255,0.2);
@@ -114,41 +113,55 @@ nav ul li:hover a, nav li:hover li a {
 /* level 2 list */
 nav ul {
 	display: none;
-	margin: 5px 0px;
-	padding: 10px;
-	width: 140px;
+	text-align:center;
+	margin: 0px;
+	padding: 0px;
+	width: 160px;
 	position: absolute;
-	top: 200px;
+	top: 210px;
 	text-decoration: none;
 	color: #fff;
-	border: 1px solid #fff;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
-    text-shadow: 1px 1px 1px #000;
+	border: 0.5px solid #fff;
+
+
 }
 /* dropdown */
 nav li:hover > ul {
 	display: block;
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,1);
 }
 nav ul li {
 	float: none;
 	margin: 0;
 	padding: 0;
+	
 }
 nav ul a {
 	font-weight: normal;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
+	text-shadow: 0 0px 1px rgba(255, 255, 255, 1);
 }
 /* clearfix */
 nav:after {
 	content: ".";
-	display: block;
+
 	clear: both;
 	visibility: hidden;
 	line-height: 0;
 	height: 0;
+}
+
+nav li:hover ul li a:hover{ /* Set styles for dropdown when items are hovered */
+	background:#fff; /* Solid colour fall-back */
+
+
+	width: 140px;
+	
+	color:#fff;
+
+
+	background:rgba(0,107,175,0.5); /* It'll look nice semi-transparent */
+
+
 }
 
 #maincontent {
