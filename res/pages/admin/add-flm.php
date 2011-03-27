@@ -17,7 +17,7 @@ $connect = new doConnect();
 	
 	//$content = file_get_contents("\"" . addslashes($_POST['filmposter']) . "\"");
 	$test = "http://imgs.xkcd.com/comics/turing_test.png";
-	$content = addslashes((file_get_contents($test));
+	$content = addslashes(file_get_contents($test));
 
 	$poster	= mysql_escape_string($_POST['filmposter']);	
 	$imdbid = mysql_escape_string($_POST['imdb_id']);
