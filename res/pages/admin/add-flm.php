@@ -14,15 +14,10 @@ $connect = new doConnect();
 	$length = mysql_escape_string($_POST['filmlength']);
 	$genre = mysql_escape_string($_POST['filmgenre']);
 	$rating	= mysql_escape_string($_POST['filmrating']);
-	
-	//$content = file_get_contents("\"" . addslashes($_POST['filmposter']) . "\"");
-	$test = "http://www.testinprivate.co.uk/images/Home%20Test%20Products.jpg";
-	$content = addslashes(file_get_contents($test));
-
 	$poster	= mysql_escape_string($_POST['filmposter']);	
 	$imdbid = mysql_escape_string($_POST['imdb_id']);
 		 
-	$sql="INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id, film_img) VALUES ('$title', '$year', '$desc', '$length', '$genre', '$rating', '$poster', '$imdbid', '$content')";
+	$sql="INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('$title', '$year', '$desc', '$length', '$genre', '$rating', '$poster', '$imdbid')";
 		 
 	mysql_query($sql) or die(mysql_error());
 

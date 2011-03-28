@@ -122,8 +122,6 @@ nav ul {
 	text-decoration: none;
 	color: #fff;
 	border: 0.5px solid #fff;
-
-
 }
 /* dropdown */
 nav li:hover > ul {
@@ -143,25 +141,16 @@ nav ul a {
 /* clearfix */
 nav:after {
 	content: ".";
-
 	clear: both;
 	visibility: hidden;
 	line-height: 0;
 	height: 0;
 }
-
 nav li:hover ul li a:hover{ /* Set styles for dropdown when items are hovered */
 	background:#fff; /* Solid colour fall-back */
-
-
 	width: 140px;
-	
 	color:#fff;
-
-
 	background:rgba(0,107,175,0.5); /* It'll look nice semi-transparent */
-
-
 }
 
 #maincontent {
@@ -171,8 +160,6 @@ nav li:hover ul li a:hover{ /* Set styles for dropdown when items are hovered */
 	padding-bottom: 10px;
 	padding-left: 0px;
 }
-
-
 #body{
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:28px;

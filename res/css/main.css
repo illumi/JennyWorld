@@ -14,7 +14,6 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 }
-
 #filmdetails{
 	float: right;
 	text-align: left;	
@@ -51,8 +50,6 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
-
-
 h1{
 	border-bottom:1px solid #000000;
 	letter-spacing:-1px;
@@ -62,7 +59,6 @@ h1{
 	margin:10px 10px 3px 0;
 	font-family:Vera, Helvetica, Georgia;
 }
-
 h2{
 	border-bottom:1px solid #000000;
 	letter-spacing:-1px;
@@ -72,7 +68,6 @@ h2{
 	margin:10px 10px 3px 0;
 	font-family: Helvetica, Georgia;
 }
-
 h3{
 	letter-spacing:-1px;
 	font-size:16.5px;
@@ -138,7 +133,6 @@ nav ul a:hover, nav ul a:focus {
 	padding-bottom: 10px;
 	padding-left: 0px;
 }
-
 #body{
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:28px;
