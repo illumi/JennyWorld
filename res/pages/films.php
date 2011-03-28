@@ -20,14 +20,14 @@ $(function() {
 		collapsible: true
 	});
 });
-</script>
-
-<head>
+</script><head>
 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/base/jquery-ui.css" type="text/css" media="all" />
 
 </head>
 
 	
+
+
 <div class="demo">
 
 	<div id="accordion">
@@ -60,7 +60,7 @@ $(function() {
 			// Print out the contents of each row into a table 
 			while($row = mysql_fetch_array($result))
 			{
-				echo	"<tr><td><img src=\"" . addslashes($row['film_poster']) . "\" alt=\"poster\"/></td>";
+				echo	"<tr><td><img src=\"res/pages/getimg.php?imgUrl=" . addslashes($row['film_poster']) . "\" alt=\"poster\"/></td>";
 				echo	"<td><table><tr><td>Plot</td><td>" . $row['film_plot'] . "</td></tr>";
 				echo	"<tr><td>Length</td><td>" . $row['film_length'] . "</td></tr>";
 				echo	"<tr><td>Genre</td><td>" . $row['film_genre'] . "</td></tr>";
