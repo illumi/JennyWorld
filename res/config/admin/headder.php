@@ -23,6 +23,17 @@ Computer Science and Information Systems Year 3
 	<script type="text/javascript" src="res/js/jquery-1.5.1.js"></script>
 	<script type="text/javascript" src="res/js/jquery-ui-1.8.10.custom.min.js"></script>
 	<script type="text/javascript" src="res/js/jquery.ui.timepicker.js"></script>
+	<script type="text/javascript">
+		 document.createElement('header');
+		 document.createElement('hgroup');
+		 document.createElement('nav');
+		 document.createElement('menu');
+		 document.createElement('section');
+		 document.createElement('article');
+		 document.createElement('aside');
+		 document.createElement('footer');
+	</script>
+
 	
 	<script type="text/javascript">
 	$(function() {

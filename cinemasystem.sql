@@ -94,7 +94,14 @@ INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('1', '1', '1000
 INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('2', '1', '1000');
 INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('3', '1', '500');
 INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('4', '1', '500');
-INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('5', '1', '100');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('5', '1', '500');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('6', '1', '500');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('7', '1', '200');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('8', '1', '200');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('9', '1', '200');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('10', '1', '200');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('11', '1', '100');
+INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('12', '1', '100');
 
 
 INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('Harry Potter and the Deathly Hallows: Part 1', '2010', 'As Harry races against time and evil to destroy the Horcruxes, he uncovers the existence of three most powerful objects in the wizarding world: the Deathly Hallows.', '146', 'Adventure, Fantasy, Mystery', 'PG-13', 'http://ia.media-imdb.com/images/M/MV5BMTQ2OTE1Mjk0N15BMl5BanBnXkFtZTcwODE3MDAwNA@@._V1._SX320.jpg', 'tt0926084');
