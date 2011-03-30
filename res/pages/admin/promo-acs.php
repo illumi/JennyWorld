@@ -47,6 +47,8 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'] || empty($_SESSION['login']
 	$connect->disc();
 
 	?> 
+
+<h2></h2>	
 </div>
 
 
