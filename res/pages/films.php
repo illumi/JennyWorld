@@ -53,10 +53,10 @@ $(function() {
 			while($row = mysql_fetch_array($result))
 			{
 				echo	"<tr><td><img src=\"res/pages/getimg.php?imgUrl=" . addslashes($row['film_poster']) . "\" alt=\"poster\"/></td>";
-				echo	"<td><table><div id='filmheaders'>Plot</div><div id='filmdetails'>" . $row['film_plot'] . "</div><p><p>";
-				echo	"<div id='filmheaders'>Length</div><div id='filmdetails'>" . $row['film_length'] . "</div><p>";
-				echo	"<div id='filmheaders'>Genre</div><div id='filmdetails'>" . $row['film_genre'] . "</div><p>";
-				echo	"<div id='filmheaders'>Rating</div><div id='filmdetails'>" . $row['film_rating'] . "</div><p></table>";
+				echo	"<td><div class='plot'>" . $row['film_plot'] . "</div><br/>";
+				echo	"<div class='filmheaders'>Length:</div><div class='filmdetails'>" . $row['film_length'] . "</div><p>";
+				echo	"<div class='filmheaders'>Genre:</div><div class='filmdetails'>" . $row['film_genre'] . "</div><p>";
+				echo	"<div class='filmheaders'>Rating:</div><div class='filmdetails'>" . $row['film_rating'] . "</div><p>";
 			}    
 			
 			 echo "</table></div>";

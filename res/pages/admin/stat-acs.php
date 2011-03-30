@@ -52,14 +52,14 @@ $connect->disc();
 <div class="demo">
 
 <div id="accordion">
-	<h3><a href="#">Section 1</a></h3>
+	<h3><a href="#">Customer Statistics</a></h3>
 	<div>
 		<p>
 		<?php
 			echo "Total number of customers: " . $total['SUM(numof_tickets)'];
 		?>
     <!-- table containing the film title and the number of viewers -->
-    <table>
+    <table class="center">
         <tr>
             <td><strong>Film Title</strong></td>
             <td><strong>Number of viewers</strong></td>
@@ -75,11 +75,11 @@ $connect->disc();
         ?>
     </table>
 	</div>
-	<h3><a href="#">Section 2</a></h3>
+	<h3><a href="#">Timetable statistics</a></h3>
 	<div>
 			<p>
 			 <!-- table containing the showings schedule and the number of tickets -->
-    <table>
+    <table class="center">
         <tr>
             <td><strong>Showing start time</strong></td>
             <td><strong>Showing end time</strong></td>
@@ -100,7 +100,7 @@ $connect->disc();
 		</p>
 		</p>
 	</div>
-	<h3><a href="#">Section 3</a></h3>
+	<h3><a href="#">Promotional Statistics</a></h3>
 	<div>
 		<p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
 		<ul>
@@ -109,7 +109,7 @@ $connect->disc();
 			<li>List item three</li>
 		</ul>
 	</div>
-	<h3><a href="#">Section 4</a></h3>
+	<h3><a href="#">Film Statistics</a></h3>
 	<div>
 		<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
 	</div>

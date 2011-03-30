@@ -14,20 +14,31 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 }
-#filmdetails{
+
+.filmdetails{
 	float: right;
 	text-align: left;	
 	margin-right:10px;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:15px;	
-	width: 600px;
+	width: 300px;
 }
-#filmheaders{
+
+.filmheaders{
 	float: left;	
 	margin-right:10px;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:15px;	
 	width: 50px;
+}
+
+
+.plot{
+	text-align: left;	
+	margin-right:10px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:15px;	
+	width: 450px;
 }
 
 #booking {
