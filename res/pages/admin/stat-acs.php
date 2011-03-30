@@ -36,6 +36,15 @@ $visit = array();
 
 for( $i=0; $i< mysql_num_rows($result); $i++)
     $visit[$i] = mysql_fetch_assoc($result);
+    
+    
+$query1 = "SELECT count(collected) as TotalBookings FROM booking;";
+$query2 = "SELECT count(collected) as CollectedBookings FROM booking where collected = true;";
+$query3 = "SELECT count(collected) as UncollectedBookings FROM booking where collected = false;";
+
+$result1 = mysql_query($query1);
+$result2 = mysql_query($query2);
+$result3 = mysql_query($query3);
 
 $connect->disc();
 ?>
@@ -62,8 +71,10 @@ echo "Total number of customers: " . $total['SUM(numof_tickets)'];
 <!-- table containing the film title and the number of viewers -->
 <table class="table-std">
 <tr>
-<td><strong>Film Title</strong></td>
-<td><strong>Number of viewers</strong></td>
+Viewers
+
+<th><strong>Film Title</strong></th>
+<th><strong>Number of viewers</strong></th>
 </tr>
 <?php
                 for($i = 0; $i < count($mostPopular); $i++)
@@ -75,6 +86,36 @@ echo "Total number of customers: " . $total['SUM(numof_tickets)'];
                 }
         ?>
 </table>
+
+<?php
+
+echo "<table class=\"table-std\">
+	<tr>
+	<th>Total Bookings</th>
+	<th>Bookings collected</th>
+	<th>Bookings uncollected</th>
+
+	</tr>";
+	// Print out the contents of each row into a table 
+	while($row = mysql_fetch_array($result1)){
+
+		echo "<td>" . $row['TotalBookings'] . "</td>";
+	}
+	while($row = mysql_fetch_array($result2)){
+
+
+		echo "<td>" . $row['CollectedBookings'] . "</td>";
+
+	}
+	while($row = mysql_fetch_array($result3)){
+		echo "<td>" . $row['UncollectedBookings'] . "</td>";
+
+	}
+	echo "</table>";
+
+?>
+
+
 </div>
 <h3><a href="#">Timetable Statistics</a></h3>
 <div>

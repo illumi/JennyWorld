@@ -70,9 +70,21 @@ $(function() {
 		});
 		});
 		
-		 $(document).ready(function() {
-                $('#timepicker_1').timepicker();
+	
+    $(document).ready(function() {
+                $('#timepicker_1').timepicker({
+                    onHourShow: timepicker7OnHourShowCallback
+                });
             });
+            function timepicker7OnHourShowCallback(hour) {
+                if ((hour > 22) || (hour < 09)|| (hour == 00)) {
+                    return false;
+                }
+                return true;
+            }
+
+
+
 
 	</script>
 </head>
