@@ -33,6 +33,14 @@ Computer Science and Information Systems Year 3
 		 document.createElement('aside');
 		 document.createElement('footer');
 	</script>
+	
+		<script>
+	$(function() {
+		$( "#accordion" ).accordion({
+			collapsible: true
+		});
+	});
+	</script>
 
 	
 	<script type="text/javascript">

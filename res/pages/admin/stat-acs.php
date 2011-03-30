@@ -45,24 +45,15 @@ $connect->disc();
 <h2>
 
 
-<script>
-	$(function() {
-		$( "#tabs" ).tabs();
-	});
-	</script>
+<meta charset="utf-8">
 
 
 
 <div class="demo">
 
-<div id="tabs">
-	<ul>
-		<li><a href="#tabs-1">Customer Statisitcs</a></li>
-		<li><a href="#tabs-2">Film Statistics</a></li>
-		<li><a href="#tabs-3">Previous Promotions</a></li>
-		<li><a href="#tabs-4">Previous Timetables</a></li>
-	</ul>
-	<div id="tabs-1">
+<div id="accordion">
+	<h3><a href="#">Section 1</a></h3>
+	<div>
 		<p>
 		<?php
 			echo "Total number of customers: " . $total['SUM(numof_tickets)'];
@@ -83,10 +74,10 @@ $connect->disc();
                 }
         ?>
     </table>
-		</p>
 	</div>
-	<div id="tabs-2">
-		<p>
+	<h3><a href="#">Section 2</a></h3>
+	<div>
+			<p>
 			 <!-- table containing the showings schedule and the number of tickets -->
     <table>
         <tr>
@@ -107,17 +98,25 @@ $connect->disc();
     </table>
 		
 		</p>
+		</p>
 	</div>
-	<div id="tabs-3">
-		<p>Previous promotions here :)</p>
+	<h3><a href="#">Section 3</a></h3>
+	<div>
+		<p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+		<ul>
+			<li>List item one</li>
+			<li>List item two</li>
+			<li>List item three</li>
+		</ul>
 	</div>
-	
-	<div id="tabs-4">
-		<p>Old timetable listings here :)</p>
+	<h3><a href="#">Section 4</a></h3>
+	<div>
+		<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
 	</div>
 </div>
 
-</div>
+</div><!-- End demo -->
+
 
 
 </h2>
