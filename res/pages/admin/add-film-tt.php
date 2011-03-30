@@ -15,13 +15,15 @@ $connect = new doConnect();
 <h1>Add Film to Timetable</h1>
 
     <h3>
-	<form name="tt" method="POST" action="" class="center" onSubmit="return stopSubmit();">
+	<form name="tt" method="POST" action="" class="center" >
                 <table border="0" id="tabSelectFilm" class="center">
 			
 			<tr>
-				<td> Film Name: </td>	
+                                <td> Film Name:
+                                    <div id="divFilmYear" style="display: none; position: absolute; padding-left: 2em;">Film Year:</div>
+                                </td>
 				<td>
-                                    <select name="id" id="lstMovies" style="width:200px;">
+                                    <select name="id" id="lstMovies" style="width:200px;" onChange="displayAdd(this);">
                                     <option value="0">--select film to add--</option>
                                     <?php
                                     $query = mysql_query("SELECT film_ID, film_title FROM films;");
@@ -30,7 +32,10 @@ $connect = new doConnect();
                                     }
                                     $connect->disc();
                                     ?>
-                                    </select>
+                                    <option value="add">Add a new film ...</option>
+                                    </select><br/>
+                                    <input type="text" name="txtAddMovieTitle" id="txtAddMovieTitle" style="width:200px; display: none;" />
+                                    <input type="text" name="txtFilmYear" id="txtFilmYear" style="width:200px; display: none;" />
 				</td>
 			</tr>
 			<tr>
@@ -62,58 +67,19 @@ $connect = new doConnect();
 				<td> <input type="text" id="timepicker_1" value="" name="newTime" required></td>
 			</tr>	
 		</table>
-                
-                <table border= "0" id="tabAddNewFilm" style="display: none;" class="center">
+                <table border="0" class="center">
+                    <p>
+                    <input type="submit" name="submit" id="submit" value="Submit" onClick="onSubmitAddTimetable(this);">
+                    <input type="reset" name="reset" id="reset" value="Reset"/>
+                    </p>
+                </table>
 
-                            <tr>
-                                <td> Film Name:</td>
-                                <td>
-                                    <input type="text" id="txtAddMovieTitle" style="width:200px;" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Film Year:</td>
-                                <td>
-                                    <input type="text" id="txtFilmYear" style="width:200px;" />
-                                </td>
-                            </tr>
-                            <tr>
-                            <td>Start Date:</td>
-                            <td>
-                                    <input type="date" id="start" name="start" size="20"/>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>End Date:</td>
-                            <td>
-                                    <input type="date" id="end" name="end" size="20"/>
-                            </td>
-                            </tr>
-                            <tr>
-                                    <td> Number of showings: </td>
-                                    <td>
-                                            <select name="numshowings">
-                                            <option value="0">--select number of showings--</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-
-                                            </select>
-                                    </td>
-                            </tr>
-                            <tr>
-                                    <td NOWRAP>Time of first showing: </td>
-                                    <td> <input type="text" id="timepicker_1" value="" name="newTime" required></td>
-                            </tr>
-                    </table>
-                <a href="#" id="showLink" onClick=" return showAddPart();" >Add a new film ...</a>
-                <a href="#" id="hideLink" onClick="hideAddPart();" style="display: none;">Hide Add Panel</a><br/>
-                    <table border="0" class="center">
-                        <p>
-                        <input type="submit" name="submit" id="submit" value="Submit" onClick="onSubmitAddTimetable(this);">
-                        <input type="reset" name="reset" id="reset" value="Reset"/>
-                        </p>
-                    </table>
+                <input type="hidden" id="filmDesc" name="filmDesc"/>
+                <input type="hidden" id="filmLength" name="filmLength"/>
+                <input type="hidden" id="filmGenre" name="filmGenre"/>
+                <input type="hidden" id="filmRating" name="filmRating"/>
+                <input type="hidden" id="filmPoster" name="filmPoster"/>
+                <input type="hidden" id="imdbID" name="imdbID"/>
 	</form>
     </h3>
 	

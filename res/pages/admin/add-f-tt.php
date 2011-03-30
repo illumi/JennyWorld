@@ -3,7 +3,6 @@
 include('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
-
 $film = $_POST['id'];
 $start_date = $_POST['start'];
 $end_date =  $_POST['end'];
@@ -13,7 +12,11 @@ $start_time = $_POST['newTime'];
 $mins = substr($start_time, -2);
 $hours = substr($start_time, 0, -3);
 
-
+// in order to know if the user wants to add a new film or not
+if(!empty($_POST['txtFilmYear']) && !empty($_POST['txtAddMovieTitle']))
+{
+    
+}
 
 $length = "select film_length from films where film_ID = '$film'";
 $start = "select film_length from films where film_ID = '$film'";
