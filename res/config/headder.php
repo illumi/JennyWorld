@@ -42,7 +42,7 @@ Computer Science and Information Systems Year 3
 				document.createElement('aside');
 				document.createElement('footer');
 			} else {
-			  alert("You should upgrade your copy of Internet Explorer.");
+			  alert("You need to upgrade your copy of Internet Explorer for this website to work correctly.");
 			}
 		} //not IE
 

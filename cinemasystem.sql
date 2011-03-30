@@ -106,14 +106,62 @@ INSERT INTO screens (screen_number, cinema_id, capacity) VALUES ('12', '1', '100
 
 INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('Harry Potter and the Deathly Hallows: Part 1', '2010', 'As Harry races against time and evil to destroy the Horcruxes, he uncovers the existence of three most powerful objects in the wizarding world: the Deathly Hallows.', '146', 'Adventure, Fantasy, Mystery', 'PG-13', 'http://ia.media-imdb.com/images/M/MV5BMTQ2OTE1Mjk0N15BMl5BanBnXkFtZTcwODE3MDAwNA@@._V1._SX320.jpg', 'tt0926084');
 INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('127 Hours', '2010', 'A mountain climber becomes trapped under a boulder while canyoneering alone near Moab, Utah and resorts to desperate measures in order to survive.', '94', 'Adventure, Drama, Thriller', 'R', 'http://ia.media-imdb.com/images/M/MV5BMTc2NjMzOTE3Ml5BMl5BanBnXkFtZTcwMDE0OTc5Mw@@._V1._SX320.jpg', 'tt1542344');
+INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('Star Trek','2009','A chronicle of the early days of James T. Kirk and his fellow USS Enterprise crew members.','127','Action, Adventure, Sci-Fi','PG-13','http://ia.media-imdb.com/images/M/MV5BMjE5NDQ5OTE4Ml5BMl5BanBnXkFtZTcwOTE3NDIzMw@@._V1._SX320.jpg','tt0796366');
+INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('The Social Network','2010','A chronicle of the founding of Facebook, the social-networking Web site.','120','Biography, Drama, History','PG-13','http://ia.media-imdb.com/images/M/MV5BMTM2ODk0NDAwMF5BMl5BanBnXkFtZTcwNTM1MDc2Mw@@._V1._SX320.jpg','tt1285016');
+INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('Happy Gilmore','1996','A rejected hockey player puts his skills to the golf course to save his grandmother\'s house.','92','Comedy, Romance, Sport','PG-13','http://ia.media-imdb.com/images/M/MV5BMjA4NjUxODg3Ml5BMl5BanBnXkFtZTcwNzcyODc5Mw@@._V1._SX320.jpg','tt0116483');
 
 
-INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('1', '1', '2011-04-01', '2011-04-12', '20:30:00', '22:30:00');
-INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('3', '2', '2011-04-01', '2011-04-12', '14:30:00', '22:30:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('1', '1', '2011-04-01', '2011-04-01', '20:00:00', '22:26:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('2', '2', '2011-04-01', '2011-04-01', '20:30:00', '22:04:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('3', '3', '2011-04-01', '2011-04-01', '20:00:00', '22:07:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('4', '4', '2011-04-01', '2011-04-01', '20:30:00', '22:30:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('5', '5', '2011-04-01', '2011-04-01', '20:00:00', '21:58:00');
 
 
-INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('1', 'John Doe', '2010-12-12', '500', '0');
-INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('2', 'John Doe', '2010-12-12', '600', '0');
+INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('1', 'John Doe', '2010-12-12', '700', '0');
+INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('2', 'John Doe', '2010-12-12', '6', '0');
+INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('3', 'John Doe', '2010-12-12', '300', '0');
+INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('4', 'John Doe', '2010-12-12', '200', '0');
+INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('5', 'John Doe', '2010-12-12', '110', '0');
 
 
 INSERT INTO promotions (film_ID, promo_name, start_date, end_date, description) VALUES ( 1, 'BOGOF', '2011-03-1', '2011-03-31', 'Buy one get one free.');
+
+DROP VIEW IF EXISTS bookingcapacity;
+DROP VIEW IF EXISTS bookingsuggestion;
+
+CREATE VIEW bookingcapacity AS 
+SELECT 
+showings.showing_id, screens.screen_ID ,booking_id, films.film_ID AS filmid, films.film_title AS filmtitle ,start_date, end_date, start_time, end_time, sum(numof_tickets) AS tickets_sold, capacity 
+FROM booking
+INNER JOIN 
+showings 
+ON 
+booking.showing_id = showings.showing_ID 
+INNER JOIN 
+screens 
+ON 
+showings.screen_ID = screens.screen_ID
+INNER JOIN 
+films 
+ON 
+showings.film_ID = films.film_ID
+GROUP BY showing_id 
+ORDER BY tickets_sold DESC;
+
+CREATE VIEW bookingsuggestion AS
+SELECT 
+one.filmtitle AS move_this_film, one.showing_ID AS move_this_show, one.screen_ID AS from_this_screen, two.screen_ID as to_this_screen, two.showing_ID AS currently_booked_for, two.filmtitle AS displaying_movie, one.start_date AS starting_on_this_date, one.start_time AS starting_this_time 
+FROM bookingcapacity AS one, bookingcapacity as two 
+WHERE 
+one.tickets_sold > two.tickets_sold 
+AND 
+one.capacity < two.capacity 
+AND 
+two.start_date <= one.start_date <= two.end_date 
+AND 
+two.start_time <= one.start_time <= two.end_time
+AND
+one.filmid != two.filmid;
+
+SELECT * FROM bookingsuggestion;

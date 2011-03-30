@@ -18,7 +18,7 @@ $screenResult= mysql_query ($screenQuery);
 
 
  $optionsShowings="";
-// $options="";
+//$options="";
  $optionsScreen="";
 
 
@@ -61,18 +61,19 @@ and then applied
 
 <h2>
 
-<form name="tt" method="POST" action="">
+<form name="tt" method="POST" action="" class="center">
 	<table border="0" class="center">
 	<tr>
-		<tr>	<td>Showing: </td>
-			<td> <SELECT Name="newShowingID">
+		<tr>	<td>Showing ID: </td>
+			<td> <SELECT name="ShowingID">
 				<option value="0">Showings
 				<?php echo $optionsShowings?>
 				</select>
 			</td>
 		</tr>
+
 		<tr>	<td>Screen: </td>
-			<td> <SELECT Name="newScreen">
+			<td> <SELECT name="newScreen">
 				<option value="0">Screen
 				<?php echo $optionsScreen?>
 				</select>
@@ -80,20 +81,21 @@ and then applied
 		</tr>
 	<tr>
 				<td NOWRAP>Start Date:</td> 
-				<td><input type="date" id="start" name="start" size="20" required/>	</td>
+				<td><input type="date" id="start" name="start" size="20">	</td>
 			</tr>
 
 			<tr>
 				<td NOWRAP>End Date: </td>
-				<td><input type="date" id="end" name="end" size="20" required/>	</td>
+				<td><input type="date" id="end" name="end" size="20">	</td>
 			</tr>
 	<tr><td NOWRAP>Time (00:00:00): </td>
-		<td> <input type="text" value="" name="newTime" required>	</td>
+		<td> <input type="text" value="" name="newTime">	</td>
 	</tr>
 	<table border="0" class="center">
 				<p>
-				<input type="submit" name="submit" id="submit" value="Submit">
-				<input type="reset" name="reset" id="reset" value="Reset">
+
+<input type="submit" name="submit" id="submit" value="Submit" onClick="onSubmitEditTimetable(this);">
+			<input type="reset" name="reset" id="reset" value="Reset">
 	   		</table>
 	</table>
 </form>

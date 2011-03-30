@@ -63,7 +63,7 @@ function SetMsg (txt, active) {
     }
 }
 
-window.onload=function() { SetMsg(document.getElementById('TxtareaInput', false)); }
+window.onload=function() {SetMsg(document.getElementById('TxtareaInput', false));}
 
 
 
@@ -274,6 +274,7 @@ function validate_addtimetable(thisform)
 			return false;
 		}
 	}
+        
 	return true;
 	
 }
@@ -364,3 +365,25 @@ function valid(thisform){
 	return true;
 }
 
+function showAddPart()
+{
+    var options = {};
+    $("#tabSelectFilm").hide("blind", options, "slow", function() {
+        $("#tabAddNewFilm").show("blind", options, "slow");
+        $("#showLink").css("display", "none");
+        $("#hideLink").css("display", "block");
+        
+    });
+
+}
+
+function hideAddPart()
+{
+    var options = {};
+    $("#tabAddNewFilm").hide("blind", options, "slow", function() {
+        $("#tabSelectFilm").show("blind", options, "slow");
+        $("#showLink").css("display", "block");
+        $("#hideLink").css("display", "none");
+    });
+
+}
