@@ -39,13 +39,15 @@ Computer Science and Information Systems Year 3
 		}
 	</script>
 	
-		<script>
-	$(function() {
-		$( "#accordion" ).accordion({
-			collapsible: true
-		});
-	});
-	</script>
+	<script>
+$(function() {
+	$( "#accordion" ).accordion({ 
+    collapsible: true, 
+    autoHeight: false, 
+    active: false 
+});
+});
+</script>
 
 	
 	<script type="text/javascript">

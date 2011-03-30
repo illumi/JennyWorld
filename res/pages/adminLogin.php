@@ -3,17 +3,39 @@
 <h1>Staff Login</h1>
 
 	<form method="POST" action="res/pages/login.php">
-		<p>Username: <input type="text" name="username" id="username" size="25" autofocus required /></p>
-		<script>
-		if (!("autofocus" in document.createElement("input"))) {
-			document.getElementById("username").focus();
-		}
-		</script>
-		<p>Password: <input type="password" name="password" id="password" size="25" required /></p>
-		<p>
-			<input type="submit" name="submit" id="submit" value="Submit"/>
-			<input type="reset" name="reset" id="reset" value="Reset"/>
-		</p>
+		<table class="table-std">
+			<tr>
+			<td>
+				Username:
+			</td> 
+			
+			<td>
+				<input type="text" name="username" id="username" size="25" autofocus required />
+			</td>
+			</tr>
+					
+			<script>
+				if (!("autofocus" in document.createElement("input"))) {
+					document.getElementById("username").focus();
+				}
+			</script>
+			<tr>
+			<td>
+				Password:
+			</td> 
+			
+			<td>
+				<input type="password" name="password" id="password" size="25" required />
+			</td>
+			
+			</tr>
+			
+			<table>
+				<input type="submit" name="submit" id="submit" value="Submit"/>
+				<input type="reset" name="reset" id="reset" value="Reset"/>
+			</table>
+	
+		</table>
 	</form>
 
 </div>

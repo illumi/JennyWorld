@@ -12,13 +12,21 @@ include('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
 ?>
+
+<head>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/base/jquery-ui.css" type="text/css" media="all" />
+</head>
+
+
+
 	
 <script>
 $(function() {
-	$( "#accordion" ).accordion({
-		autoHeight: false,
-		collapsible: true
-	});
+	$( "#accordion" ).accordion({ 
+    collapsible: true, 
+    autoHeight: false, 
+    active: false 
+});
 });
 </script>
 

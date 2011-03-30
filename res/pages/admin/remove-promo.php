@@ -20,11 +20,10 @@ $connect->disc();
 
 <div id="body">
 <h1> Remove Film</h1><p>
-<h3>
 
 <section id="remove info">
 	<form method="POST" action="admin.php?page=remove-pro">
-		<table border="0" class="center">
+		<table class="table-std">
                     <tr>
                         <th>Delete</th>
                         <th>Promotion Name</th>
@@ -57,7 +56,4 @@ $connect->disc();
 	</form>
 </section>
 
-</h3>
-
-<h2></h2>
 </div>

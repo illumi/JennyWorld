@@ -25,7 +25,7 @@ Computer Science and Information Systems Year 3
 	<br/>
 	<h3>
 	By Train: JWorld is located about 30 minutes walk from Edinburgh Park train station.
-	<p>
+
 	By Bus: JWorld has a bus stop right outside the entrance. Buses that go to JWorld are the 25, 34 and 45 from Lothian Buses
 	</h3>
 	

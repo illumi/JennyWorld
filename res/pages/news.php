@@ -12,7 +12,7 @@ $today = date('Y-m-d');
 
 <div id="body">
 <h1>Current promotions</h1><p>
-<h3>
+
 
 	<?php
 
@@ -24,7 +24,7 @@ $today = date('Y-m-d');
 		 
 	$result = mysql_query($query) or die(mysql_error());
 
-	echo "<table class=\"center\">
+	echo "<table class=\"table-std\">
 	<tr>
 	<th>Promotion</th>
 	<th>Film Title</th>
@@ -46,8 +46,7 @@ $today = date('Y-m-d');
 	$connect->disc();
 
 	?> 
-	
-</h3>
 
-<h2></h2>
+
+
 </div>
