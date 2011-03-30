@@ -24,14 +24,19 @@ Computer Science and Information Systems Year 3
 	<script type="text/javascript" src="res/js/jquery-ui-1.8.10.custom.min.js"></script>
 	<script type="text/javascript" src="res/js/jquery.ui.timepicker.js"></script>
 	<script type="text/javascript">
-		 document.createElement('header');
-		 document.createElement('hgroup');
-		 document.createElement('nav');
-		 document.createElement('menu');
-		 document.createElement('section');
-		 document.createElement('article');
-		 document.createElement('aside');
-		 document.createElement('footer');
+		var ver = -1;
+		if (navigator.appName == 'Microsoft Internet Explorer') {
+			var ua = navigator.userAgent;
+			var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+			if (re.exec(ua) != null)
+			  ver = parseFloat( RegExp.$1 );
+		}
+
+		if ( ver > -1 ) {
+			alert("As a staff member, you need to be using Firefox.");
+		} else { 
+			//not IE
+		}
 	</script>
 
 	
