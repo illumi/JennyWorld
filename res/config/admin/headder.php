@@ -128,7 +128,6 @@ $(function() {
 			<ul>
 				<li><a href=\"admin.php?page=add-film\">Add Film</a></li>
 				<li><a href=\"admin.php?page=edit-film\">Edit Film</a></li>
-				<li><a href=\"admin.php?page=remove-film\">Remove Film</a></li>
 			</ul>
 		</li>
 	</nav>

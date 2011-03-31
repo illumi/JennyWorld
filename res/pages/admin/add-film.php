@@ -49,7 +49,7 @@
 
 </script>
 
-<form name="filmForm" method="POST" action="admin.php?page=add-flm" class="center">
+<form name="filmForm" method="POST" action="" class="center">
 	<table border= "0" class="center">
 		<tr>
 			<td>Film Title:</td> 

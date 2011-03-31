@@ -151,6 +151,18 @@ function onSubmitAddFilms(submit)
 		else return false;
 }
 
+function onSubmitfindFilms(submit)
+{
+	Form=buSsearch.form;
+	
+		if (validate_findfilm(Form))
+		{
+			Form.action = "admin.php?page=add-flm";
+			return true;
+		} 
+		else return false;
+}
+
 function onSubmitEditTimetable(submit)
 {
 	Form=submit.form;
@@ -180,7 +192,15 @@ function validate_addfilm(thisform)
 {
 	with (thisform) 
 	{
-		if (!validate_name(filmtitle, "You must enter a film title!")) 
+		if (!validate_name(title, "You must enter a film title!")) 
+		{
+			return false;
+		}
+		if (!validate_name(year, "You must enter year of release!")) 
+		{
+			return false;
+		}
+		if (!validate_name(filmdesc, "You must enter a description for the film!")) 
 		{
 			return false;
 		}
@@ -188,14 +208,32 @@ function validate_addfilm(thisform)
 		{
 			return false;
 		}
-		if(document.addfilm.genre.selectedIndex==0)
+		if (!validate_name(filmgenre, "You must enter a genre for the film!")) 
 		{
-			alert("Please select a genre.");
 			return false;
 		}
-		if(document.addfilm.rating.selectedIndex==0)
+		if (!validate_name(filmrating, "You must enter a rating for the film!")) 
 		{
-			alert("Please select a rating.");
+			return false;
+		}
+		if (!validate_name(filmposter, "You must enter a poster for the film!")) 
+		{
+			return false;
+		}
+
+
+
+	}
+	return true;
+	
+}
+
+function validate_findfilm(thisform)
+{
+	with (thisform) 
+	{
+		if (!validate_name(title, "You must enter a film title!")) 
+		{
 			return false;
 		}
 		if (!validate_name(year, "You must enter year of release!")) 
