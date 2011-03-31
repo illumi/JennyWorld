@@ -3,47 +3,63 @@
 include('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
+
 $film = $_POST['id'];
-$start_date = strtotime($_POST['start']);
-$end_date =  strtotime($_POST['end']);
+$start_date = strtotime($_POST['start']); //convert to timestamp
+$end_date = strtotime($_POST['end']); //convert to timestamp
 $showings = $_POST['numshowings'];
 $start_time = $_POST['newTime']; 
 
-$time = explode(':', $start_time, 2); //array of size 2 with hours in [0] and mins in [1]
+//$mins = substr($start_time, -2);
+//$hours = substr($start_time, 0, -3);
 
 $interval = (($end_date-$start_date)/60/60/24); //gets number of days between two dates. Not as nice as php5.3 though.
-
-//$var = date('Y-m-d', strtotime("+10 days"));
-
+echo "interval: ". $interval . "<p><p>";
 // in order to know if the user wants to add a new film or not
 if(!empty($_POST['txtFilmYear']) && !empty($_POST['txtAddMovieTitle']))
 {
     
 }
 
-$length = "select film_length from films where film_ID = '$film'";
-$run = mysql_query($length) or die(mysql_error());
+$length = "SELECT film_length FROM films WHERE film_ID = '$film'";
+$res1 = mysql_query($length) or die(mysql_error());
 
-while($row = mysql_fetch_array($run)){
-	  
-		$length = $row['film_length'];
-	} 
+$row1 = mysql_fetch_array($res1);
+$length = $row1['film_length'];
+
 	
-	for( $i=0; $i < $interval; $i++) { //loop for every day the film should be shown
+	for( $i=0; $i <= $interval; $i++) { //loop for every day the film should be shown
+	$mins = substr($start_time, -2);		//Reset time for each day
+	$hours = substr($start_time, 0, -3);
+	
+	$day = date('Y-m-d', strtotime(date("Y-m-d", $start_date) . " +" . $i . " day")); //calc day here
+	echo "Day: " . $day . " <p>";
+	
 		for( $j=0; $j < $showings; $j++) {	//loop for number of times per day it should be shown
-		
+		echo "Showing: ". ($j+1) . " <p>";
 			if ($j == 0) { //if first showing
+				
 
-				//TO-DO check which screen is free at this time and date then use that value
 
-				$sql= "INSERT INTO showings (start_date, end_date, start_time, film_ID, screen_ID) 
-					   VALUES('$start_date', '$end_date', '$start_time', '$film', '1')";
+				echo "Start time: ". $start_time . " <p><p>";
+				
+				$endTime = date("H:i", strtotime('+96 minutes', strtotime($start_time)));
+				echo "End time: ". $endTime . " <p><p>";
+				
+				//Below checks which screen is free at this time and date then use that value
+				$screens = "SELECT * FROM screens WHERE screen_ID NOT IN (SELECT screen_ID FROM screenshows WHERE end_date >= '$day' AND end_time >= '$start_time' AND end_date <= '$day' AND end_time <= '$endTime' UNION SELECT screen_ID FROM screenshows WHERE start_date >= '$day' AND start_time >= '$start_time' AND start_date <= '$day' AND start_time <= '$endTime' UNION SELECT screen_ID FROM screenshows WHERE start_date <= '$day' AND start_time <= '$start_time' AND end_date >= '$day' AND end_time >= '$endTime') ORDER BY capacity DESC";
+
+				$res2 = mysql_query($screens); 
+				$row2 = mysql_fetch_assoc($res2);
+				$screen = $row2['screen_ID'];
+				echo "In Screen: ". $screen . "<p><p>";
+				
+				$sql= "INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) 
+						VALUES ('$screen', '$film', '$day', '$end_date', '$start_time', '$endTime')";
 				$result = mysql_query($sql) or die(mysql_error());
 
 			}
-			else {
-				
-				//TO-DO increment day by 1
+			else { //next showings
 				
 				$length = $length + 30; //add 30 mins after film to allow for cleaning of screen
 				$temp = round($length / 60); //find next start time
@@ -51,14 +67,23 @@ while($row = mysql_fetch_array($run)){
 				if ($hours < 22) {
 					$hours = $hours + $temp;
 					$time = $hours . ":" . $mins;
+					echo "Start time: ". $time . " <p><p>";
+					$endTime = date("H:i", strtotime('+'.$length.' minutes', strtotime($time)));
+					echo "End time: ". $endTime . "<p><p>";
 					
-					$sql= "INSERT INTO showings (start_date, end_date, start_time, film_ID, screen_ID) 
-						   VALUES('$start_date', '$end_date', '$time', '$film', '1')";
+					//Below checks which screen is free at this time and date then use that value
+					$screens = "SELECT * FROM screens WHERE screen_ID NOT IN (SELECT screen_ID FROM screenshows WHERE end_date >= '$day' AND end_time >= '$time' AND end_date <= '$day' AND end_time <= '$endTime' UNION SELECT screen_ID FROM screenshows WHERE start_date >= '$day' AND start_time >= '$time' AND start_date <= '$day' AND start_time <= '$endTime' UNION SELECT screen_ID FROM screenshows WHERE start_date <= '$day' AND start_time <= '$time' AND end_date >= '$day' AND end_time >= '$endTime') ORDER BY capacity DESC";
+					
+					$res3 = mysql_query($screens); 
+					$row3 = mysql_fetch_assoc($res3);
+					$screen = $row3['screen_ID'];
+					echo "In Screen: ". $screen . "<p><p>";
+
+					$sql= "INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('$screen', '$film', '$day', '$end_date', '$time', '$endTime')";
 					$result = mysql_query($sql) or die(mysql_error());
 
 				}
 			}
-				
 		}
 	}
 

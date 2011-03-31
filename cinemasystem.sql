@@ -111,11 +111,11 @@ INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, fi
 INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('Happy Gilmore','1996','A rejected hockey player puts his skills to the golf course to save his grandmother\'s house.','92','Comedy, Romance, Sport','PG-13','http://ia.media-imdb.com/images/M/MV5BMjA4NjUxODg3Ml5BMl5BanBnXkFtZTcwNzcyODc5Mw@@._V1._SX320.jpg','tt0116483');
 
 
-INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('1', '1', '2011-04-01', '2011-04-01', '20:00:00', '22:26:00');
-INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('2', '2', '2011-04-01', '2011-04-01', '20:30:00', '22:04:00');
-INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('3', '3', '2011-04-01', '2011-04-01', '20:00:00', '22:07:00');
-INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('4', '4', '2011-04-01', '2011-04-01', '20:30:00', '22:30:00');
-INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('5', '5', '2011-04-01', '2011-04-01', '20:00:00', '21:58:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('1', '1', '2011-04-05', '2011-04-05', '20:00:00', '22:26:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('2', '2', '2011-04-05', '2011-04-05', '20:30:00', '22:04:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('3', '3', '2011-04-05', '2011-04-05', '20:00:00', '22:07:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('4', '4', '2011-04-05', '2011-04-05', '20:30:00', '22:30:00');
+INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('5', '5', '2011-04-05', '2011-04-05', '20:00:00', '21:58:00');
 
 
 INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('1', 'John Doe', '2010-12-12', '700', '0');
@@ -125,10 +125,11 @@ INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, col
 INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, collected) VALUES ('5', 'John Doe', '2010-12-12', '110', '0');
 
 
-INSERT INTO promotions (film_ID, promo_name, start_date, end_date, description) VALUES ( 1, 'BOGOF', '2011-03-1', '2011-03-31', 'Buy one get one free.');
+INSERT INTO promotions (film_ID, promo_name, start_date, end_date, description) VALUES ( 1, 'BOGOF', '2011-04-01', '2011-04-14', 'Buy one get one free for two weeks.');
 
 DROP VIEW IF EXISTS bookingcapacity;
-DROP VIEW IF EXISTS bookingsuggestion;
+DROP VIEW IF EXISTS bookingoverlaps;
+DROP VIEW IF EXISTS screenfilms;
 
 CREATE VIEW bookingcapacity AS 
 SELECT 
@@ -149,19 +150,45 @@ showings.film_ID = films.film_ID
 GROUP BY showing_id 
 ORDER BY tickets_sold DESC;
 
-CREATE VIEW bookingsuggestion AS
+CREATE VIEW bookingoverlaps AS
 SELECT 
-one.filmtitle AS move_this_film, one.showing_ID AS move_this_show, one.screen_ID AS from_this_screen, two.screen_ID as to_this_screen, two.showing_ID AS currently_booked_for, two.filmtitle AS displaying_movie, one.start_date AS starting_on_this_date, one.start_time AS starting_this_time 
+one.*
 FROM bookingcapacity AS one, bookingcapacity as two 
 WHERE 
-one.tickets_sold > two.tickets_sold 
-AND 
-one.capacity < two.capacity 
-AND 
 two.start_date <= one.start_date <= two.end_date 
 AND 
 two.start_time <= one.start_time <= two.end_time
 AND
-one.filmid != two.filmid;
+one.filmid != two.filmid
+GROUP BY showing_id
+ORDER BY tickets_sold DESC;
 
-SELECT * FROM bookingsuggestion;
+CREATE VIEW screenfilms AS 
+SELECT 
+showing_ID, showings.screen_ID, showings.film_ID, film_title, start_date, start_time, end_date, end_time
+FROM showings 
+INNER JOIN 
+screens 
+ON 
+showings.screen_ID = screens.screen_ID
+INNER JOIN 
+films 
+ON 
+showings.film_ID = films.film_ID
+GROUP BY showing_id
+
+CREATE VIEW screenshows AS 
+SELECT 
+showings.showing_id, screens.screen_ID , films.film_ID AS filmid, films.film_title AS filmtitle ,start_date, end_date, start_time, end_time, capacity 
+FROM
+showings 
+INNER JOIN 
+screens 
+ON 
+showings.screen_ID = screens.screen_ID
+INNER JOIN 
+films 
+ON 
+showings.film_ID = films.film_ID
+GROUP BY showing_id 
+ORDER BY showings.showing_id;
