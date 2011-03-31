@@ -19,7 +19,6 @@ $connect = new doConnect();
             $(document).ready(function() {
 
             $('#butFind').click(function(){
-                var test = $('#txtFilmYear').val();
                 $.ajax({
                             url: "http://www.imdbapi.com/?t=" + $('#txtAddMovieTitle').val() + "&y="+$('#txtFilmYear').val(),
                             dataType: "jsonp",
