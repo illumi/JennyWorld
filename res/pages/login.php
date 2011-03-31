@@ -2,7 +2,7 @@
 
 session_start();
 
-include('../lib/class_dbcon.php');
+include('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
 $user = $_POST['username'];
@@ -39,10 +39,10 @@ if($count == 1){
                 $_SESSION['admin'] = 0;
             }
         }
-        header("location: ../../admin.php");
+        header("location: admin.php");
 }
 //displays error message otherwise
 else {
-	echo "Wrong Username or Password";
+	header("location: index.php?page=adminLogin&fail=false");
 }
 ?>

@@ -1,8 +1,16 @@
 <div id="body">
 
 <h1>Staff Login</h1>
-
-	<form method="POST" action="res/pages/login.php">
+	<p>
+	
+	<?php 
+		$fail = $_GET['fail'];
+		if (!($fail == "") | !($fail == null)) {
+			echo "Invalid username or password";
+		}
+	?>
+	
+	<form method="POST" action="index.php?page=login">
 		<table class="table-std">
 			<tr>
 			<td>

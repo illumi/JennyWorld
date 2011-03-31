@@ -24,7 +24,7 @@ Computer Science and Information Systems Year 3
 					echo "<a href=\"admin.php?page=logOut\">Log Out</a>";
 				}
 				else {
-					echo "<a href=\"index.php?page=adminLogin\">Staff Login</a>";
+					echo "<a href=\"index.php?page=adminLogin&fail=\">Staff Login</a>";
 				}
 				?>
 				<br/>
