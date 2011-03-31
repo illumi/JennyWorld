@@ -56,7 +56,7 @@ include('res/lib/class_dbcon.php');
 <h2>
 
 <form name="findForm" method="POST" action="admin.php?page=findbooking" class="center">
-<table>
+<table class="center">
 	<tr>
 	<td>Booking Ref:</td> <td><input type="text" value="" name="ref" id="ref" required></td><br />
 	</tr>
@@ -71,7 +71,7 @@ include('res/lib/class_dbcon.php');
 <br />
 
 	<form name="bookForm" method="POST" action="admin.php?page=booking-do">
-		<table>
+		<table class="center">
 			<tr>
 				<th>Book Tickets</th>
 			<tr>

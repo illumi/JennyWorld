@@ -12,13 +12,21 @@ include('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
 ?>
+
+<head>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/base/jquery-ui.css" type="text/css" media="all" />
+</head>
+
+
+
 	
 <script>
 $(function() {
-	$( "#accordion" ).accordion({
-		autoHeight: false,
-		collapsible: true
-	});
+	$( "#accordion" ).accordion({ 
+    collapsible: true, 
+    autoHeight: false, 
+    active: false 
+});
 });
 </script>
 
@@ -53,10 +61,10 @@ $(function() {
 			while($row = mysql_fetch_array($result))
 			{
 				echo	"<tr><td><img src=\"res/pages/getimg.php?imgUrl=" . addslashes($row['film_poster']) . "\" alt=\"poster\"/></td>";
-				echo	"<td><table><div id='filmheaders'>Plot</div><div id='filmdetails'>" . $row['film_plot'] . "</div><p><p>";
-				echo	"<div id='filmheaders'>Length</div><div id='filmdetails'>" . $row['film_length'] . "</div><p>";
-				echo	"<div id='filmheaders'>Genre</div><div id='filmdetails'>" . $row['film_genre'] . "</div><p>";
-				echo	"<div id='filmheaders'>Rating</div><div id='filmdetails'>" . $row['film_rating'] . "</div><p></table>";
+				echo	"<td><div class='plot'>" . $row['film_plot'] . "</div><br/>";
+				echo	"<div class='filmheaders'>Length:</div><div class='filmdetails'>" . $row['film_length'] . "</div><p>";
+				echo	"<div class='filmheaders'>Genre:</div><div class='filmdetails'>" . $row['film_genre'] . "</div><p>";
+				echo	"<div class='filmheaders'>Rating:</div><div class='filmdetails'>" . $row['film_rating'] . "</div><p>";
 			}    
 			
 			 echo "</table></div>";

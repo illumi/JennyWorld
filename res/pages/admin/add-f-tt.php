@@ -3,7 +3,6 @@
 include('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
-
 $film = $_POST['id'];
 $start_date = strtotime($_POST['start']);
 $end_date =  strtotime($_POST['end']);
@@ -16,7 +15,11 @@ $interval = (($end_date-$start_date)/60/60/24); //gets number of days between tw
 
 //$var = date('Y-m-d', strtotime("+10 days"));
 
-
+// in order to know if the user wants to add a new film or not
+if(!empty($_POST['txtFilmYear']) && !empty($_POST['txtAddMovieTitle']))
+{
+    
+}
 
 $length = "select film_length from films where film_ID = '$film'";
 $start = "select film_length from films where film_ID = '$film'";

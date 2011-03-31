@@ -7,7 +7,7 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'] || empty($_SESSION['login']
 
 <div id="body">
 <h1> Promotions Overview</h1>
-<h3>
+
 
 	<?php
 
@@ -20,7 +20,7 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'] || empty($_SESSION['login']
 		 
 	$result = mysql_query($query) or die(mysql_error());
 
-	echo "<table border='1' class=\"center\">
+	echo "<table class=\"table-std\">
 	<tr>
 	<th>Promo ID</th>
 	<th>Film Title</th>
@@ -47,9 +47,8 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'] || empty($_SESSION['login']
 	$connect->disc();
 
 	?> 
-	
-</h3>
-<h2></h2>
+
+<h2></h2>	
 </div>
 
 

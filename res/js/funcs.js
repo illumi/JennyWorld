@@ -273,6 +273,19 @@ function validate_addtimetable(thisform)
 		{
 			return false;
 		}
+                if(document.tt.id.selectedIndex == document.tt.id.length - 1)
+                {
+                    if(!validate_name(txtAddMovieTitle, "Please enter a title for the film to be added."))
+                    {
+                        return false;
+                    }
+                    if(!validate_name(txtFilmYear, "Please enter the film's year to be added."))
+                    {
+                        return false;
+                    }
+
+                    searchInfo(thisform);
+                }
 	}
         
 	return true;
@@ -362,25 +375,47 @@ function valid(thisform){
 	return true;
 }
 
-function showAddPart()
+function displayAdd(e)
 {
-    var options = {};
-    $("#tabSelectFilm").hide("blind", options, "slow", function() {
-        $("#tabAddNewFilm").show("blind", options, "slow");
-        $("#showLink").css("display", "none");
-        $("#hideLink").css("display", "block");
-        
-    });
-
+    if(e.options[e.selectedIndex].value == "add")
+    {
+        $("#divFilmYear").css("display", "block");
+        $("#txtAddMovieTitle").css("display", "block");
+        $("#txtFilmYear").css("display", "block");
+    }
+    else
+    {
+        $("#divFilmYear").css("display", "none");
+        $("#txtAddMovieTitle").css("display", "none");
+        $("#txtFilmYear").css("display", "none");
+    }
 }
 
-function hideAddPart()
+function searchInfo()
 {
-    var options = {};
-    $("#tabAddNewFilm").hide("blind", options, "slow", function() {
-        $("#tabSelectFilm").show("blind", options, "slow");
-        $("#showLink").css("display", "block");
-        $("#hideLink").css("display", "none");
-    });
+    var test = $('#txtFilmYear').val();
+    $.ajax({
+			url: "http://www.imdbapi.com/?t=" + $('#txtAddMovieTitle').val() + "&y="+$('#txtFilmYear').val(),
+			dataType: "jsonp",
+			error: function(j,s,e) {
+				alert("Error: "+e);
+			}, success: function(d) {
+				$('#filmDesc').val(d.Plot);
 
+				var time, rawtime = d.Runtime.split(" ");
+				if (rawtime.length == 4) {
+					time = parseInt(rawtime[0]*60) + parseInt(rawtime[2]);
+				} else if (rawtime[1] == "hrs") {
+					time = parseInt(rawtime[0]*60);
+				} else {
+				time = parseInt(rawtime[0]);
+				}
+
+				$('#filmLength').val(time);
+				$('#filmGenre').val(d.Genre);
+				$('#filmRating').val(d.Rated);
+				$('#filmPoster').val(d.Poster);
+				$('#imdbID').val(d.ID);
+			}
+		});
 }
