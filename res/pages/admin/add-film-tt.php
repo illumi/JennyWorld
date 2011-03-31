@@ -26,7 +26,7 @@ $connect = new doConnect();
                             error: function(j,s,e) {
                                     alert("Error: "+e);
                             }, success: function(d) {
-                                    $('#filmDesc').val(d.Plot);
+                                    $('#txtFilmDesc').val(d.Plot);
 
                                     var time, rawtime = d.Runtime.split(" ");
                                     if (rawtime.length == 4) {
@@ -37,10 +37,10 @@ $connect = new doConnect();
                                     time = parseInt(rawtime[0]);
                                     }
 
-                                    $('#filmLength').val(time);
-                                    $('#filmGenre').val(d.Genre);
-                                    $('#filmRating').val(d.Rated);
-                                    $('#filmPoster').val(d.Poster);
+                                    $('#txtFilmLength').val(time);
+                                    $('#txtFilmGenre').val(d.Genre);
+                                    $('#txtFilmRating').val(d.Rated);
+                                    $('#txtFilmPoster').val(d.Poster);
                                     $('#imdbID').val(d.ID);
                             }
                     });
