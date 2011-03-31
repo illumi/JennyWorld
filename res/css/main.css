@@ -31,6 +31,15 @@ body {
 	margin-right:auto;
 }
 
+.link-bottom{
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:15px;	
+	color: #ffffff;
+	margin-left:auto; 
+	margin-right:auto;
+
+}
+
 .center {margin-left:auto; margin-right:auto;}
 
 .filmheaders{

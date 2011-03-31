@@ -46,6 +46,10 @@ $result1 = mysql_query($query1);
 $result2 = mysql_query($query2);
 $result3 = mysql_query($query3);
 
+$totalpromos = mysql_query("SELECT COUNT(promo_id) as Totalpromotions FROM promotions;");
+
+$totalpromo = mysql_fetch_assoc($totalpromos);
+
 $connect->disc();
 ?>
 
@@ -66,15 +70,16 @@ $connect->disc();
 <div>
 <p>
 <?php
-echo "Total number of customers: " . $total['SUM(numof_tickets)'];
+echo "<div class=\"stat-text\">Total number of customers: " . $total['SUM(numof_tickets)'] . "</div>";
 ?>
 <!-- table containing the film title and the number of viewers -->
 <table class="table-std">
 <tr>
-Viewers
+<div class="stat-text">Viewers</div>
+<br/>
 
 <th><strong>Film Title</strong></th>
-<th><strong>Number of viewers</strong></th>
+<th><strong>Most popoular movies amongst viewers</strong></th>
 </tr>
 <?php
                 for($i = 0; $i < count($mostPopular); $i++)
@@ -86,6 +91,9 @@ Viewers
                 }
         ?>
 </table>
+<br/>
+<div class="stat-text">Customer Bookings</div>
+<br/>
 
 <?php
 
@@ -120,12 +128,16 @@ echo "<table class=\"table-std\">
 <h3><a href="#">Timetable Statistics</a></h3>
 <div>
 <p>
+	
+<br/>
+<div class="stat-text">Showings and Viewersz</div>
+<br/>	
 <!-- table containing the showings schedule and the number of tickets -->
 <table class="table-std">
 <tr>
-<td><strong>Showing start time</strong></td>
-<td><strong>Showing end time</strong></td>
-<td><strong>Number of viewers</strong></td>
+<th><strong>Showing start time</strong></th>
+<th><strong>Showing end time</strong></th>
+<th><strong>Number of viewers</strong></th>
 </tr>
 <?php
                 for($i = 0; $i < count($visit); $i++)
@@ -143,7 +155,9 @@ echo "<table class=\"table-std\">
 </div>
 <h3><a href="#">Promotional Statistics</a></h3>
 <div>
-<p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+<?php	
+echo "<div class=\"stat-text\">Total number of promotions: " . $totalpromo['Totalpromotions'] . "</div>";
+?>
 <ul>
 <li>List item one</li>
 <li>List item two</li>

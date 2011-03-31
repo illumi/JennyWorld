@@ -60,6 +60,14 @@ h3{
 	text-align:center;
 }
 
+.stat-text{
+
+	text-align: center;
+	margin:10px 10px 3px 0;
+	font-family:Vera, Helvetica, Georgia;
+
+}
+
 
 
 img.align-left { float:left; margin: 0 15px 15px 0; } 
