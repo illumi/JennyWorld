@@ -329,12 +329,9 @@ function onDelete(button){
 }
 
 
-
-
-
 function validate_name(field, alerttxt){
     with (field) {
-        if (value == null || value == "") {
+        if (field.value == null || field.value == "") {
             alert(alerttxt);
             return false;
         }

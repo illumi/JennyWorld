@@ -5,13 +5,16 @@ $connect = new doConnect();
 
 
 $film = $_POST['id'];
-$start_date = $_POST['start'];
-$end_date =  $_POST['end'];
+$start_date = strtotime($_POST['start']);
+$end_date =  strtotime($_POST['end']);
 $showings = $_POST['numshowings'];
 $start_time = $_POST['newTime']; 
 
-$mins = substr($start_time, -2);
-$hours = substr($start_time, 0, -3);
+$time = explode(':', $start_time, 2); //array of size 2 with hours in [0] and mins in [1]
+
+$interval = (($end_date-$start_date)/60/60/24); //gets number of days between two dates. Not as nice as php5.3 though.
+
+//$var = date('Y-m-d', strtotime("+10 days"));
 
 
 
@@ -56,7 +59,7 @@ while($row = mysql_fetch_array($run)){
 	}
 	
 	
-	
+
 $connect->disc();
 header("location: admin.php?page=tt-acs");
 
