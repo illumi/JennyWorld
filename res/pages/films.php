@@ -36,18 +36,19 @@ $(function() {
 		<?php
 
 		$today = date('Y-m-d');
+		$future = date('Y-m-d', strtotime("+10 days"));
 
-		$sql1 = mysql_query("select count(distinct f.film_ID) from films f, showings s where s.film_ID = f.film_ID and s.start_date <= '$today' and s.end_date >= '$today';");
+		$sql1 = mysql_query("SELECT count(DISTINCT f.film_ID) FROM films f, showings s WHERE s.film_ID = f.film_ID AND s.start_date >= '$today' and s.end_date <= '$future';");
 		$count = mysql_fetch_assoc($sql1); 
 
-		$sql2 = mysql_query("select distinct film_title from films f, showings s where s.film_ID = f.film_ID and s.start_date <= '$today' and s.end_date >= '$today';");
+		$sql2 = mysql_query("SELECT DISTINCT film_title FROM films f, showings s WHERE s.film_ID = f.film_ID AND s.start_date >= '$today' and s.start_date <= '$future'");
 
 		$title = array();
 
 		for( $i=0; $i< mysql_num_rows($sql2); $i++)
 		$title[$i] = mysql_fetch_assoc($sql2);
 
-		for( $i=0; $i< $count['count(distinct f.film_ID)']; $i++)
+		for( $i=0; $i< $count['count(DISTINCT f.film_ID)']; $i++)
 		{
 
 			$film = $title[$i]['film_title'];
