@@ -7,7 +7,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['admin'] || empty($_SESSION['login']
 include ('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
-$query = mysql_query("SELECT * FROM bookingsuggestion;");
+$query = mysql_query("SELECT * FROM bookingoverlaps;");
 
 $connect->disc();
 ?>
@@ -19,17 +19,17 @@ $connect->disc();
 		<form name="autoRotateForm" method="POST" action="res/pages/admin/rotate-do.php" class="center">
 			
 		</form>
-		
+
 		<table>
 			<tr>
 				<th>
-					move_this_film
+					Move This Show
 				</th>
 				<th>
-					move_this_show
+					From this Screen
 				</th>
 				<th>
-					from_this_screen
+					To This Screen
 				</th>
 				<th>
 					to_this_screen

@@ -5,6 +5,10 @@ DROP TABLE IF EXISTS staff CASCADE;
 DROP TABLE IF EXISTS cinema CASCADE;
 DROP TABLE IF EXISTS promotions CASCADE;
 DROP TABLE IF EXISTS films CASCADE;
+DROP VIEW IF EXISTS bookingcapacity;
+DROP VIEW IF EXISTS bookingoverlaps;
+DROP VIEW IF EXISTS screenfilms;
+DROP VIEW IF EXISTS screenshows;
 
 CREATE TABLE films (
 	film_ID int(11) NOT NULL AUTO_INCREMENT,
@@ -127,9 +131,6 @@ INSERT INTO booking (showing_id, customer_name, booking_date, numof_tickets, col
 
 INSERT INTO promotions (film_ID, promo_name, start_date, end_date, description) VALUES ( 1, 'BOGOF', '2011-04-01', '2011-04-14', 'Buy one get one free for two weeks.');
 
-DROP VIEW IF EXISTS bookingcapacity;
-DROP VIEW IF EXISTS bookingoverlaps;
-DROP VIEW IF EXISTS screenfilms;
 
 CREATE VIEW bookingcapacity AS 
 SELECT 
@@ -150,6 +151,7 @@ showings.film_ID = films.film_ID
 GROUP BY showing_id 
 ORDER BY tickets_sold DESC;
 
+
 CREATE VIEW bookingoverlaps AS
 SELECT 
 one.*
@@ -162,6 +164,7 @@ AND
 one.filmid != two.filmid
 GROUP BY showing_id
 ORDER BY tickets_sold DESC;
+
 
 CREATE VIEW screenfilms AS 
 SELECT 
@@ -176,6 +179,7 @@ films
 ON 
 showings.film_ID = films.film_ID
 GROUP BY showing_id
+ORDER BY start_date, film_title, start_time;
 
 CREATE VIEW screenshows AS 
 SELECT 

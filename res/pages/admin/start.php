@@ -16,15 +16,12 @@ if( !isset($_SESSION['login']) || empty($_SESSION['login']))
 include ('res/lib/class_dbcon.php');
 $connect = new doConnect();
 
-$query = mysql_query("SELECT * FROM bookingsuggestion;");
+$query = mysql_query("SELECT * FROM bookingoverlaps;");
 
 $row = mysql_fetch_assoc($query);
 
 $connect->disc();
 
-if ($row == null) {
-	header('Location: empty');
-}
 ?>
 
 	<div id="body">
