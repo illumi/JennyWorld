@@ -15,13 +15,47 @@ $connect = new doConnect();
 <h1>Add Film to Timetable</h1>
 
     <h3>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+            $('#butFind').click(function(){
+                var test = $('#txtFilmYear').val();
+                $.ajax({
+                            url: "http://www.imdbapi.com/?t=" + $('#txtAddMovieTitle').val() + "&y="+$('#txtFilmYear').val(),
+                            dataType: "jsonp",
+                            error: function(j,s,e) {
+                                    alert("Error: "+e);
+                            }, success: function(d) {
+                                    $('#filmDesc').val(d.Plot);
+
+                                    var time, rawtime = d.Runtime.split(" ");
+                                    if (rawtime.length == 4) {
+                                            time = parseInt(rawtime[0]*60) + parseInt(rawtime[2]);
+                                    } else if (rawtime[1] == "hrs") {
+                                            time = parseInt(rawtime[0]*60);
+                                    } else {
+                                    time = parseInt(rawtime[0]);
+                                    }
+
+                                    $('#filmLength').val(time);
+                                    $('#filmGenre').val(d.Genre);
+                                    $('#filmRating').val(d.Rated);
+                                    $('#filmPoster').val(d.Poster);
+                                    $('#imdbID').val(d.ID);
+                            }
+                    });
+
+                    return false;
+            });
+
+            });
+        </script>
+        
 	<form name="tt" method="POST" action="" class="center" >
                 <table border="0" id="tabSelectFilm" class="center">
 			
 			<tr>
-                                <td> Film Name:
-                                    <div id="divFilmYear" style="display: none; position: absolute; padding-left: 2em;">Film Year:</div>
-                                </td>
+                                <td> Film Name:</td>
 				<td>
                                     <select name="id" id="lstMovies" style="width:200px;" onChange="displayAdd(this);">
                                     <option value="0">--select film to add--</option>
@@ -35,9 +69,45 @@ $connect = new doConnect();
                                     <option value="add">Add a new film ...</option>
                                     </select><br/>
                                     <input type="text" name="txtAddMovieTitle" id="txtAddMovieTitle" style="width:200px; display: none;" />
-                                    <input type="text" name="txtFilmYear" id="txtFilmYear" style="width:200px; display: none;" />
 				</td>
 			</tr>
+                        <tr id="rowFilmYear" style="display: none;">
+                            <td>Film Year:</td>
+                            <td>
+                                <input type="text" name="txtFilmYear" id="txtFilmYear" style="width:200px;" />
+                                <input type="button" name="butFind" id="butFind" value="Find Film"/>
+                            </td>
+                        </tr>
+                        <tr id="rowFilmDesc" style="display: none">
+                            <td>Film Description:</td>
+                            <td>
+                                <input type="text" name="txtFilmDesc" id="txtFilmDesc" style="width:200px;"/>
+                            </td>
+                        </tr>
+                        <tr id="rowFilmLength" style="display: none">
+                            <td>Film length (mins):</td>
+                            <td>
+                                <input type="text" name="txtFilmLength" id="txtFilmLength" style="width:200px;"/>
+                            </td>
+                        </tr>
+                        <tr id="rowFilmGenre" style="display: none">
+                            <td>Film genre:</td>
+                            <td>
+                                <input type="text" name="txtFilmGenre" id="txtFilmGenre" style="width:200px;"/>
+                            </td>
+                        </tr>
+                        <tr id="rowFilmRating" style="display: none">
+                            <td>Film rating:</td>
+                            <td>
+                                <input type="text" name="txtFilmRating" id="txtFilmRating" style=width:200px;"/>
+                            </td>
+                        </tr>
+                        <tr id="rowFilmPoster" style="display: none">
+                            <td>Film poster (IMG):</td>
+                            <td>
+                                <input type="text" name="txtFilmPoster" id="txtFilmPoster" style="width:200px;"/>
+                            </td>
+                        </tr>
 			<tr>
                             <td>Start Date:</td>
                             <td>
@@ -74,11 +144,6 @@ $connect = new doConnect();
                     </p>
                 </table>
 
-                <input type="hidden" id="filmDesc" name="filmDesc"/>
-                <input type="hidden" id="filmLength" name="filmLength"/>
-                <input type="hidden" id="filmGenre" name="filmGenre"/>
-                <input type="hidden" id="filmRating" name="filmRating"/>
-                <input type="hidden" id="filmPoster" name="filmPoster"/>
                 <input type="hidden" id="imdbID" name="imdbID"/>
 	</form>
     </h3>

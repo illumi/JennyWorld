@@ -379,43 +379,25 @@ function displayAdd(e)
 {
     if(e.options[e.selectedIndex].value == "add")
     {
-        $("#divFilmYear").css("display", "block");
-        $("#txtAddMovieTitle").css("display", "block");
-        $("#txtFilmYear").css("display", "block");
+        // we have to put the value "" instead of block otherwise it reset the CSS of the tr when they appear. The empty enforces them to take back their
+        // default value. We can use table-row as well but it is not supported by IE
+        $("#txtAddMovieTitle").css("display", "");
+        $("#rowFilmYear").css("display", "");
+        $("#rowFilmDesc").css("display", "");
+        $("#rowFilmLength").css("display", "");
+        $("#rowFilmGenre").css("display", "");
+        $("#rowFilmRating").css("display", "");
+        $("#rowFilmPoster").css("display", "");
     }
     else
     {
-        $("#divFilmYear").css("display", "none");
         $("#txtAddMovieTitle").css("display", "none");
-        $("#txtFilmYear").css("display", "none");
+        $("#rowFilmYear").css("display", "none");
+        $("#rowFilmDesc").css("display", "none");
+        $("#rowFilmLength").css("display", "none");
+        $("#rowFilmGenre").css("display", "none");
+        $("#rowFilmRating").css("display", "none");
+        $("#rowFilmPoster").css("display", "none");
     }
 }
 
-function searchInfo()
-{
-    var test = $('#txtFilmYear').val();
-    $.ajax({
-			url: "http://www.imdbapi.com/?t=" + $('#txtAddMovieTitle').val() + "&y="+$('#txtFilmYear').val(),
-			dataType: "jsonp",
-			error: function(j,s,e) {
-				alert("Error: "+e);
-			}, success: function(d) {
-				$('#filmDesc').val(d.Plot);
-
-				var time, rawtime = d.Runtime.split(" ");
-				if (rawtime.length == 4) {
-					time = parseInt(rawtime[0]*60) + parseInt(rawtime[2]);
-				} else if (rawtime[1] == "hrs") {
-					time = parseInt(rawtime[0]*60);
-				} else {
-				time = parseInt(rawtime[0]);
-				}
-
-				$('#filmLength').val(time);
-				$('#filmGenre').val(d.Genre);
-				$('#filmRating').val(d.Rated);
-				$('#filmPoster').val(d.Poster);
-				$('#imdbID').val(d.ID);
-			}
-		});
-}
