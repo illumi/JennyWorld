@@ -16,7 +16,7 @@ $connect = new doConnect();
 	$end_date =  $_POST['end'];
 	$start_time = $_POST['newTime'];
 
-$sql="UPDATE showings SET screen_ID = '$screen', start_date = '$start_date', end_date = '$end_date', start_time='$start_time' WHERE showing_ID = '$showingID'");
+$sql="UPDATE showings SET screen_ID = '$screen', start_date = '$start_date', end_date = '$end_date', start_time='$start_time' WHERE showing_ID = '$showingID';";
 
 
 mysql_query($sql) or die(mysql_error()) ;

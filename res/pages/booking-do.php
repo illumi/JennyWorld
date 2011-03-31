@@ -23,7 +23,7 @@ $connect->disc();
 		?>
 		<form name="bookingForm" method="POST" action="index.php?page=make-booking" class="center">
 			<input type="text" value="<?php echo $row['showing_ID']; ?>" name="showing_id" id="showing_id" style="visibility:hidden"/>	
-			<table>
+			<table class="center">
 				<tr>
 					<td>
 						Number of Tickets:
@@ -45,4 +45,5 @@ $connect->disc();
 			<input type="submit" name="formSubmit" id="buFormSubmit" value="" style="visibility:hidden"/></br>
 		</form>
 	</h3>
+	<h2></h2>
 	</div>
