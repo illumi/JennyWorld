@@ -413,29 +413,9 @@ function valid(thisform){
 	return true;
 }
 
-function displayAdd(e)
-{
-    if(e.options[e.selectedIndex].value == "add")
-    {
-        // we have to put the value "" instead of block otherwise it reset the CSS of the tr when they appear. The empty enforces them to take back their
-        // default value. We can use table-row as well but it is not supported by IE
-        $("#txtAddMovieTitle").css("display", "");
-        $("#rowFilmYear").css("display", "");
-        $("#rowFilmDesc").css("display", "");
-        $("#rowFilmLength").css("display", "");
-        $("#rowFilmGenre").css("display", "");
-        $("#rowFilmRating").css("display", "");
-        $("#rowFilmPoster").css("display", "");
-    }
-    else
-    {
-        $("#txtAddMovieTitle").css("display", "none");
-        $("#rowFilmYear").css("display", "none");
-        $("#rowFilmDesc").css("display", "none");
-        $("#rowFilmLength").css("display", "none");
-        $("#rowFilmGenre").css("display", "none");
-        $("#rowFilmRating").css("display", "none");
-        $("#rowFilmPoster").css("display", "none");
+function displayAdd(e) {
+    if(e.options[e.selectedIndex].value == "add"){
+		window.location = "http://www2.macs.hw.ac.uk/~js230/JennyWorld/admin.php?page=add-film";
     }
 }
 

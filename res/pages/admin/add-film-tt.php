@@ -25,11 +25,11 @@ $connect = new doConnect();
 						<option value="0">--select film to add--</option>
 						<option value="add">Add a new film ...</option>
 						<?php
-						$query = mysql_query("SELECT film_ID, film_title FROM films;");
-						while ($row = mysql_fetch_assoc($query)) {
-								echo '<option value="' . $row['film_ID'] . '">' . $row['film_title']. '</option>';
-						}
-						$connect->disc();
+							$query = mysql_query("SELECT film_ID, film_title FROM films;");
+							while ($row = mysql_fetch_assoc($query)) {
+									echo '<option value="' . $row['film_ID'] . '">' . $row['film_title']. '</option>';
+							}
+							$connect->disc();
 						?>
 						</select><br/>
 					<input type="text" name="txtAddMovieTitle" id="txtAddMovieTitle" style="width:200px; display: none;" />
