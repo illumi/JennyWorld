@@ -2,7 +2,7 @@
 
 if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 {
-	header('Location: ./index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin&fail=');
 }
 
 if(isset($_GET['msg']))
