@@ -2,7 +2,7 @@
 
 if(!isset($_SESSION['login']) || !$_SESSION['admin'] || empty($_SESSION['login']))
 {
-	header('Location: ./index.php?page=adminLogin');
+	header('Location: ./index.php?page=adminLogin&fail=');
 }
 
 include ('res/lib/class_dbcon.php');
