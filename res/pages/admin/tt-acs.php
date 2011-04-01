@@ -50,9 +50,22 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 	$prevdate = date('Y-m-d', strtotime(date("Y-m-d", $timstamp) . " -1 day"));
 	$nextdate = date('Y-m-d', strtotime(date("Y-m-d", $timstamp) . " +1 day"));
 	
-	echo "<a href=\"admin.php?page=tt-acs&date=$prevdate\">Previous Day</a> ";
+	echo "<p><a href=\"admin.php?page=tt-acs&date=$prevdate\">Previous Day</a> ";
 	echo "<a href=\"admin.php?page=tt-acs&date=$nextdate\">Next Day</a>";
 	
+	echo "
+	<form method=\"post\" action=\"\">
+		<table class=\"table-std\">
+			<tr>
+				<td>Go to Date:</td> 
+				<td><input type=\"date\" name=\"date\" id=\"date\" required /></td>
+			</tr>
+			<table>
+				<input type=\"button\" value=\"Search!\" onClick=\"onClickTtButton(this);\"/>
+			</table>
+		</table>
+	</form>
+	";
 	?> 
 	
 <p>

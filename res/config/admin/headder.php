@@ -52,7 +52,7 @@ $(function() {
 	
 	<script type="text/javascript">
 	$(function() {
-		var dates = $( "#start, #end" ).datepicker({
+		var dates = $( "#start, #end, #date" ).datepicker({
 		defaultDate: "+1w",
 		dateFormat: 'yy-mm-dd',
 		minDate: 0,

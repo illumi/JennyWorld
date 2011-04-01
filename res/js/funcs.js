@@ -415,7 +415,11 @@ function valid(thisform){
 
 function displayAdd(e) {
     if(e.options[e.selectedIndex].value == "add"){
-		window.location = "http://www2.macs.hw.ac.uk/~js230/JennyWorld/admin.php?page=add-film";
+		window.location = "http://www.macs.hw.ac.uk/~js230/JennyWorld/admin.php?page=add-film";
     }
 }
 
+function onClickTtButton(button) {
+	Form=button.form;
+	window.location = "http://www.macs.hw.ac.uk/~js230/JennyWorld/admin.php?page=tt-acs&date="+Form.date.value;
+}
