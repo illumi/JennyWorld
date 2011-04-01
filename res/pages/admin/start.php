@@ -34,7 +34,7 @@ $connect->disc();
 			echo "Click below to return to Manager Mode.";
 		} else if ($_SESSION['admin'] == 1) {
 			if ($row == !null) {
-				echo "There may be sugested rotations available. Click <a href=\"admin.php?page=auto-rotate\">here</a> to view them.<p><p>";
+				echo "There may be suggested rotations available. Click <a href=\"admin.php?page=auto-rotate\">here</a> to view them.<p><p>";
 			}
 			echo "Click below to enter Staff Mode.";
 		}
