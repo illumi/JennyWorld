@@ -32,7 +32,7 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 				echo "</div>";
 			}
 			echo "<div class='film'>";
-			echo "$film - $duration";
+			echo "$film &nbsp - &nbsp Film length: $duration";
 			echo "</div>";
 			$tmpname = $film;
 			echo "<div class='time'>";
