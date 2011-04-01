@@ -10,79 +10,74 @@ $connect = new doConnect();
 $query = mysql_query("SELECT * FROM bookingoverlaps;");
 
 $connect->disc();
+
+$ids = "";
 ?>
 
 <div id="body">
 	<h1>Auto Rotate System</h1>
 	<h3>
 	<p>
-		<form name="autoRotateForm" method="POST" action="res/pages/admin/rotate-do.php" class="center">
-			
-		</form>
-
-		<table>
+		<table  class="center">
 			<tr>
 				<th>
-					Move This Show
+					On Date
 				</th>
 				<th>
-					From this Screen
+					Current Screen
 				</th>
 				<th>
-					To This Screen
+					Proposed Screen
 				</th>
 				<th>
-					to_this_screen
+					For Film
 				</th>
 				<th>
-					currently_booked_for
+					At Time
 				</th>
 				<th>
-					displaying_movie
-				</th>
-				<th>
-					starting_on_this_date
-				</th>
-				<th>
-					starting_this_time
+					Tickets sold
 				</th>
 			</tr>
 		
 		
 		<?php 
+			$i=1;
 			while ($row = mysql_fetch_assoc($query)) {
 			echo '
 			<tr>
 				<td>
-					' .$row['move_this_film'] .'
+					' .$row['start_date'] .'
 				</td>
 				<td>
-					' .$row['move_this_show'] .'
+					' .$row['screen_ID'] .'
 				</td>
 				<td>
-					' .$row['from_this_screen'] .'
+					'.$i.'
 				</td>
 				<td>
-					' .$row['to_this_screen'] .'
+					' .$row['filmtitle'] .'
 				</td>
 				<td>
-					' .$row['currently_booked_for'] .'
+					' .$row['start_time'] .'
 				</td>
 				<td>
-					' .$row['displaying_movie'] .'
-				</td>
-				<td>
-					' .$row['starting_on_this_date'] .'
-				</td>
-				<td>
-					' .$row['starting_this_time'] .'
+					' .$row['tickets_sold'] .'
 				</td>
 			</tr>
 			';
+			$i++;
+			$ids .=  $row['showing_id'].",";
 			}
+			$ids = substr($ids,0,-1) 
 		?>
 		</table>
-		
+		<form name="autoRotateForm" method="POST" action="admin.php?page=rotate-do" class="center">
+			<table border="0" class="center">
+				<input type="input" name="ids" id="ids" <?php echo "value=\"$ids\""?> style="visibility:hidden"/> <p>
+				<input type="submit" name="submit" id="submit" value="Make Changes!">
+			</table>
+		</form>
 
 	</h3>
 	<h2></h2>

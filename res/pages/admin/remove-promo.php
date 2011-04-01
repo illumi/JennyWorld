@@ -52,7 +52,7 @@ $connect->disc();
 			<p>
 			<input type="submit" name="submit" id="submit" value="Delete">
 			<input type="reset" name="reset" id="reset" value="Reset">
-                </table>
+        </table>
 	</form>
 </section>
 
