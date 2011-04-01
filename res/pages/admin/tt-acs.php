@@ -31,8 +31,8 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 			if ($tmpname != "") {
 				echo "</div>";
 			}
-			echo "<div class='film'>";
-			echo "$film &nbsp - &nbsp Film length: $duration";
+			echo "<br><div class='film'>";
+			echo "$film <div class='duration'>Film length: $duration</div>";
 			echo "</div>";
 			$tmpname = $film;
 			echo "<div class='time'>";

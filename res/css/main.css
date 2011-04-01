@@ -8,13 +8,14 @@ body {
 	color: #000;
 	background: #006BAF;
 }
+/*container div for the whole content*/
 #container {
 	width: 840px;
 	height:100%;
 	margin-right: auto;
 	margin-left: auto;
 }
-
+/*classto set links to display white*/
 .lb a:link, 
 .lb a:visited, 
 .lb a:hover { 
@@ -22,7 +23,7 @@ body {
  text-decoration: none; 
 } 
 
-
+/*class for formatting the film details in films.php*/
 .filmdetails{
 	float: right;
 	text-align: left;	
@@ -32,6 +33,7 @@ body {
 	width: 300px;
 }
 
+/*class for centering tables throughout the website*/
 .table-std{
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:15px;	
@@ -39,17 +41,10 @@ body {
 	margin-right:auto;
 }
 
-.link-bottom{
-	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
-	font-size:15px;	
-	color: #ffffff;
-	margin-left:auto; 
-	margin-right:auto;
-
-}
-
+/*class for centering things*/
 .center {margin-left:auto; margin-right:auto;}
 
+/*class for formatting headings of the film details in films.php*/
 .filmheaders{
 	float: left;	
 	margin-right:10px;
@@ -58,8 +53,7 @@ body {
 	width: 50px;
 }
 
-
-
+/*class for formatting the plot independently of the otherdetail: films.php*/
 .plot{
 	text-align: left;	
 	margin-right:10px;
@@ -68,6 +62,7 @@ body {
 	width: 450px;
 }
 
+/*div for the customer booking form on the homepage*/
 #booking {
 	float: right;
 	margin-right:150px;
@@ -77,6 +72,7 @@ body {
 	width: 100px;
 }
 
+/*div for the main text on the home page*/
 #mainContent {
 	float:left;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -88,6 +84,8 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
+
+
 h1{
 	border-bottom:1px solid #000000;
 	letter-spacing:-1px;
@@ -114,7 +112,9 @@ h3{
 	margin:10px 10px 3px 0;
 	font-family: Vera, Helvetica, Georgia;
 }
+
 img.align-left { float:left; margin: 0 15px 15px 0; } 
+
 #logo {
 	background-image: url(../img/log.png);
 	background-repeat: no-repeat;
@@ -164,6 +164,7 @@ nav ul a:link, nav ul a:visited {
 nav ul a:hover, nav ul a:focus {
 	background: rgba(255,255,255,0.4);
 }
+
 #maincontent {
 	margin-top: 80px;
 	padding-top: 10px;
@@ -244,18 +245,13 @@ footer p {
 	margin-right:25px;
 }
 
-#gay { 
-	margin:3px; 
-	width:400px; 
-	height:300px;
-	display:none; 
-	background:#ffffff;
- }
 .center {
 	margin-left:auto;
 	margin-right:auto;
 	text-align:center;
 }
+
+/*styling for tables*/
 table {
 border-collapse:collapse;
 }
