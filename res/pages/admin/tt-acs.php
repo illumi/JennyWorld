@@ -20,7 +20,7 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 	
 	echo $date . "<p>";
 	
-	$sql = "SELECT film_title, start_time, duration FROM screenfilms WHERE start_date = '$date'";
+	$sql = "SELECT film_title, start_time, duration, screen_ID FROM screenfilms WHERE start_date = '$date'";
 	$result = mysql_query($sql) or die(mysql_error());
 
 	
@@ -38,9 +38,9 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 			echo "</div></td></table>";
 			$tmpname = $film;
 			echo "<div class='time'>";
-			echo $row['start_time'] . " ";
+			echo $row['start_time'] . " - Screen: " . $row['screen_ID'] . "<br>";
 		} else {
-			echo $row['start_time'] . " ";
+			echo $row['start_time'] . " - Screen: " . $row['screen_ID'] . "<br>";
 		}
 	}
 		
