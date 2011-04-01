@@ -287,7 +287,7 @@ function validate_editfilm(thisform)
 
 function validate_addtimetable(thisform)
 {
-	with (thisform) 
+	/*with (thisform) 
 	{
 		if(document.tt.id.selectedIndex==0)
 		{
@@ -307,18 +307,24 @@ function validate_addtimetable(thisform)
 			alert("Please select the number of daily showings.");
 			return false;
 		}
-		if (!validate_name(timepicker_1, "Please enter the start time of the first showing."))
+		if (!validate_name(end, "Please enter the start time of the first film.")) 
 		{
 			return false;
 		}
-                if(document.tt.id.selectedIndex == 1)
+                if(document.tt.id.selectedIndex == document.tt.id.length - 1)
                 {
                     if(!validate_name(txtAddMovieTitle, "Please enter a title for the film to be added."))
                     {
                         return false;
                     }
+                    if(!validate_name(txtFilmYear, "Please enter the film's year to be added."))
+                    {
+                        return false;
+                    }
+
+                    searchInfo(thisform);
                 }
-	}
+	}*/
         
 	return true;
 	

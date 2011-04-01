@@ -31,7 +31,7 @@ $connect = new doConnect();
 							}
 							$connect->disc();
 						?>
-                                        </select><br/>
+						</select><br/>
 					<input type="text" name="txtAddMovieTitle" id="txtAddMovieTitle" style="width:200px; display: none;" />
 				</td>
 			</tr>
