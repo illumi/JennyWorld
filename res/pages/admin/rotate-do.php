@@ -6,6 +6,7 @@
 
 
 $ids = explode(",", $_POST['ids']);
+$screens = explode(",", $_POST['screens']);
 
 
 include('res/lib/class_dbcon.php');
@@ -13,9 +14,8 @@ $connect = new doConnect();
 
 
 for( $i=0; $i <= (sizeof($ids)-1); $i++) {
-	$screen = $i+1;
 	
-	$sql = "UPDATE showings SET screen_ID = '$screen' WHERE showing_ID = '$ids[$i]'";
+	$sql = "UPDATE showings SET screen_ID = '$screens[$i]' WHERE showing_ID = '$ids[$i]'";
 	echo $sql."<p>";
 	mysql_query($sql);
 }

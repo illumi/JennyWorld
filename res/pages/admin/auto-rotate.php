@@ -12,6 +12,7 @@ $query = mysql_query("SELECT * FROM bookingoverlaps;");
 $connect->disc();
 
 $ids = "";
+$screens = "";
 ?>
 
 <div id="body">
@@ -44,37 +45,42 @@ $ids = "";
 		<?php 
 			$i=1;
 			while ($row = mysql_fetch_assoc($query)) {
-			echo '
-			<tr>
-				<td>
-					' .$row['start_date'] .'
-				</td>
-				<td>
-					' .$row['screen_ID'] .'
-				</td>
-				<td>
-					'.$i.'
-				</td>
-				<td>
-					' .$row['filmtitle'] .'
-				</td>
-				<td>
-					' .$row['start_time'] .'
-				</td>
-				<td>
-					' .$row['tickets_sold'] .'
-				</td>
-			</tr>
-			';
+				
+				if ($i != $row['screen_ID']) {
+					echo '
+						<tr>
+							<td>
+								' .$row['start_date'] .'
+							</td>
+							<td>
+								' .$row['screen_ID'] .'
+							</td>
+							<td>
+								'.$i.'
+							</td>
+							<td>
+								' .$row['filmtitle'] .'
+							</td>
+							<td>
+								' .$row['start_time'] .'
+							</td>
+							<td>
+								' .$row['tickets_sold'] .'
+							</td>
+						</tr>';
+				$ids .=  $row['showing_id'].",";
+				$screens .= $i.",";
+				} 
 			$i++;
-			$ids .=  $row['showing_id'].",";
 			}
-			$ids = substr($ids,0,-1) 
+			$ids = substr($ids,0,-1);
+			$screens = substr($screens,0,-1);
 		?>
 		</table>
 		<form name="autoRotateForm" method="POST" action="admin.php?page=rotate-do" class="center">
 			<table border="0" class="center">
-				<input type="input" name="ids" id="ids" <?php echo "value=\"$ids\""?> style="visibility:hidden"/> <p>
+				<input type="input" name="ids" id="ids" <?php echo "value=\"$ids\""?> style="visibility:hidden"/>
+				<input type="input" name="screens" id="screens" <?php echo "value=\"$screens\""?> style="visibility:hidden"/> <p>
 				<input type="submit" name="submit" id="submit" value="Make Changes!">
 			</table>
 		</form>
