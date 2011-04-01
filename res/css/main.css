@@ -15,6 +15,14 @@ body {
 	margin-left: auto;
 }
 
+.lb a:link, 
+.lb a:visited, 
+.lb a:hover { 
+ color: #ffffff; 
+ text-decoration: none; 
+} 
+
+
 .filmdetails{
 	float: right;
 	text-align: left;	
@@ -49,6 +57,7 @@ body {
 	font-size:15px;	
 	width: 50px;
 }
+
 
 
 .plot{
