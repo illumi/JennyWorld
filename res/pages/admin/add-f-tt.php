@@ -10,9 +10,6 @@ $end_date = strtotime($_POST['end']); //convert to timestamp
 $showings = $_POST['numshowings'];
 $start_time = $_POST['newTime']; 
 
-//$mins = substr($start_time, -2);
-//$hours = substr($start_time, 0, -3);
-
 $interval = (($end_date-$start_date)/60/60/24); //gets number of days between two dates. Not as nice as php5.3 though.
 $end_date = date('Y-m-d', $end_date);//translate end_date abck into correct format
 
@@ -74,6 +71,7 @@ $length = $row1['film_length'];
 	}
 
 $connect->disc();
-header("location: admin.php?page=tt-acs");
+$today = date('Y-m-d');	
+header("location: admin.php?page=tt-acs&date=$today");
 
 ?>

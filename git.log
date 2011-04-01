@@ -1,0 +1,851 @@
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 14:58:25 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 14:58:10 2011 +0100
+    Auto rotate now works
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Apr 1 14:46:57 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Apr 1 14:46:38 2011 +0100
+    fixed contact page on customer side
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 14:34:14 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 14:34:05 2011 +0100
+    Auto rotate working, something wrong with the view though
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Apr 1 14:30:25 2011 +0100
+    changed redirections for sessions
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 12:52:14 2011 +0100
+    Fixed booking issue
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Apr 1 12:46:09 2011 +0100
+    added screen numbers to tt-acs
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Apr 1 12:31:19 2011 +0100
+    changed 2 redirections
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Apr 1 11:41:55 2011 +0100
+    done formatting for timetable overview
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Apr 1 11:20:58 2011 +0100
+    adopted a previous version of system: contains date feature in timetable
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Fri Apr 1 02:59:53 2011 +0100
+    solving add film timetable part
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Fri Apr 1 02:34:22 2011 +0100
+    Add some more stats
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 02:24:54 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 02:24:45 2011 +0100
+    added a box to enter a date to browse to in the timetable
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Apr 1 02:23:29 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Apr 1 02:23:13 2011 +0100
+    formatted timetable overview
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 01:51:10 2011 +0100
+    added ability to browse through timetable
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 01:27:22 2011 +0100
+    chaging timetable view again
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 01:17:21 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 01:17:06 2011 +0100
+    chaging timetable view. need to make it dynamic
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Apr 1 01:06:58 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Apr 1 01:06:27 2011 +0100
+    added style to links
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Apr 1 00:19:17 2011 +0100
+    fixed timepicker error and fixed redirects for some files
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 31 23:11:03 2011 +0100
+    Fixed issue #38 failed login redirect now goes back to the login prompt
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 31 22:56:45 2011 +0100
+    Fixed adding new films from timetable view
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 31 22:47:23 2011 +0100
+    Fixed films (customer) to show films available 10 days in advance
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 31 22:33:06 2011 +0100
+    Fixed empty error and fixing add new film from timetable view
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 31 21:06:35 2011 +0100
+    Implemented insert into timetable
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 31 19:09:33 2011 +0100
+    add film validation
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 31 16:18:43 2011 +0100
+    pushing to refresh
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 31 15:12:11 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 31 15:11:53 2011 +0100
+    centre table for custoemr booking and progress on add film to timetable
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Thu Mar 31 14:45:41 2011 +0100
+    remove my localhost file
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Thu Mar 31 14:02:35 2011 +0100
+    correct tiny error syntaxe
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Thu Mar 31 13:58:47 2011 +0100
+    Add part of the add new film in timetable but still have problem the ajax code
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Thu Mar 31 13:13:03 2011 +0100
+    I forget to hide my classdb_conn for my localhost
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Thu Mar 31 13:11:42 2011 +0100
+    correct a syntaxe error in edit-f-tt.php
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 31 12:25:44 2011 +0100
+    fixed films formatting
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 31 11:33:54 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 31 11:33:43 2011 +0100
+    Started work on timetable
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 31 00:30:30 2011 +0100
+    can only select a film between 9AM and 10PM
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Wed Mar 30 23:33:37 2011 +0100
+    added a few lines at the bottom I notced i had deleted
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Wed Mar 30 23:26:12 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Wed Mar 30 23:25:49 2011 +0100
+    fixed drop down menu problem with jquery, tidied up some html on customer side.. should validate now
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Wed Mar 30 23:18:55 2011 +0100
+    part of adding in the timetable part
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Wed Mar 30 22:09:36 2011 +0100
+    centered tables...
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Wed Mar 30 19:17:29 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Wed Mar 30 19:16:56 2011 +0100
+    added accordian widget to stats
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Wed Mar 30 19:11:21 2011 +0100
+    part of the add film from timetable part
+
+Author: Kyle Ewan Alexander Tough <keat1@linux79.(none)>
+Date:   Wed Mar 30 15:02:43 2011 +0100
+    edit tt wont work, i added js submit option but still wont work
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Wed Mar 30 14:43:19 2011 +0100
+    changing some data in the tables to test the auto rotate, also fixed the Internet explorer detection
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Mon Mar 28 19:48:40 2011 +0100
+    More IE integration
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Mon Mar 28 16:45:10 2011 +0100
+    Cleanup and adding IE8 support
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Mon Mar 28 16:03:26 2011 +0100
+    fixed poster issue for film list (customer)
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Sun Mar 27 22:57:29 2011 +0100
+    just change a title
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sun Mar 27 22:03:02 2011 +0100
+    More changes to try to get images working
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sun Mar 27 21:39:50 2011 +0100
+    fixed conflict with films
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sun Mar 27 21:38:54 2011 +0100
+    more work on the images
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Sun Mar 27 21:37:15 2011 +0100
+    changed staff nav bar and changed the manager nav bar to highlight hovered options
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Sun Mar 27 21:31:06 2011 +0100
+    changed staff nav bar and changed the manager nav bar to highlight hovered options
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sun Mar 27 21:28:22 2011 +0100
+    Trying to fix the film images
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Sun Mar 27 21:20:04 2011 +0100
+    changed staff nav bar and changed the manager nav bar to highlight hovered options
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sun Mar 27 19:50:30 2011 +0100
+    Fixed an add film issue, also validated some of the customer side.
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sun Mar 27 16:57:42 2011 +0100
+    Fixed film shwoings for customer view
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Sun Mar 27 15:50:10 2011 +0100
+    imlemented changes to films so poster is shown: not yet working
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Sun Mar 27 13:48:00 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Sun Mar 27 13:47:24 2011 +0100
+    imlemented changes to films on customer side: information is now shown about each film
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sun Mar 27 13:43:24 2011 +0100
+    Issue #23 Fixed the break at the bottom of all pages (customer and admin side)
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sun Mar 27 02:26:16 2011 +0100
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sun Mar 27 02:26:11 2011 +0100
+    changes to add film, now scrapes IMDB for information
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Sun Mar 27 02:23:23 2011 +0100
+    imlemented changes to timetable
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sat Mar 26 01:39:13 2011 +0000
+    attempting to center staff nav bar, without success. updated the style sheet anyway with cleaner code.
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sat Mar 26 01:15:56 2011 +0000
+    Clean up! Also made all files use one php5 sql connector class file under res/lib.
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sat Mar 26 00:24:32 2011 +0000
+    Added an option for manager to switch to staff mode from any page they are currently on
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Mar 25 23:29:54 2011 +0000
+    imlemented changes to booking form for cashier and customer: set fixed width for the booking fields
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Mar 25 23:28:11 2011 +0000
+    imlemented changes to booking form for cashier and customer: set fixed width for the booking fields
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Mar 25 22:58:20 2011 +0000
+    remove geany files and started auto rotate system
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Mar 25 22:46:52 2011 +0000
+    imlemented changes to book tickets on cashier side: cashier can now check a booking and confirm it
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Mar 25 22:44:09 2011 +0000
+    imlemented changes to book tickets on cashier side: cashier can now check a booking and confirm it
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Mar 25 19:53:03 2011 +0000
+    Finished booking new tickets on admin side
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Mar 25 19:18:50 2011 +0000
+    Fixed the ability to book a ticket when the film was more than 10 days away (or in the past)
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Mar 25 15:37:42 2011 +0000
+    Booking on the customer side now works
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Mar 25 13:22:21 2011 +0000
+    imlemented changes to films: films will now dynamically appear when timetable is fixed
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Mar 25 13:20:45 2011 +0000
+    more customer booking work, fixed why the footer was appearing in the middle of the booking form
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Mar 25 10:15:16 2011 +0000
+    removing geany auto file
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Mar 25 02:05:16 2011 +0000
+    removing some old files
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Mar 25 02:03:42 2011 +0000
+    added a feature for selecting films on the customer side. Still needs ha fair bit of work
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Mar 25 01:37:58 2011 +0000
+    fixed a little error in stat-acs
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Mar 25 01:35:50 2011 +0000
+    implemented changes to statistics: added a tab feature for switching to different types of stats
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Mar 25 01:30:45 2011 +0000
+    implemented changes to statistics: added a tab feature for switching to different types of stats
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Fri Mar 25 01:20:12 2011 +0000
+    added some stats
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Mar 25 00:54:06 2011 +0000
+    imlemented changes to the content on the homepage: it now grows dynamically
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Thu Mar 24 23:35:06 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Thu Mar 24 23:34:44 2011 +0000
+    fixed staff nav bar
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 24 23:33:30 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 24 23:33:04 2011 +0000
+    imlemented changes to edit homepage: made box bigger and added description of what to enter
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 24 22:48:05 2011 +0000
+    attempting to get a number selector working but it seems to be an opera only thing
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 24 22:25:01 2011 +0000
+    imlemented changes to events: now oly shows promotions to customer with end date >= today
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 24 21:33:11 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 24 21:32:42 2011 +0000
+    fixed the time box not resetting when a new film is chosen
+
+Author: Kyle Ewan Alexander Tough <keat1@linux36.(none)>
+Date:   Thu Mar 24 21:31:16 2011 +0000
+    tt-acs now displays current tt between the sun-sat of the current week and added calander to edit
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Thu Mar 24 18:37:48 2011 +0000
+    session fixed
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 24 16:58:46 2011 +0000
+    Almost got booking working nicely. also iIntegrating a php5 sqlConnector class into the website.
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 24 13:18:09 2011 +0000
+    Removed extra timepicker files
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 24 12:14:01 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 24 12:13:39 2011 +0000
+    fixed positioning of booking box and starting adding more statistics
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 24 11:48:50 2011 +0000
+    added a time widget to add timetable (still needs proper format added in for it to work with the DB)
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 24 11:42:28 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Mar 24 11:42:16 2011 +0000
+    Trying to fix css for book tickets table
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 24 02:56:12 2011 +0000
+    added staff function to table
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 24 02:41:02 2011 +0000
+    fixed edit promotion and edit film as theyd stopped updating db
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 24 02:04:38 2011 +0000
+    validated forms/calender except for edit-tt, adde remove script to other funcs and tidied tables
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Wed Mar 23 22:28:56 2011 +0000
+    customer side book tickets interface working
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Tue Mar 22 20:22:02 2011 +0000
+    removing some old files
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Tue Mar 22 20:20:51 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Tue Mar 22 20:20:04 2011 +0000
+    implemented edit promotions, still needs validated
+
+Author: Kyle Ewan Alexander Tough <keat1@linux63.(none)>
+Date:   Tue Mar 22 20:18:23 2011 +0000
+    worked with current tt more and made few tt changes
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Tue Mar 22 13:32:30 2011 +0000
+    Update the remove file part in the Record film
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Mon Mar 21 22:01:29 2011 +0000
+    Added ability to change the front page message via admin controls
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Mon Mar 21 13:16:50 2011 +0000
+    Consolidated the switching of views for managers into 1 file
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sun Mar 20 03:59:53 2011 +0000
+    Added views and fixed sessions for Manager/Cashiers
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sun Mar 20 01:53:20 2011 +0000
+    Normalised the DB, added ability to change cinema brief on the home page, fixed some querys
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Mar 18 17:42:45 2011 +0000
+    Almost sorted promotion and cleaned up loads of files. More html5 validation on the admin side.
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Mar 18 14:06:44 2011 +0000
+    Fixed the jQuery calendar and implemented it cleanly rather than having files all over the place.
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Mar 18 12:06:44 2011 +0000
+    Finished new staff interface, all functions work. most of the customer pages are now valid HTML5
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Mar 18 02:03:27 2011 +0000
+    fixed JS file and staff submits for new staff memebrs
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Mar 18 01:32:19 2011 +0000
+    staff interface changes
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Mar 17 15:12:50 2011 +0000
+    added section for booking tickets and added to css for tables, also fixed a few small bugs
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Mon Feb 21 12:05:28 2011 +0000
+    Changes to staff interface. Almost there!
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Sat Feb 19 15:53:19 2011 +0000
+    Deleted more temp files
+
+Author: Kyle Ewan Alexander Tough <keat1@linux78.(none)>
+Date:   Fri Feb 18 16:23:45 2011 +0000
+    Timetable edit works and added more test data to sql + fixed dropdowns
+
+Author: Kyle Ewan Alexander Tough <keat1@linux78.(none)>
+Date:   Fri Feb 18 16:18:38 2011 +0000
+    Timetable edit works and added more test data to sql + fixed dropdowns
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Feb 18 15:13:37 2011 +0000
+    fixed conflict
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Feb 18 15:11:31 2011 +0000
+    Staff interface change
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Fri Feb 18 15:06:25 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Fri Feb 18 15:06:18 2011 +0000
+    made some changes to the logo
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Feb 18 14:52:43 2011 +0000
+    changed redirection for deliverable
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Feb 18 14:03:51 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Feb 18 14:03:07 2011 +0000
+    fixed drop down boxes
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Feb 18 14:02:59 2011 +0000
+    Rechanged Kyles changes
+
+Author: Kyle Ewan Alexander Tough <keat1@linux78.(none)>
+Date:   Fri Feb 18 13:52:58 2011 +0000
+    changes to edit with start to functionality and change to remove
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Feb 18 13:45:39 2011 +0000
+    code cleanup of both admin and customer side, making use of code re-use
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Feb 18 13:11:36 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Feb 18 13:11:06 2011 +0000
+    removed duplicate file from pages/admin
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Fri Feb 18 13:10:52 2011 +0000
+    changed about page to an information page for the deliverable
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Feb 18 13:09:53 2011 +0000
+    more staff changes
+
+Author: kyle <kyle@kyle-laptop-ubuntu.(none)>
+Date:   Fri Feb 18 11:43:50 2011 +0000
+    remove refuses to work but should with a little tweak and start on edit timetable
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Feb 17 23:56:39 2011 +0000
+    Big cleanup of admin code. Still needs a lot of work but much better for now
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Feb 17 22:55:46 2011 +0000
+    removed all temp files and tweeked Admin UI
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Thu Feb 17 21:07:16 2011 +0000
+    removed the temp netbeans files and attempted a .gitignore
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Feb 17 20:43:51 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Feb 17 20:43:24 2011 +0000
+    worked on customer end. Promotions and film detsails now appear
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Thu Feb 17 20:35:44 2011 +0000
+    issue with the session solved (jamie and jonas)
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Feb 17 17:59:28 2011 +0000
+    added calendars for date input. These still need tested after the sessions have been fixed.
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Wed Feb 16 21:42:42 2011 +0000
+    update issue with the connection by a staff (not manager) role. Issue solved
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Wed Feb 16 13:13:43 2011 +0000
+    removed some auto netbeans files that Jonas left behind
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Mon Feb 7 18:33:21 2011 +0000
+    fixed bugs in add-promo, still problems getting promo-acs to display film title instead of film ID
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Mon Feb 7 18:04:35 2011 +0000
+    added dropdown box to add-promo
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Mon Feb 7 16:54:27 2011 +0000
+    changed some of layout in Promotions
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Fri Feb 4 14:07:41 2011 +0000
+    moved promo-acs.php to admin so that it displays correctly
+
+Author: Jonas <jonas.pauthier@gmail.com>
+Date:   Fri Feb 4 11:50:37 2011 +0000
+    the issue with the redirection in admin.php is resolved
+
+Author: kyle <kyle@kyle-laptop-ubuntu.(none)>
+Date:   Thu Feb 3 23:17:09 2011 +0000
+    got add-film-tt working, needs little more work, and added other files to work on
+
+Author: lc159 <lc159@hw.ac.uk>
+Date:   Thu Feb 3 19:11:55 2011 +0000
+    Film records- add, edit and remove functions working. Read corresponding issue for more detail
+
+Author: lc159 <lc159@hw.ac.uk>
+Date:   Thu Feb 3 15:37:17 2011 +0000
+    removed lewis-temp
+
+Author: lc159 <lc159@hw.ac.uk>
+Date:   Thu Feb 3 15:34:47 2011 +0000
+    attempt at removing duplicate and unwanted files/folders
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Wed Feb 2 23:59:56 2011 +0000
+    removed the sql connector by accident, my bad.
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Wed Feb 2 23:51:15 2011 +0000
+    removed some of lewis temp files and tried to fix redirection to the admin login page if you dont have a session
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Wed Feb 2 22:18:59 2011 +0000
+    almost done with fixing admin style sheet. Needs a little more work
+
+Author: kyle <kyle@kyle-laptop-ubuntu.(none)>
+Date:   Wed Feb 2 21:58:22 2011 +0000
+    added timetable access and add film to timetable which doesnt function yet
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Wed Feb 2 21:29:45 2011 +0000
+    fixed conflict in admin headder
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Wed Feb 2 21:27:53 2011 +0000
+    Tweaking the admin menus, not finished by any means :)
+
+Author: lc159 <lc159@hw.ac.uk>
+Date:   Wed Feb 2 19:10:08 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: lc159 <lc159@hw.ac.uk>
+Date:   Wed Feb 2 18:55:16 2011 +0000
+    Added new admin section "Film Records" with working add and remove functions (02/02/11)
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Wed Feb 2 18:18:31 2011 +0000
+    fixed conflict in the headder file
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Wed Feb 2 18:17:12 2011 +0000
+    making small changes to the admin interface
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Wed Feb 2 17:40:37 2011 +0000
+    changed staff so special characters are handled in names
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Wed Feb 2 15:34:40 2011 +0000
+    made some layout changes to staff
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Wed Feb 2 14:42:08 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Wed Feb 2 14:41:54 2011 +0000
+    modified edit-staff section, separated edit password option
+
+Author: David Watson <dw77@linux72.(none)>
+Date:   Wed Feb 2 14:15:06 2011 +0000
+    just uploaded css for jamie
+
+Author: David Watson <dw77@linux72.(none)>
+Date:   Wed Feb 2 14:07:54 2011 +0000
+    just uploaded css for jamie
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Wed Feb 2 13:46:02 2011 +0000
+    fixed edit-staff conflict
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Wed Feb 2 13:44:46 2011 +0000
+    push
+
+Author: jp126 <jonas.pauthier@gmail.com>
+Date:   Wed Feb 2 13:42:20 2011 +0000
+    Merge branch 'master' of github.com:illumi/JennyWorld
+
+Author: jp126 <jonas.pauthier@gmail.com>
+Date:   Wed Feb 2 13:41:38 2011 +0000
+    session implemented
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Wed Feb 2 12:43:51 2011 +0000
+    push
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Tue Feb 1 23:17:52 2011 +0000
+    Remove temp file that was uploaded
+
+Author: dw1991 <dw1991@github.com>
+Date:   Tue Feb 1 23:14:52 2011 +0000
+    made a few changes to admin side and started add/edit/remove promotions
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Tue Feb 1 16:46:45 2011 +0000
+    completed add/remove staff, edit staff yet to be completed
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Tue Feb 1 16:09:30 2011 +0000
+    added add/remove staff functionality
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Mon Jan 31 22:17:18 2011 +0000
+    made some more changes to staff section
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Mon Jan 31 21:02:58 2011 +0000
+    copied sql-connection into admin for use in staff stuff, added overview and buttons to staff section
+
+Author: nb135 <breminem@hotmail.co.uk>
+Date:   Mon Jan 31 17:02:21 2011 +0000
+    Changed Jenny World to Jworld
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Mon Jan 31 13:47:56 2011 +0000
+    Added a link to README where I host the website
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Mon Jan 31 13:42:28 2011 +0000
+    more admin stuff
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Mon Jan 31 13:36:08 2011 +0000
+    started on the admin interface it needs work and sessions sorted
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Fri Jan 28 22:26:30 2011 +0000
+    David left temp files from whatever editor he was using,
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Jan 27 20:28:12 2011 +0000
+    cleaning up file order
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Jan 27 20:23:47 2011 +0000
+    cleaning up file order
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Jan 27 20:18:20 2011 +0000
+    cleaning up file order
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Jan 27 20:14:30 2011 +0000
+    cleaning up file order
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Jan 27 19:24:36 2011 +0000
+    added the php script for connecting to database in a seperate file
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Jan 27 19:20:39 2011 +0000
+    updated login.php so that it now connect to the database and will only allow access with a correct username and password
+
+Author: dw1991 <d.watson.1991@gmail.com>
+Date:   Thu Jan 27 17:04:12 2011 +0000
+    updated the files to the most recent which included requested changes from customer also includes sql file and a small page breakdown file
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Wed Jan 26 12:39:17 2011 +0000
+    removed Dreamweavers auto files from all directorys
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Tue Jan 25 16:08:19 2011 +0000
+    fixed conflict
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Tue Jan 25 16:06:35 2011 +0000
+    testing merge
+
+Author: lc159 <lc159@hw.ac.uk>
+Date:   Tue Jan 25 16:05:44 2011 +0000
+    channged readme for testing
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Tue Jan 25 16:02:19 2011 +0000
+    deleted some dreamweaver files
+
+Author: lc159 <lc159@hw.ac.uk>
+Date:   Wed Jan 19 12:50:00 2011 +0000
+    I fixed a typo in my name. Just testing it out
+
+Author: illumi <jamiespence2@gmail.com>
+Date:   Tue Dec 14 23:18:09 2010 +0000
+    initial upload
