@@ -15,7 +15,7 @@
 		
         $option = '<option id="0">-- Select Date --</option>';
 		
-        $query = mysql_query("SELECT showing_ID, start_date FROM showings WHERE film_id = \"$film\" AND start_date >= \"$start_date\" AND start_date <= \"$end_date\";") or die(mysql_error());
+        $query = mysql_query("SELECT DISTINCT start_date FROM showings WHERE film_id = \"$film\" AND start_date >= \"$start_date\" AND start_date <= \"$end_date\";") or die(mysql_error());
 		
 		$connect->disc();
 		
