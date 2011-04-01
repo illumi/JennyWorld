@@ -77,7 +77,7 @@ $(function() {
                 });
             });
             function timepicker7OnHourShowCallback(hour) {
-                if ((hour > 22) || (hour < 09)|| (hour == 00)) {
+                if ((hour > 22) || (hour < 9)|| (hour == 0)) {
                     return false;
                 }
                 return true;

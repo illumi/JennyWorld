@@ -22,5 +22,5 @@ $connect = new doConnect();
 	mysql_query($sql) or die(mysql_error());
 
 $connect->disc();
-//header("location: admin.php?page=films-acs");
+header("location: admin.php?page=films-acs");
 ?>
