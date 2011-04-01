@@ -287,7 +287,7 @@ function validate_editfilm(thisform)
 
 function validate_addtimetable(thisform)
 {
-	with (thisform) 
+	/*with (thisform) 
 	{
 		if(document.tt.id.selectedIndex==0)
 		{
@@ -324,7 +324,7 @@ function validate_addtimetable(thisform)
 
                     searchInfo(thisform);
                 }
-	}
+	}*/
         
 	return true;
 	

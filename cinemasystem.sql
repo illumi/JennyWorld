@@ -112,7 +112,7 @@ INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, fi
 INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('127 Hours', '2010', 'A mountain climber becomes trapped under a boulder while canyoneering alone near Moab, Utah and resorts to desperate measures in order to survive.', '94', 'Adventure, Drama, Thriller', 'R', 'http://ia.media-imdb.com/images/M/MV5BMTc2NjMzOTE3Ml5BMl5BanBnXkFtZTcwMDE0OTc5Mw@@._V1._SX320.jpg', 'tt1542344');
 INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('Star Trek','2009','A chronicle of the early days of James T. Kirk and his fellow USS Enterprise crew members.','127','Action, Adventure, Sci-Fi','PG-13','http://ia.media-imdb.com/images/M/MV5BMjE5NDQ5OTE4Ml5BMl5BanBnXkFtZTcwOTE3NDIzMw@@._V1._SX320.jpg','tt0796366');
 INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('The Social Network','2010','A chronicle of the founding of Facebook, the social-networking Web site.','120','Biography, Drama, History','PG-13','http://ia.media-imdb.com/images/M/MV5BMTM2ODk0NDAwMF5BMl5BanBnXkFtZTcwNTM1MDc2Mw@@._V1._SX320.jpg','tt1285016');
-INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('Happy Gilmore','1996','A rejected hockey player puts his skills to the golf course to save his grandmother\'s house.','92','Comedy, Romance, Sport','PG-13','http://ia.media-imdb.com/images/M/MV5BMjA4NjUxODg3Ml5BMl5BanBnXkFtZTcwNzcyODc5Mw@@._V1._SX320.jpg','tt0116483');
+INSERT INTO films (film_title, film_year, film_plot, film_length, film_genre, film_rating, film_poster, imdb_id) VALUES ('Happy Gilmore','1996','A rejected hockey player puts his skills to the golf course to save his grandmothers house.','92','Comedy, Romance, Sport','PG-13','http://ia.media-imdb.com/images/M/MV5BMjA4NjUxODg3Ml5BMl5BanBnXkFtZTcwNzcyODc5Mw@@._V1._SX320.jpg','tt0116483');
 
 
 INSERT INTO showings (screen_ID, film_ID, start_date, end_date, start_time, end_time) VALUES ('1', '1', '2011-04-05', '2011-04-05', '20:00:00', '22:26:00');
@@ -168,7 +168,7 @@ ORDER BY tickets_sold DESC;
 
 CREATE VIEW screenfilms AS 
 SELECT 
-showing_ID, showings.screen_ID, showings.film_ID, film_title, start_date, start_time, end_date, end_time
+showing_ID, showings.screen_ID, showings.film_ID, film_title, film_length AS duration, start_date, start_time, end_date, end_time
 FROM showings 
 INNER JOIN 
 screens 
@@ -180,6 +180,7 @@ ON
 showings.film_ID = films.film_ID
 GROUP BY showing_id
 ORDER BY start_date, film_title, start_time;
+
 
 CREATE VIEW screenshows AS 
 SELECT 

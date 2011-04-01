@@ -10,41 +10,37 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 <h2>
 
 	<?php
-	
+
 	include('res/lib/class_dbcon.php');
 	$connect = new doConnect();
 
 	echo date("Y-m-d") . "<p>";
 
 	$today= date('Y-m-d'); //todays date
+	
+	$sql = "SELECT film_title, start_time, duration FROM screenfilms WHERE start_date = '2011-04-07'";
+	$result = mysql_query($sql) or die(mysql_error());
 
-	//Query finds all showings in the future
-	$query = "SELECT s.screen_ID, s.film_ID,  f.film_title, s.start_time, f.film_rating, s.start_date, f.film_length FROM showings s, films f WHERE s.film_ID = f.film_ID AND start_date >= $today";	 
-	$result = mysql_query($query) or die(mysql_error());
-
-	echo "<table border='1' class=\"center\">
-	<tr>
-	<th>Screen ID</th>
-	<th>Film Title</th>
-	<th>Start Time</th>
-	<th>Runtime</th>
-	<th>Start</th>
-	<th>Rating</th>
-	</tr>";
-
-	// Print out the contents of each row into a table 
-	while($row = mysql_fetch_array($result)){
-		echo "<tr>";
-		echo "<td>" .$row['screen_ID']. " </td> ";
-		echo "<td NOWRAP>" . $row['film_title'] . "</td>";
-		echo "<td>" . $row['start_time'] . "</td>";
-		echo "<td>" . $row['film_length'] . "</td>";
-		echo "<td>" . $row['start_date'] . "</td>";
-		echo "<td>" . $row['film_rating'] . "</td>";
-		echo "</tr>";
+	
+	
+	$tmpname = "";
+	while($row = mysql_fetch_array($result)) {
+		$film = $row['film_title'];
+		$duration = $row['duration'];
+		if ($film != $tmpname) {
+			if ($tmpname != "") {
+				echo "</div>";
+			}
+			echo "<div class='film'>";
+			echo "$film - $duration";
+			echo "</div>";
+			$tmpname = $film;
+			echo "<div class='time'>";
+			echo $row['start_time'] . " ";
+		} else {
+			echo $row['start_time'] . " ";
+		}
 	}
-	echo "</table>";
-		
 		
 	$connect->disc();
 
