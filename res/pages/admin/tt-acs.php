@@ -24,6 +24,7 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 	$result = mysql_query($sql) or die(mysql_error());
 
 	
+	
 	$tmpname = "";
 	while($row = mysql_fetch_array($result)) {
 		$film = $row['film_title'];
@@ -32,22 +33,16 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 			if ($tmpname != "") {
 				echo "</div>";
 			}
-			echo "<table class='center'><td><div class='film'>";
+			echo "<br><table class='center'><td><div class='film'>";
 			echo "$film <div class='duration'>Film length: $duration</div>";
-			echo "</div>";
+			echo "</div></td></table>";
 			$tmpname = $film;
 			echo "<div class='time'>";
 			echo $row['start_time'] . " ";
-			
 		} else {
 			echo $row['start_time'] . " ";
-			
 		}
-		
-		echo "</td></table>";
 	}
-	
-	
 		
 	$connect->disc();
 	

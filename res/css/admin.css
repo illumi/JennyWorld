@@ -250,7 +250,8 @@ a.block {
 	text-align:center;
 	word-spacing: 10pt;
 	letter-spacing: 3px;
-	width: 300px;
+	/*background-color: blue;*/
+	width: 400px;
 }
 
 
@@ -260,8 +261,8 @@ a.block {
 	font-size:14px;	
 	margin-left:auto; 
 	margin-right:auto;
-	text-align:center;
-	width: 300px;
+	text-align:left;
+	width: 500px;
 
 }
 
@@ -271,10 +272,9 @@ a.block {
 	font-size:23px;	
 	margin-left:auto; 
 	margin-right:auto;
-	text-align:center;
+	text-align:left;
 	padding: 30;
-	border-bottom:0.5px solid #000000;
-	width: 300px;
+	width: 500px;
 }
 
 
