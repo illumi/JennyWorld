@@ -14,11 +14,11 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 	include('res/lib/class_dbcon.php');
 	$connect = new doConnect();
 
-	echo date("Y-m-d") . "<p>";
-
-	$today= date('Y-m-d'); //todays date
+	$date = $_GET['date'];
 	
-	$sql = "SELECT film_title, start_time, duration FROM screenfilms WHERE start_date = '2011-04-07'";
+	echo $date . "<p>";
+	
+	$sql = "SELECT film_title, start_time, duration FROM screenfilms WHERE start_date = '$date'";
 	$result = mysql_query($sql) or die(mysql_error());
 
 	
@@ -43,7 +43,16 @@ if(!isset($_SESSION['login']) && !$_SESSION['admin'])
 	}
 		
 	$connect->disc();
-
+	
+	
+	$timstamp = strtotime($date);
+	
+	$prevdate = date('Y-m-d', strtotime(date("Y-m-d", $timstamp) . " -1 day"));
+	$nextdate = date('Y-m-d', strtotime(date("Y-m-d", $timstamp) . " +1 day"));
+	
+	echo "<a href=\"admin.php?page=tt-acs&date=$prevdate\">Previous Day</a> ";
+	echo "<a href=\"admin.php?page=tt-acs&date=$nextdate\">Next Day</a>";
+	
 	?> 
 	
 <p>

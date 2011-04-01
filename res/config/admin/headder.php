@@ -97,7 +97,8 @@ $(function() {
 			<h1>Jworld</h1>
 		</hgroup>
 		
-	<?php	
+	<?php
+	$today = date('Y-m-d');	
 	if($_SESSION['admin'] == 1 && $_SESSION['staff'] == 0){
 		echo "
 	<nav>
@@ -115,7 +116,7 @@ $(function() {
 				<li><a href=\"admin.php?page=remove-promo\">Remove Promo</a></li>
 			</ul>
 		</li>
-		<li><a href=\"admin.php?page=tt-acs\">Timetable</a>
+		<li><a href=\"admin.php?page=tt-acs&date=$today\">Timetable</a>
 			<ul>
 				<li><a href=\"admin.php?page=add-film-tt\">Add Film</a></li>
 				<li><a href=\"admin.php?page=edit-film-tt\">Edit Film</a></li>
@@ -137,7 +138,7 @@ $(function() {
 	<nav>
 		<li><a href=\"admin.php\">Home</a></li>
 		<li><a href=\"admin.php?page=booktickets\">Tickets</a></li>
-		<li><a href=\"admin.php?page=tt-acs\">Timetable</a></li>
+		<li><a href=\"admin.php?page=tt-acs&date=$today\">Timetable</a></li>
 		<li><a href=\"admin.php?page=stat-acs\">Statistics</a></li>
 		<li><a href=\"admin.php?page=films-acs\">Film Records</a></li>
 		<li><a href=\"admin.php?page=promo-acs\">Promotions</a></li>
