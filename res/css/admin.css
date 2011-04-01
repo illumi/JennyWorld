@@ -23,6 +23,13 @@ body {
 	margin-right:auto;
 }
 
+.lb a:link, 
+.lb a:visited, 
+.lb a:hover { 
+ color: #ffffff; 
+ text-decoration: none; 
+} 
+
 h1{
 	border-bottom:1px solid #000000;
 	letter-spacing:-1px;
